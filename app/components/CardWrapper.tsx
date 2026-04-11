@@ -42,21 +42,21 @@ const CardWrapper = ({
       {showHeaders && (
         <div className="w-full flex items-center justify-between mb-14">
           <div className="flex items-center justify-center gap-5">
-            <div className="border border-[#2F3037] p-1.5 rounded-xl">
+            <div className="hidden md:flex border border-[#2F3037] p-1.5 rounded-xl">
               <div className="border border-[#474853] p-2 rounded-lg">
                 <Image src={icon} alt={title} width={20} height={20} />
               </div>
             </div>
             <div>
-              <p className="font-semibold text-xl mb-2">{header}</p>
-              <p className="font-semibold text-sm text-[#A7AAB4]">{subheader}</p>
+              <p className="font-semibold text-lg md:text-xl mb-2">{header}</p>
+              <p className="font-semibold text-xs md:text-sm text-[#A7AAB4]">{subheader}</p>
             </div>
           </div>
           <Link
             href={link}
             className="flex gap-2 py-3 px-4 rounded-xl border border-[#2F3037] bg-[#232529]"
           >
-            <p className="font-semibold text-sm">{title}</p>
+            <p className="hidden md:flex font-semibold text-sm">{title}</p>
             <Image
               src={roundedArrow}
               alt="Rounded Arrow"

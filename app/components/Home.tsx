@@ -18,10 +18,10 @@ import Footer from "./Footer";
 export function Home() {
   return (
     <div className="h-full w-full flex flex-col items-start justify-start">
-      <div className="w-full mx-auto max-w-5xl">
+      <div className="w-full mx-auto px-5 md:px-0 md:max-w-5xl">
         {/* First Section */}
-        <div className="flex my-36 justify-between gap-32 items-stretch w-full">
-          <div className="flex flex-col justify-between h-100">
+        <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0 md:gap-32 items-stretch w-full">
+          <div className="flex flex-col justify-center md:justify-between h-fit md:h-100">
             <div>
               <div className="flex gap-2">
                 <p className="text-[#00F48D] font-semibold text-xs">
@@ -32,19 +32,19 @@ export function Home() {
                   OPEN TO WORK
                 </p>
               </div>
-              <p className="text-white font-semibold text-4xl mt-5">
+              <p className="text-white font-semibold text-3xl md:text-4xl mt-5">
                 Hey, I&apos;m Ishan Tandel
               </p>
               <p className="text-[#A7AAB4] font-semibold text-sm mt-3">
                 I&apos;m a product designer who builds. MSc in User Experience,
                 Computer
-                <br />
+                <br className="hidden md:block" />
                 Science undergrad currently shipping my own products using AI
-                while <br />
+                while <br className="hidden md:block" />
                 looking for the right design role in the United Kingdom.
               </p>
             </div>
-            <div className="mb-20">
+            <div className="mb-0 md:mb-20">
               <p className="text-[#A7AAB4] font-semibold text-xs mt-12">
                 COMPANIES I’VE WORKED WITH
               </p>
@@ -52,22 +52,22 @@ export function Home() {
                 <Image
                   src={zoth}
                   alt="Zoth"
-                  className="h-5 w-auto object-contain"
+                  className="h-6 w-auto object-contain"
                 />
                 <Image
                   src={aspora}
                   alt="Aspora"
-                  className="h-5 w-auto object-contain"
+                  className="h-6 w-auto object-contain"
                 />
                 <Image
                   src={di}
                   alt="DI"
-                  className="h-5 w-auto object-contain"
+                  className="h-6 w-auto object-contain"
                 />
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center w-1/3 gap-2 h-100">
+          <div className="hidden md:flex flex-col items-center w-1/3 gap-2 h-100">
             <div className="flex-1 flex items-stretch p-2 rounded-2xl border border-[#2F3037] bg-[#232529]">
               <Image
                 src={homepic}
@@ -84,31 +84,31 @@ export function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center my-36">
+        <div className="flex justify-center my-36 md:my-36">
           <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={personalProjectsData} />
           </div>
         </div>
-        <div className="flex justify-center my-36">
+        <div className="flex justify-center my-36 md:my-36">
           <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={videCodedProjectsData} />
           </div>
         </div>
-        <div className="flex justify-center my-36">
+        <div className="flex justify-center my-36 md:my-36">
           <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={appreciation} />
           </div>
         </div>
-        <div className="flex justify-center my-36">
+        <div className="flex justify-center my-36 md:my-36">
           <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={recentHighlights} />
           </div>
         </div>
-        <div className="flex justify-center my-36">
+        <div className="flex justify-center my-36 md:my-36">
           <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={mylife} />

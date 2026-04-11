@@ -20,9 +20,9 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-[#131415]">
         <NavigationProvider>
-          <div className="flex h-screen bg-[#131415]">
+          <div className="flex flex-col md:flex-row h-screen bg-[#131415]">
             <Sidebar />
-            <main className="flex-1 overflow-auto p-10">
+            <main className="flex-1 overflow-auto p-0 md:p-10">
               {children}
             </main>
           </div>
