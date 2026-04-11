@@ -4,7 +4,7 @@ import { CardItem } from "./CardWrapper";
 const MyLifeCard = ({ imagePath, title, activity, coverImage }: CardItem) => {
   return (
     <div className="flex flex-col h-full gap-2">
-      <div className="items-start p-2 bg-[#1A1B1E] border border-[#2F3037] rounded-xl h-full">
+      <div className="items-start p-2 bg-[#232529] border border-[#2F3037] rounded-xl h-full">
         <Image
           src={imagePath}
           alt={!title ? "Project Image" : title}

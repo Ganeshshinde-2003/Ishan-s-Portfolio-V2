@@ -18,21 +18,21 @@ import Footer from "./Footer";
 export function Home() {
   return (
     <div className="h-full w-full flex flex-col items-start justify-start">
-        <div className="w-full mx-auto max-w-4xl">
+      <div className="w-full mx-auto max-w-5xl">
         {/* First Section */}
-        <div className="flex my-10 justify-between gap-32 items-stretch w-full">
+        <div className="flex my-36 justify-between gap-32 items-stretch w-full">
           <div className="flex flex-col justify-between h-100">
             <div>
-              <div className="flex gap-4">
-                <p className="text-[#00F48D] font-semibold text-sm">
+              <div className="flex gap-2">
+                <p className="text-[#00F48D] font-semibold text-xs">
                   Product+AI Designer{" "}
                 </p>
-                <p className="text-[#474853] font-semibold text-sm">|</p>
-                <p className="text-[#A7AAB4] font-semibold text-sm">
+                <p className="text-[#474853] font-semibold text-xs">|</p>
+                <p className="text-[#A7AAB4] font-semibold text-xs">
                   OPEN TO WORK
                 </p>
               </div>
-              <p className="text-white font-semibold text-2xl mt-5">
+              <p className="text-white font-semibold text-4xl mt-5">
                 Hey, I&apos;m Ishan Tandel
               </p>
               <p className="text-[#A7AAB4] font-semibold text-sm mt-3">
@@ -68,11 +68,11 @@ export function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center w-1/3 gap-2 h-100">
-            <div className="flex-1 flex items-stretch p-1.5 rounded-lg border border-[#2F3037]">
+            <div className="flex-1 flex items-stretch p-2 rounded-2xl border border-[#2F3037] bg-[#232529]">
               <Image
                 src={homepic}
                 alt="Home"
-                className="h-full w-full object-cover rounded-md"
+                className="h-full w-full object-cover rounded-xl"
               />
             </div>
             <div className="w-full flex items-center justify-end gap-2">
@@ -84,32 +84,32 @@ export function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center my-20">
-          <div className="w-full max-w-4xl">
+        <div className="flex justify-center my-36">
+          <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={personalProjectsData} />
           </div>
         </div>
-        <div className="flex justify-center my-20">
-          <div className="w-full max-w-4xl">
+        <div className="flex justify-center my-36">
+          <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={videCodedProjectsData} />
           </div>
         </div>
-        <div className="flex justify-center my-20">
-          <div className="w-full max-w-4xl">
+        <div className="flex justify-center my-36">
+          <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={appreciation} />
           </div>
         </div>
-        <div className="flex justify-center my-20">
-          <div className="w-full max-w-4xl">
+        <div className="flex justify-center my-36">
+          <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={recentHighlights} />
           </div>
         </div>
-        <div className="flex justify-center my-20">
-          <div className="w-full max-w-4xl">
+        <div className="flex justify-center my-36">
+          <div className="w-full max-w-5xl">
             {/* personal projects */}
             <CardWrapper data={mylife} />
           </div>

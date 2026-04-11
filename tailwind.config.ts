@@ -12,7 +12,7 @@ const config: Config = {
         "primary-green": "#00F48D",
       },
       backgroundColor: {
-        primary: "#131415",
+        primary: "#232529",
         "primary-green": "#00F48D",
       },
       textColor: {

@@ -43,8 +43,8 @@ const MyLifeCardWrapper = ({
     <div className="w-full">
       <div className="w-full flex items-center justify-between mb-8">
         <div className="flex items-center justify-center gap-5">
-          <div className="border border-[#474853] p-1.5 rounded-lg">
-            <div className="border border-[#474853] p-2 rounded-md">
+          <div className="border border-[#2F3037] p-1.5 rounded-xl">
+            <div className="border border-[#474853] p-2 rounded-lg">
               <Image src={icon} alt={header} width={20} height={20} />
             </div>
           </div>

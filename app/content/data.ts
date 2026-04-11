@@ -58,7 +58,7 @@ export const appreciation = {
   header: "Word Of Appreciation",
   subheader: "Products I've shipped using AI",
   title: "Take a Look",
-  icon: "/assets/icons/projects.svg",
+  icon: "/assets/icons/thumb.svg",
   link: "/",
   data: [
     {
@@ -86,7 +86,7 @@ export const recentHighlights = {
   header: "Recent Highlights",
   subheader: "Products I've shipped using AI",
   title: "Take a Look",
-  icon: "/assets/icons/projects.svg",
+  icon: "/assets/icons/flag.svg",
   link: "/",
   data: [
     {
@@ -118,7 +118,7 @@ export const mylife = {
   subheader:
     "A collection of stories, miles, and moments that shape how I Think & Design.",
   title: "Take a Look",
-  icon: "/assets/icons/projects.svg",
+  icon: "/assets/icons/heart.svg",
   link: "/",
   data: [
     {
@@ -401,25 +401,25 @@ export const myLifeGoes = {
       imagePath: "/assets/lifegoes/one.png",
       title: "Trails Over Treadmills",
       coverImage: true,
-      arrow: true,
+      arrow: false,
     },
     {
       imagePath: "/assets/lifegoes/two.png",
       title: "Salt Water Therapy",
       coverImage: true,
-      arrow: true,
+      arrow: false,
     },
     {
       imagePath: "/assets/lifegoes/three.png",
       title: "Found My Quiet Place",
       coverImage: true,
-      arrow: true,
+      arrow: false,
     },
     {
       imagePath: "/assets/lifegoes/four.png",
       title: "No Brakes, Just Rapids",
       coverImage: true,
-      arrow: true,
+      arrow: false,
     },
   ],
 };

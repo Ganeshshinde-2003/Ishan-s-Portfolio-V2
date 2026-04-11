@@ -10,7 +10,7 @@ export default function Page() {
   const { activeNav } = useNavigation();
 
   return (
-    <div className="bg-primary text-white h-full w-full rounded-2xl shadow-[0_1px_40px_10px_rgba(5,5,5,0.2)] overflow-y-auto scrollbar-hide">
+    <div className="bg-[#1A1B1E] text-white h-full w-full rounded-2xl shadow-[0_1px_40px_10px_rgba(5,5,5,0.2)] overflow-y-auto scrollbar-hide">
       {activeNav === "home" && <Home />}
       {activeNav === "my-life" && <MyLife />}
       {activeNav === "work" && <Work />}

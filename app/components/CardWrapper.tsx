@@ -42,8 +42,8 @@ const CardWrapper = ({
       {showHeaders && (
         <div className="w-full flex items-center justify-between mb-14">
           <div className="flex items-center justify-center gap-5">
-            <div className="border border-[#474853] p-1.5 rounded-lg">
-              <div className="border border-[#474853] p-2 rounded-md">
+            <div className="border border-[#2F3037] p-1.5 rounded-xl">
+              <div className="border border-[#474853] p-2 rounded-lg">
                 <Image src={icon} alt={title} width={20} height={20} />
               </div>
             </div>
@@ -54,7 +54,7 @@ const CardWrapper = ({
           </div>
           <Link
             href={link}
-            className="flex gap-2 py-3 px-4 rounded-xl border border-[#232529] bg-[#333333]"
+            className="flex gap-2 py-3 px-4 rounded-xl border border-[#2F3037] bg-[#232529]"
           >
             <p className="font-semibold text-sm">{title}</p>
             <Image
