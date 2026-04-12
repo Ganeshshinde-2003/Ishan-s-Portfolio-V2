@@ -43,13 +43,13 @@ const MyLifeCardWrapper = ({
     <div className="w-full">
       <div className="w-full flex items-center justify-between mb-8">
         <div className="flex items-center justify-center gap-5">
-          <div className="hidden md:flex border border-[#2F3037] p-1.5 rounded-xl">
-            <div className="border border-[#474853] p-2 rounded-lg">
-              <Image src={icon} alt={header} width={20} height={20} />
+          <div className="hidden md:flex items-center justify-center border border-[#2F3037] p-1.5 rounded-xl h-14 w-14 shrink-0">
+            <div className="border border-[#474853] p-2 rounded-lg flex items-center justify-center">
+              <Image src={icon} alt={header} width={28} height={28} />
             </div>
           </div>
           <div>
-            <p className="font-semibold text-xl mb-2">{header}</p>
+            <p className="font-semibold text-2xl mb-2">{header}</p>
             {subheader && (
               <p className="font-semibold text-sm text-[#A7AAB4]">
                 {subheader}

@@ -36,12 +36,12 @@ const socialItems: {
   image: StaticImageData;
   link: string;
 }[] = [
-  { id: "mail", image: mail, link: "#" },
-  { id: "behance", image: be, link: "#" },
-  { id: "linkedin", image: linkedin, link: "#" },
+  { id: "mail", image: mail, link: "mailto: ishan.tandel1803@gmail.com" },
+  { id: "behance", image: be, link: "https://www.behance.net/ishantandel" },
+  { id: "linkedin", image: linkedin, link: "https://www.linkedin.com/in/ishan-tandel-90b592222/" },
   { id: "globe", image: globe, link: "#" },
   { id: "twitter", image: x, link: "#" },
-  { id: "bubble", image: bubble, link: "#" },
+  { id: "bubble", image: bubble, link: "https://medium.com/@ishantandel637" },
   { id: "instagram", image: gram, link: "#" },
   { id: "note", image: note, link: "#" },
 ];

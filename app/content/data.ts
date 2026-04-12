@@ -3,7 +3,7 @@ export const personalProjectsData = {
   subheader: "A curated collection of my design work",
   title: "All Projects",
   icon: "/assets/icons/projects.svg",
-  link: "/",
+  link: "work" as const,
   data: [
     {
       imagePath: "/assets/projects/zoth.svg",
@@ -31,7 +31,7 @@ export const videCodedProjectsData = {
   subheader: "Products I've shipped using AI",
   title: "Take a Look",
   icon: "/assets/icons/projects.svg",
-  link: "/",
+  link: "ai-projects" as const,
   data: [
     {
       imagePath: "/assets/projects/researchlens.svg",
@@ -59,7 +59,6 @@ export const appreciation = {
   subheader: "Products I've shipped using AI",
   title: "Take a Look",
   icon: "/assets/icons/thumb.svg",
-  link: "/",
   data: [
     {
       talk: "“Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.”",
@@ -87,7 +86,6 @@ export const recentHighlights = {
   subheader: "Products I've shipped using AI",
   title: "Take a Look",
   icon: "/assets/icons/flag.svg",
-  link: "/",
   data: [
     {
       imagePath: "/assets/highlights/one.png",
@@ -119,7 +117,7 @@ export const mylife = {
     "A collection of stories, miles, and moments that shape how I Think & Design.",
   title: "Take a Look",
   icon: "/assets/icons/heart.svg",
-  link: "/",
+  link: "my-life" as const,
   data: [
     {
       imagePath: "/assets/mylife/one.png",

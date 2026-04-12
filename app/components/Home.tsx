@@ -17,11 +17,19 @@ import Footer from "./Footer";
 
 export function Home() {
   return (
-    <div className="h-full w-full flex flex-col items-start justify-start">
-      <div className="w-full mx-auto px-5 md:px-0 md:max-w-5xl">
+    <div className="h-full w-full flex flex-col items-start justify-start relative">
+      {/* White light gradient spreading from top-left */}
+      <div
+        className="absolute top-0 left-0 w-full h-full pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 1000px 700px at 20% -10%, rgba(255, 255, 255, 0.15) 0%, transparent 50%)",
+          zIndex: 0,
+        }}
+      />
+      <div className="w-full mx-auto px-5 md:px-0 md:max-w-212.5 relative z-10">
         {/* First Section */}
-        <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0 md:gap-32 items-stretch w-full">
-          <div className="flex flex-col justify-center md:justify-between h-fit md:h-100">
+        <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0 md:gap-8 items-stretch w-full">
+          <div className="flex flex-col justify-center md:justify-between md:w-[65%] h-fit md:h-100">
             <div>
               <div className="flex gap-2">
                 <p className="text-[#00F48D] font-semibold text-xs">
@@ -38,9 +46,9 @@ export function Home() {
               <p className="text-[#A7AAB4] font-semibold text-sm mt-3">
                 I&apos;m a product designer who builds. MSc in User Experience,
                 Computer
-                <br className="hidden md:block" />
+                {/* <br className="hidden md:block" /> */}
                 Science undergrad currently shipping my own products using AI
-                while <br className="hidden md:block" />
+                while 
                 looking for the right design role in the United Kingdom.
               </p>
             </div>
@@ -85,31 +93,31 @@ export function Home() {
         </div>
 
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-5xl">
+          <div className="w-full max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={personalProjectsData} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-5xl">
+          <div className="w-full max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={videCodedProjectsData} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-5xl">
+          <div className="w-full max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={appreciation} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-5xl">
+          <div className="w-full max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={recentHighlights} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-5xl">
+          <div className="w-full max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={mylife} />
           </div>

@@ -16,7 +16,9 @@ const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80 }
   }, []);
 
   return (
-    <div className="flex flex-col items-start p-2 bg-[#232529] h-full border border-[#2F3037] rounded-2xl">
+    <div
+      className={`flex flex-col items-start p-2 bg-[#232529] h-full border border-[#2F3037] rounded-2xl`}
+    >
       <div className="w-full h-auto" style={{ height: isMd && imageHeight > 0 ? `${imageHeight * 4}px` : "400px" }}>
         <Image
           src={imagePath}
