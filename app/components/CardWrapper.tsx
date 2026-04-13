@@ -41,7 +41,7 @@ const CardWrapper = ({
   return (
     <div className="w-full">
       {showHeaders && (
-        <div className="w-full flex items-center justify-between mb-14">
+        <div className="w-full flex items-center justify-between mb-8">
           <div className="flex items-center justify-center gap-5">
             <div className="hidden md:flex items-center justify-center border border-[#2F3037] p-1.5 rounded-xl h-14 w-14 shrink-0">
               <div className="border border-[#474853] p-2 rounded-lg flex items-center justify-center">
@@ -73,7 +73,7 @@ const CardWrapper = ({
           )}
         </div>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {data.map((item, index) =>
           item.talk ? (
             <AppreciationCard key={index} {...item} />

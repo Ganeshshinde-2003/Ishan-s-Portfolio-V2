@@ -26,7 +26,7 @@ export function MyLife() {
       />
       <div className="w-full mx-auto px-5 md:px-0 md:max-w-212.5 relative z-10">
         {/* First Section */}
-        <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0 md:gap-8 items-stretch w-full">
+        <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0  w-full">
           <div className="flex flex-col justify-between w-full md:w-2/5 h-auto md:h-100">
             <div>
               <div className="flex gap-2">
@@ -50,13 +50,13 @@ export function MyLife() {
               </p>
             </div>
           </div>
-          <div className="hidden md:flex w-1/2 gap-2">
-            <div className="flex flex-col items-center w-1/2 gap-2 h-100">
-              <div className="flex-1 flex items-stretch p-2 rounded-2xl border border-[#2F3037] bg-[#232529]">
+          <div className="hidden md:flex items-center w-1/2 gap-2">
+            <div className="flex flex-col items-center w-1/2 gap-2 h-[350px]">
+              <div className="flex-1 flex p-2 rounded-2xl border border-[#2F3037] bg-[#232529]">
                 <Image
                   src={homepic}
                   alt="Home"
-                  className="h-full w-full object-cover rounded-xl"
+                  className="h-full w-100 object-cover rounded-xl"
                   loading="eager"
                 />
               </div>
@@ -69,12 +69,12 @@ export function MyLife() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center w-1/2 gap-2 h-100">
-              <div className="flex-1 flex items-stretch p-2  rounded-2xl border border-[#2F3037] bg-[#232529]">
+            <div className="flex flex-col items-center w-1/2 gap-2 h-[350px]">
+              <div className="flex-1 flex p-2  rounded-2xl border border-[#2F3037] bg-[#232529]">
                 <Image
                   src={homepic}
                   alt="Home"
-                  className="h-full w-full object-cover rounded-xl"
+                  className="h-full w-100 object-cover rounded-xl"
                   loading="eager"
                 />
               </div>
