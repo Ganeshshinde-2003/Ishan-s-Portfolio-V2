@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { videCodedProjectsData } from "../content/data";
 import CardWrapper from "./CardWrapper";
 
@@ -15,7 +16,12 @@ export function AiProject() {
           zIndex: 0,
         }}
       />
-      <div className="w-full mx-auto px-6 md:max-w-212.5 relative z-10">
+      <motion.div
+        className="w-full mx-auto px-6 md:max-w-212.5 relative z-10"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
             AI Enabled Projects
@@ -28,7 +34,7 @@ export function AiProject() {
           {/* personal projects */}
           <CardWrapper data={videCodedProjectsData} showHeaders={false} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import aspora from "../../public/assets/workedwith/aspora.svg";
 import di from "../../public/assets/workedwith/di.svg";
 import homepic from "../../public/assets/home_screen_pic.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import CardWrapper from "./CardWrapper";
 import {
   appreciation,
@@ -26,7 +27,12 @@ export function Home() {
           zIndex: 0,
         }}
       />
-      <div className="w-full mx-auto px-6  md:max-w-212.5 relative z-10">
+      <motion.div
+        className="w-full mx-auto px-6  md:max-w-212.5 relative z-10"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         {/* First Section */}
         <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0 md:gap-8 items-stretch w-full">
           <div className="flex flex-col justify-center md:justify-between md:w-[65%] h-fit md:h-100">
@@ -122,7 +128,7 @@ export function Home() {
             <CardWrapper data={mylife} />
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );

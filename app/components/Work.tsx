@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { personalProjectsData } from "../content/data";
 import CardWrapper from "./CardWrapper";
 
@@ -14,7 +15,12 @@ export function Work() {
           zIndex: 0,
         }}
       />
-      <div className="w-full mx-auto px-6 md:max-w-212.5 relative z-10">
+      <motion.div
+        className="w-full mx-auto px-6 md:max-w-212.5 relative z-10"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Work & Personal Project</h1>
           <p className="text-[#A7AAB4] font-extrabold text-xs">A curated collection showcasing all my designs</p>
@@ -23,7 +29,7 @@ export function Work() {
           {/* personal projects */}
           <CardWrapper data={personalProjectsData} showHeaders={false} />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
