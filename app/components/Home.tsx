@@ -1,8 +1,8 @@
 "use client";
 
-import zoth from "../../public/assets/workedwith/zoth.png";
-import aspora from "../../public/assets/workedwith/aspora.png";
-import di from "../../public/assets/workedwith/di.png";
+import zoth from "../../public/assets/workedwith/zoth.svg";
+import aspora from "../../public/assets/workedwith/aspora.svg";
+import di from "../../public/assets/workedwith/di.svg";
 import homepic from "../../public/assets/home_screen_pic.jpg";
 import Image from "next/image";
 import CardWrapper from "./CardWrapper";
@@ -26,24 +26,24 @@ export function Home() {
           zIndex: 0,
         }}
       />
-      <div className="w-full mx-auto px-5 md:px-0 md:max-w-212.5 relative z-10">
+      <div className="w-full mx-auto px-6  md:max-w-212.5 relative z-10">
         {/* First Section */}
         <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0 md:gap-8 items-stretch w-full">
           <div className="flex flex-col justify-center md:justify-between md:w-[65%] h-fit md:h-100">
             <div>
               <div className="flex gap-2">
-                <p className="text-[#00F48D] font-semibold text-xs">
+                <p className="text-[#00F48D] font-medium text-xs">
                   Product+AI Designer{" "}
                 </p>
-                <p className="text-[#474853] font-semibold text-xs">|</p>
-                <p className="text-[#A7AAB4] font-semibold text-xs">
+                <p className="text-[#474853] font-medium text-xs">|</p>
+                <p className="text-[#A7AAB4] font-medium text-xs">
                   OPEN TO WORK
                 </p>
               </div>
-              <p className="text-white font-semibold text-3xl md:text-4xl mt-5">
+              <p className="text-white font-normal text-3xl md:text-4xl mt-5">
                 Hey, I&apos;m Ishan Tandel
               </p>
-              <p className="text-[#A7AAB4] font-semibold text-sm mt-3">
+              <p className="text-[#A7AAB4] font-medium text-sm mt-3">
                 I&apos;m a product designer who builds. MSc in User Experience,
                 Computer
                 {/* <br className="hidden md:block" /> */}
@@ -53,7 +53,7 @@ export function Home() {
               </p>
             </div>
             <div className="mb-0 md:mb-20">
-              <p className="text-[#A7AAB4] font-semibold text-xs mt-12">
+              <p className="text-[#A7AAB4] font-bold text-xs mt-12">
                 COMPANIES I’VE WORKED WITH
               </p>
               <div className="flex gap-3 mt-4">
@@ -84,40 +84,40 @@ export function Home() {
               />
             </div>
             <div className="w-full flex items-center justify-end gap-2">
-              <p className="text-xs font-semibold text-[#A7AAB4]">WINDY HAIR</p>
+              <p className="text-xs font-extrabold text-[#A7AAB4]">WINDY HAIR</p>
               <div className="flex items-center justify-center py-1 px-2 border border-[#2F3037] rounded-md bg-[#131415]">
-                <p className="text-sm font-semibold text-[#A7AAB4]">Img</p>
+                <p className="text-sm font-extrabold text-[#A7AAB4]">Img</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-212.5">
+          <div className="w-full md:max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={personalProjectsData} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-212.5">
+          <div className="w-full md:max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={videCodedProjectsData} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-212.5">
+          <div className="w-full md:max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={appreciation} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-212.5">
+          <div className="w-full md:max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={recentHighlights} />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">
-          <div className="w-full max-w-212.5">
+          <div className="w-full md:max-w-212.5">
             {/* personal projects */}
             <CardWrapper data={mylife} />
           </div>

@@ -50,7 +50,7 @@ const CardWrapper = ({
             </div>
             <div>
               <p className="font-semibold text-lg md:text-xl mb-2">{header}</p>
-              <p className="font-semibold text-xs md:text-sm text-[#A7AAB4]">
+              <p className="font-medium text-xs md:text-sm text-[#A7AAB4]">
                 {subheader}
               </p>
             </div>
@@ -62,7 +62,7 @@ const CardWrapper = ({
               }}
               className="flex gap-2 py-3 px-4 rounded-xl border border-[#2F3037] bg-[#232529] cursor-pointer"
             >
-              <p className="hidden md:flex font-semibold text-sm">{title}</p>
+              <p className="hidden md:flex font-extrabold text-sm">{title}</p>
               <Image
                 src={roundedArrow}
                 alt="Rounded Arrow"

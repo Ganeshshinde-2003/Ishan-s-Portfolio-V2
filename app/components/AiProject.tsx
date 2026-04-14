@@ -10,14 +10,19 @@ export function AiProject() {
       <div
         className="absolute top-0 left-0 w-full h-full pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse 700px 250px at 50% -10%, rgba(255, 255, 255, 0.08) 0%, transparent 60%)",
+          background:
+            "radial-gradient(ellipse 700px 250px at 50% -10%, rgba(255, 255, 255, 0.08) 0%, transparent 60%)",
           zIndex: 0,
         }}
       />
-<div className="w-full mx-auto px-5 md:px-0 md:max-w-212.5 relative z-10">
+      <div className="w-full mx-auto px-6 md:max-w-212.5 relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Work & Personal Project</h1>
-          <p className="text-[#A7AAB4] text-xs">A curated collection showcasing all my designs</p>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            AI Enabled Projects
+          </h1>
+          <p className="text-[#A7AAB4] font-extrabold text-xs">
+            A curated collection showcasing all my designs
+          </p>
         </div>
         <div className="w-full">
           {/* personal projects */}

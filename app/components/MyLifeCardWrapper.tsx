@@ -49,9 +49,9 @@ const MyLifeCardWrapper = ({
             </div>
           </div>
           <div>
-            <p className="font-semibold text-2xl mb-2">{header}</p>
+            <p className="font-extrabold text-3xl mb-2">{header}</p>
             {subheader && (
-              <p className="font-semibold text-sm text-[#A7AAB4]">
+              <p className="font-medium text-sm text-[#A7AAB4]">
                 {subheader}
               </p>
             )}
@@ -80,7 +80,7 @@ const MyLifeCardWrapper = ({
           </div>
 
           <div
-            className="md:hidden grid  gap-2 w-full"
+            className="md:hidden grid gap-2 w-full"
             style={{
               gridTemplateColumns: `repeat(1, minmax(0, 1fr))`,
             }}

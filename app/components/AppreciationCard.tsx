@@ -14,8 +14,8 @@ const AppreciationCard = ({
       <p className="text-base font-semibold">{talk}</p>
       <div className="w-full flex flex-col mt-10">
         <Image src={imagePath} alt={!name ? "Speaker Image" : name} width={60} height={60} className="rounded-full mb-2"/>
-        <p className="text-base font-semibold">{name}</p>
-        <p className="text-sm text-[#A7AAB4]">{position}</p>
+        <p className="text-base font-normal">{name}</p>
+        <p className="text-sm font-bold text-[#A7AAB4]">{position}</p>
       </div>
     </div>
   );

@@ -63,8 +63,8 @@ export function Sidebar() {
               className="rounded-full shrink-0"
             />
             <div className="flex flex-col justify-center">
-              <h3 className="text-white font-semibold text-sm">Ishan Tandel</h3>
-              <p className="text-gray-400 text-xs">Product Designer</p>
+              <h3 className="text-white font-extrabold text-sm">Ishan Tandel</h3>
+              <p className="text-gray-400 text-xs font-extrabold">Product Designer</p>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export function Sidebar() {
           </div>
         </div>
         <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-          <p className="text-white font-semibold text-xs mb-5">CREATIONS</p>
+          <p className="text-white font-extrabold text-xs mb-5">CREATIONS</p>
           <ul className="space-y-2">
             {navigationItems.map((item) => (
               <li key={item.id}>
@@ -86,7 +86,7 @@ export function Sidebar() {
                     setActiveNav(item.id);
                     setIsMenuOpen(false);
                   }}
-                  className={`text-base font-semibold transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 ${
+                  className={`text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 ${
                     activeNav === item.id
                       ? "text-[#ffffff] bg-[#1A1B1E]"
                       : "text-[#A7AAB4] hover:text-[#ffffff]"
@@ -109,7 +109,7 @@ export function Sidebar() {
                   />
                   <span className="flex-1 text-sm">{item.label}</span>
                   {item.id === "my-life" && (
-                    <div className="text-[#00F48D] text-xs font-semibold px-2 py-1 rounded-lg">
+                    <div className="text-[#00F48D] text-xs font-medium px-2 py-1 rounded-lg">
                       NEW
                     </div>
                   )}
@@ -120,7 +120,7 @@ export function Sidebar() {
         </div>
       </div>
       <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-        <p className="text-white font-semibold text-xs mb-5">SOCIALS</p>
+        <p className="text-white font-extrabold text-xs mb-5">SOCIALS</p>
         <div className="grid grid-cols-4 gap-3 mb-5 place-items-center">
           {socialItems.map((item) => (
             <Link
@@ -139,7 +139,7 @@ export function Sidebar() {
             </Link>
           ))}
         </div>
-        <p className="text-xs text-center font-semibold mt-5 text-[#A7AAB4]">
+        <p className="text-xs text-center font-extrabold mt-5 text-[#A7AAB4]">
           51.5074° N, 0.1278° W
         </p>
       </div>
