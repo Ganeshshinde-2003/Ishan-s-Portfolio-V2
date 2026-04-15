@@ -49,7 +49,7 @@ export function Home() {
               <p className="text-white font-normal text-3xl md:text-4xl mt-5">
                 Hey, I&apos;m Ishan Tandel
               </p>
-              <p className="text-[#A7AAB4] font-medium text-sm mt-3">
+              <p className="text-[#A7AAB4] font-medium text-sm mt-3 leading-8">
                 I&apos;m a product designer who builds. MSc in User Experience,
                 Computer
                 {/* <br className="hidden md:block" /> */}
@@ -62,7 +62,7 @@ export function Home() {
               <p className="text-[#A7AAB4] font-bold text-xs mt-12">
                 COMPANIES I’VE WORKED WITH
               </p>
-              <div className="flex gap-3 mt-4">
+              <div className="flex gap-4 mt-4">
                 <Image
                   src={zoth}
                   alt="Zoth"

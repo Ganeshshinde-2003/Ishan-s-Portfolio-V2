@@ -9,10 +9,9 @@ export function AiProject() {
     <div className="h-auto md:h-full w-full flex flex-col items-center justify-center py-10 md:py-16 relative">
       {/* Horizontal capsule light effect - subtle half dome */}
       <div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
+         className="absolute top-0 left-0 w-full h-full pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 700px 250px at 50% -10%, rgba(255, 255, 255, 0.08) 0%, transparent 60%)",
+          background: "radial-gradient(ellipse 550px 450px at 50% -10%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 40%, transparent 70%)",
           zIndex: 0,
         }}
       />
