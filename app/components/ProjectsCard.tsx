@@ -41,7 +41,7 @@ const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80 }
           )}
         </div>
         {description && (
-          <p className="text-sm font-bold mt-2">{description}</p>
+          <p className="text-sm font-medium mt-2">{description}</p>
         )}
       </div>
     </div>

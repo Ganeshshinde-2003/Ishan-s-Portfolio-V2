@@ -57,8 +57,9 @@ export const videCodedProjectsData = {
 export const appreciation = {
   header: "Word Of Appreciation",
   subheader: "Products I've shipped using AI",
-  title: "Take a Look",
+  title: "View More",
   icon: "/assets/icons/thumb.svg",
+  link: "home" as const,
   data: [
     {
       talk: "“Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.”",

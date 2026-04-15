@@ -63,8 +63,8 @@ export function Sidebar() {
               className="rounded-full shrink-0"
             />
             <div className="flex flex-col justify-center">
-              <h3 className="text-white font-extrabold text-sm">Ishan Tandel</h3>
-              <p className="text-gray-400 text-xs font-extrabold">Product Designer</p>
+              <h3 className="text-white font-semibold text-sm">Ishan Tandel</h3>
+              <p className="text-gray-400 text-xs font-medium">Product Designer</p>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export function Sidebar() {
           </div>
         </div>
         <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-          <p className="text-white font-extrabold text-xs mb-5">CREATIONS</p>
+          <p className="text-white font-medium text-xs mb-5 tracking-wider">CREATIONS</p>
           <ul className="space-y-2">
             {navigationItems.map((item) => (
               <li key={item.id}>
@@ -120,7 +120,7 @@ export function Sidebar() {
         </div>
       </div>
       <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-        <p className="text-white font-extrabold text-xs mb-5">SOCIALS</p>
+        <p className="text-white font-medium text-xs mb-5 tracking-wider">SOCIALS</p>
         <div className="grid grid-cols-4 gap-3 mb-5 place-items-center">
           {socialItems.map((item) => (
             <Link

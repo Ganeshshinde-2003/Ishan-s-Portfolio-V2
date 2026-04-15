@@ -50,8 +50,8 @@ export function MyLife() {
               </p>
             </div>
             <div className="mb-0 md:mb-20">
-              <p className="text-[#A7AAB4] font-bold text-xs mt-12">
-                Product Thinker ||Conceptual Designer || Traveller <br />
+              <p className="text-[#A7AAB4] font-medium text-xs mt-12 tracking-wider">
+                Product Thinker || Conceptual Designer || Traveller <br />
                 || Curious Mind || Athlete
               </p>
             </div>
@@ -67,11 +67,11 @@ export function MyLife() {
                 />
               </div>
               <div className="w-full flex items-center justify-end gap-2">
-                <p className="text-xs font-extrabold text-[#A7AAB4]">
+                <p className="text-xs font-medium text-[#A7AAB4] tracking-wider">
                   WINDY HAIR
                 </p>
                 <div className="flex items-center justify-center py-1 px-2 border border-[#2F3037] rounded-md bg-[#131415]">
-                  <p className="text-xs font-extrabold text-[#A7AAB4]">Img</p>
+                  <p className="text-xs font-medium tracking-wider text-[#A7AAB4]">Img</p>
                 </div>
               </div>
             </div>
@@ -85,11 +85,11 @@ export function MyLife() {
                 />
               </div>
               <div className="w-full flex items-center justify-end gap-2">
-                <p className="text-xs font-extrabold text-[#A7AAB4]">
+                <p className="text-xs font-medium text-[#A7AAB4] tracking-wider">
                   WINDY HAIR
                 </p>
                 <div className="flex items-center justify-center py-1 px-2 border border-[#2F3037] rounded-md bg-[#131415]">
-                  <p className="text-xs font-extrabold text-[#A7AAB4]">Img</p>
+                  <p className="text-xs font-medium tracking-wider text-[#A7AAB4]">Img</p>
                 </div>
               </div>
             </div>

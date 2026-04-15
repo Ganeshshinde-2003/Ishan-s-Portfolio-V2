@@ -39,7 +39,7 @@ export function Home() {
             <div>
               <div className="flex gap-2">
                 <p className="text-[#00F48D] font-medium text-xs">
-                  Product+AI Designer{" "}
+                  Product + AI Designer{" "}
                 </p>
                 <p className="text-[#474853] font-medium text-xs">|</p>
                 <p className="text-[#A7AAB4] font-medium text-xs">
@@ -49,34 +49,31 @@ export function Home() {
               <p className="text-white font-normal text-3xl md:text-4xl mt-5">
                 Hey, I&apos;m Ishan Tandel
               </p>
-              <p className="text-[#A7AAB4] font-medium text-sm mt-3 leading-8">
+              <p className="text-[#A7AAB4] font-medium text-sm mt-3 leading-6 tracking-wide">
                 I&apos;m a product designer who builds. MSc in User Experience,
-                Computer
-                {/* <br className="hidden md:block" /> */}
-                Science undergrad currently shipping my own products using AI
-                while 
-                looking for the right design role in the United Kingdom.
+                Computer Science undergrad currently shipping my own products using AI
+                while looking for the right design role in the United Kingdom.
               </p>
             </div>
             <div className="mb-0 md:mb-20">
-              <p className="text-[#A7AAB4] font-bold text-xs mt-12">
+              <p className="text-[#A7AAB4] font-medium text-xs mt-12 tracking-wider">
                 COMPANIES I’VE WORKED WITH
               </p>
               <div className="flex gap-4 mt-4">
                 <Image
                   src={zoth}
                   alt="Zoth"
-                  className="h-6 w-auto object-contain"
+                  className="h-8 w-auto object-contain"
                 />
                 <Image
                   src={aspora}
                   alt="Aspora"
-                  className="h-6 w-auto object-contain"
+                  className="h-8 w-auto object-contain"
                 />
                 <Image
                   src={di}
                   alt="DI"
-                  className="h-6 w-auto object-contain"
+                  className="h-8 w-auto object-contain"
                 />
               </div>
             </div>
@@ -90,9 +87,9 @@ export function Home() {
               />
             </div>
             <div className="w-full flex items-center justify-end gap-2">
-              <p className="text-xs font-extrabold text-[#A7AAB4]">WINDY HAIR</p>
+              <p className="text-xs font-medium text-[#A7AAB4] tracking-wider">WINDY HAIR</p>
               <div className="flex items-center justify-center py-1 px-2 border border-[#2F3037] rounded-md bg-[#131415]">
-                <p className="text-sm font-extrabold text-[#A7AAB4]">Img</p>
+                <p className="text-sm font-medium tracking-wider text-[#A7AAB4]">Img</p>
               </div>
             </div>
           </div>
