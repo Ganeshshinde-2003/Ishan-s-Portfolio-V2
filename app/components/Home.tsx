@@ -3,7 +3,7 @@
 import zoth from "../../public/assets/workedwith/zoth.svg";
 import aspora from "../../public/assets/workedwith/aspora.svg";
 import di from "../../public/assets/workedwith/di.svg";
-import homepic from "../../public/assets/home_screen_pic.jpg";
+import homepic from "../../public/assets/home_screen_pic.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CardWrapper from "./CardWrapper";

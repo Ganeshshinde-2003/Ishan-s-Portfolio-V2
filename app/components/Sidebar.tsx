@@ -79,43 +79,74 @@ export function Sidebar() {
         <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
           <p className="text-white font-medium text-xs mb-5 tracking-wider">CREATIONS</p>
           <ul className="space-y-2">
-            {navigationItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => {
-                    setActiveNav(item.id);
-                    setIsMenuOpen(false);
-                  }}
-                  className={`text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 ${
-                    activeNav === item.id
-                      ? "text-[#ffffff] bg-[#1A1B1E]"
-                      : "text-[#A7AAB4] hover:text-[#ffffff]"
-                  }`}
-                >
-                  <Image
-                    src={item.icon}
-                    alt={item.label}
-                    width={16}
-                    height={16}
-                    className="w-full h-full object-cover"
-                    objectFit="cover"
-                    style={{
-                      filter:
-                        activeNav === item.id
-                          ? "brightness(0) saturate(100%) invert(100%)"
-                          : "brightness(0) saturate(100%) invert(67%)",
-                      width: "auto",
+            {navigationItems.map((item) => {
+              const isResume = item.id === "resume";
+
+              if (isResume) {
+                return (
+                  <li key={item.id}>
+                    <a
+                      href="/fonts/resume.pdf"
+                      download="Ishan_Tandel_Resume.pdf"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[#A7AAB4] hover:text-[#ffffff]"
+                    >
+                      <Image
+                        src={item.icon}
+                        alt={item.label}
+                        width={16}
+                        height={16}
+                        className="w-full h-full object-cover"
+                        objectFit="cover"
+                        style={{
+                          filter: "brightness(0) saturate(100%) invert(67%)",
+                          width: "auto",
+                        }}
+                      />
+                      <span className="flex-1 text-sm">{item.label}</span>
+                    </a>
+                  </li>
+                );
+              }
+
+              return (
+                <li key={item.id}>
+                  <button
+                    onClick={() => {
+                      setActiveNav(item.id);
+                      setIsMenuOpen(false);
                     }}
-                  />
-                  <span className="flex-1 text-sm">{item.label}</span>
-                  {item.id === "my-life" && (
-                    <div className="text-[#00F48D] text-xs font-medium px-2 py-1 rounded-lg">
-                      NEW
-                    </div>
-                  )}
-                </button>
-              </li>
-            ))}
+                    className={`text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 ${
+                      activeNav === item.id
+                        ? "text-[#ffffff] bg-[#1A1B1E]"
+                        : "text-[#A7AAB4] hover:text-[#ffffff]"
+                    }`}
+                  >
+                    <Image
+                      src={item.icon}
+                      alt={item.label}
+                      width={16}
+                      height={16}
+                      className="w-full h-full object-cover"
+                      objectFit="cover"
+                      style={{
+                        filter:
+                          activeNav === item.id
+                            ? "brightness(0) saturate(100%) invert(100%)"
+                            : "brightness(0) saturate(100%) invert(67%)",
+                        width: "auto",
+                      }}
+                    />
+                    <span className="flex-1 text-sm">{item.label}</span>
+                    {item.id === "my-life" && (
+                      <div className="text-[#00F48D] text-xs font-medium px-2 py-1 rounded-lg">
+                        NEW
+                      </div>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

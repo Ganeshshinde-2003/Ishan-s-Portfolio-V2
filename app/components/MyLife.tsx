@@ -1,6 +1,7 @@
 "use client";
 
-import homepic from "../../public/assets/home_screen_pic.jpg";
+import pic1 from "../../public/assets/mylife1.svg";
+import pic2 from "../../public/assets/mylife2.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import MyLifeCardWrapper from "./MyLifeCardWrapper";
@@ -60,7 +61,7 @@ export function MyLife() {
             <div className="flex flex-col items-center w-1/2 gap-2 h-[350px]">
               <div className="flex-1 flex p-2 rounded-2xl border border-[#2F3037] bg-[#232529]">
                 <Image
-                  src={homepic}
+                  src={pic1}
                   alt="Home"
                   className="h-full w-100 object-cover rounded-xl"
                   loading="eager"
@@ -78,7 +79,7 @@ export function MyLife() {
             <div className="flex flex-col items-center w-1/2 gap-2 h-[350px]">
               <div className="flex-1 flex p-2  rounded-2xl border border-[#2F3037] bg-[#232529]">
                 <Image
-                  src={homepic}
+                  src={pic2}
                   alt="Home"
                   className="h-full w-100 object-cover rounded-xl"
                   loading="eager"
