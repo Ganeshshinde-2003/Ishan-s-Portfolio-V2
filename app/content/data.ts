@@ -89,21 +89,21 @@ export const recentHighlights = {
   icon: "/assets/icons/flag.svg",
   data: [
     {
-      imagePath: "/assets/highlights/one.png",
+      imagePath: "/assets/highlights/one.svg",
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
       coverImage: true,
       arrow: true,
     },
     {
-      imagePath: "/assets/highlights/two.png",
+      imagePath: "/assets/highlights/two.svg",
       title: "DEcent HealthCare",
       description: "Improving Platform Navigation",
       coverImage: true,
       arrow: true,
     },
     {
-      imagePath: "/assets/highlights/three.png",
+      imagePath: "/assets/highlights/three.svg",
       title: "Mobile",
       description: "Hydro Farming App",
       coverImage: true,

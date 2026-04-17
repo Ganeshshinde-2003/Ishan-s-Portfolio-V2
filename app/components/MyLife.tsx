@@ -57,13 +57,13 @@ export function MyLife() {
               </p>
             </div>
           </div>
-          <div className="hidden md:flex items-center w-1/2 gap-2">
+          <div className="hidden md:flex items-center w-1/2 gap-4">
             <div className="flex flex-col items-center w-1/2 gap-2 h-[350px]">
               <div className="flex-1 flex p-2 rounded-2xl border border-[#2F3037] bg-[#232529]">
                 <Image
                   src={pic1}
                   alt="Home"
-                  className="h-full w-100 object-cover rounded-xl"
+                  className="h-full w-full object-cover rounded-xl"
                   loading="eager"
                 />
               </div>
@@ -81,7 +81,7 @@ export function MyLife() {
                 <Image
                   src={pic2}
                   alt="Home"
-                  className="h-full w-100 object-cover rounded-xl"
+                  className="h-full w-full object-cover rounded-xl"
                   loading="eager"
                 />
               </div>

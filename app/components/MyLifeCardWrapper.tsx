@@ -61,14 +61,14 @@ const MyLifeCardWrapper = ({
 
       {startWith > 0 && firstItem ? (
         <>
-          <div className="hidden md:flex gap-2 w-full items-center justify-center">
+          <div className="hidden md:flex gap-4 w-full items-center justify-center">
             <div
               className={`${flexible ? "w-2/5" : "w-1/2"} flex-1 flex flex-col`}
             >
               <ProjectsCard {...firstItem} imageHeight={0} />
             </div>
             <div
-              className={`${flexible ? "w-3/5" : "w-1/2"} grid  gap-2 auto-rows-min`}
+              className={`${flexible ? "w-3/5" : "w-1/2"} grid  gap-4 auto-rows-min`}
               style={{
                 gridTemplateColumns: `repeat(${contentPerRow ? contentPerRow : 4}, minmax(0, 1fr))`,
               }}
@@ -80,7 +80,7 @@ const MyLifeCardWrapper = ({
           </div>
 
           <div
-            className="md:hidden grid gap-2 w-full"
+            className="md:hidden grid gap-4 w-full"
             style={{
               gridTemplateColumns: `repeat(1, minmax(0, 1fr))`,
             }}
@@ -94,7 +94,7 @@ const MyLifeCardWrapper = ({
       ) : (
         <>
           <div
-            className="hidden md:grid  gap-2 w-full"
+            className="hidden md:grid  gap-4 w-full"
             style={{
               gridTemplateColumns: `repeat(${contentPerRow ? contentPerRow : 4}, minmax(0, 1fr))`,
             }}
@@ -104,7 +104,7 @@ const MyLifeCardWrapper = ({
             ))}
           </div>
           <div
-            className="md:hidden grid  gap-2 w-full"
+            className="md:hidden grid  gap-4 w-full"
             style={{
               gridTemplateColumns: `repeat(1, minmax(0, 1fr))`,
             }}
