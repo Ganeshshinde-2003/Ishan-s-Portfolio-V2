@@ -1,6 +1,7 @@
 "use client";
 
 import { useNavigation, type NavItem } from "@/app/context/NavigationContext";
+import { useMarsAssistant } from "@/app/context/MarsAssistantContext";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -48,6 +49,7 @@ const socialItems: {
 
 export function Sidebar() {
   const { activeNav, setActiveNav } = useNavigation();
+  const { openMars } = useMarsAssistant();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -148,6 +150,25 @@ export function Sidebar() {
               );
             })}
           </ul>
+
+          {/* Mars AI Assistant CTA */}
+          <div className="h-px bg-[#2F3037] my-4" />
+          <button
+            onClick={() => {
+              openMars();
+              setIsMenuOpen(false);
+            }}
+            className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[#A7AAB4] hover:text-[#ffffff]"
+          >
+            <div className="w-7 h-7 rounded-full bg-[#2F3037] flex items-center justify-center shrink-0">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 1L9.5 6.5L15 8L9.5 9.5L8 15L6.5 9.5L1 8L6.5 6.5L8 1Z" fill="#A7AAB4" />
+                <path d="M13 2L13.5 3.5L15 4L13.5 4.5L13 6L12.5 4.5L11 4L12.5 3.5L13 2Z" fill="#A7AAB4" opacity="0.6" />
+              </svg>
+            </div>
+            <span className="flex-1 text-sm">Mars AI Assistant</span>
+            <span className="bg-[#00F48D] text-[#0A0B0D] text-xs font-bold px-2 py-0.5 rounded-md">AI</span>
+          </button>
         </div>
       </div>
       <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>

@@ -4,7 +4,8 @@
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-git --import-alias '@/*' --skip-install)",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(taskkill /F /IM node.exe)"
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(npx tsc *)"
     ]
   }
 }
