@@ -5,7 +5,7 @@ import { CardItem } from "./CardWrapper";
 import roundedArrow from "../../public/assets/icons/roundedarrow.svg";
 import { useState, useEffect } from "react";
 
-const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80 }: CardItem & { imageHeight?: number }) => {
+const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80, onClick }: CardItem & { imageHeight?: number; onClick?: () => void }) => {
   const [isMd, setIsMd] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,11 @@ const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80 }
 
   return (
     <div
-      className={`flex flex-col items-start p-2 bg-[#232529] h-full border border-[#2F3037] rounded-2xl`}
+      onClick={onClick}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={onClick ? (e) => { if (e.key === "Enter" || e.key === " ") onClick(); } : undefined}
+      className={`flex flex-col items-start p-2 bg-[#232529] h-full border border-[#2F3037] rounded-2xl${onClick ? " cursor-pointer hover:border-[#474853] transition-colors" : ""}`}
     >
       <div className="w-full h-auto" style={{ height: isMd && imageHeight > 0 ? `${imageHeight * 4}px` : "400px" }}>
         <Image

@@ -5,6 +5,7 @@ import { Home } from "@/app/components/Home";
 import { MyLife } from "@/app/components/MyLife";
 import { Work } from "@/app/components/Work";
 import { AiProject } from "@/app/components/AiProject";
+import { CaseStudyAspora } from "@/app/components/CaseStudyAspora";
 
 export default function Page() {
   const { activeNav } = useNavigation();
@@ -15,6 +16,7 @@ export default function Page() {
       {activeNav === "my-life" && <MyLife />}
       {activeNav === "work" && <Work />}
       {activeNav === "ai-projects" && <AiProject />}
+      {activeNav === "case-study-aspora" && <CaseStudyAspora />}
     </div>
   );
 }

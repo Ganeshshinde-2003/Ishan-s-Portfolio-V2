@@ -80,7 +80,11 @@ const CardWrapper = ({
           ) : item.activity ? (
             <MyLifeCard key={index} {...item} />
           ) : (
-            <ProjectsCard key={index} {...item} />
+            <ProjectsCard
+              key={index}
+              {...item}
+              onClick={item.title === "Aspora" ? () => setActiveNav("case-study-aspora") : undefined}
+            />
           ),
         )}
       </div>
