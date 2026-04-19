@@ -62,19 +62,19 @@ export const appreciation = {
   link: "home" as const,
   data: [
     {
-      talk: "“Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.”",
-      name: "Satyarth Sanyal",
-      position: "Founder, Zoth.io",
+      talk: "\u201CWorking with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.\u201D",
+      name: "Chaitanya Pandit",
+      position: "Co-founder, EnableWealth",
       imagePath: "/assets/workedwith/chaitanya.png",
     },
     {
-      talk: "“ Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.”",
-      name: "Satyarth Sanyal",
-      position: "Founder, Zoth.io",
+      talk: "\u201Cishan is inquisitive in nature and performs all his given tasks in perfection. He goes beyond what is expected and explores various solutions. He embraces technology in great zeal. Ambitious and works towards his goals brilliantly. I wish him the very best\u201D",
+      name: "Jay Kiruthika",
+      position: "Senior Lecturer at Kingston University",
       imagePath: "/assets/workedwith/chaitanya.png",
     },
     {
-      talk: "“ Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.”",
+      talk: "\u201C Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.\u201D",
       name: "Satyarth Sanyal",
       position: "Founder, Zoth.io",
       imagePath: "/assets/workedwith/chaitanya.png",
