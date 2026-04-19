@@ -18,9 +18,9 @@ export const personalProjectsData = {
       arrow: true,
     },
     {
-      imagePath: "/assets/projects/hydro.svg",
-      title: "Mobile",
-      description: "Hydro Farming App",
+      imagePath: "/assets/projects/aspora.svg",
+      title: "Aspora",
+      description: "Turning referrals into an experience worth sharing",
       arrow: true,
     },
   ],
