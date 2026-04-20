@@ -46,9 +46,9 @@ export const videCodedProjectsData = {
       arrow: true,
     },
     {
-      imagePath: "/assets/projects/worldmonitor.svg",
-      title: "World Monitor",
-      description: "Track real-time world data",
+      imagePath: "/assets/projects/blinkspeak.svg",
+      title: "BlinkSpeak",
+      description: "Blink-to-speak for ALS patients",
       arrow: true,
     },
   ],

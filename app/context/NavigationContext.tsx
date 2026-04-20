@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState } from 'react';
 
-export type NavItem = 'home' | 'work' | 'ai-projects' | 'resume' | 'about' | 'my-life' | 'case-study-aspora' | 'case-study-researchlens';
+export type NavItem = 'home' | 'work' | 'ai-projects' | 'resume' | 'about' | 'my-life' | 'case-study-aspora' | 'case-study-researchlens' | 'case-study-blinkspeak';
 
 interface NavigationContextType {
   activeNav: NavItem;
