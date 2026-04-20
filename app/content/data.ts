@@ -6,6 +6,12 @@ export const personalProjectsData = {
   link: "work" as const,
   data: [
     {
+      imagePath: "/assets/projects/aspora.svg",
+      title: "Aspora",
+      description: "Turning referrals into an experience worth sharing",
+      arrow: true,
+    },
+    {
       imagePath: "/assets/projects/zoth.svg",
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
@@ -15,12 +21,6 @@ export const personalProjectsData = {
       imagePath: "/assets/projects/decent.svg",
       title: "DEcent HealthCare",
       description: "Improving Platform Navigation",
-      arrow: true,
-    },
-    {
-      imagePath: "/assets/projects/aspora.svg",
-      title: "Aspora",
-      description: "Turning referrals into an experience worth sharing",
       arrow: true,
     },
   ],
