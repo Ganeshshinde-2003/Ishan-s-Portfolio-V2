@@ -1,5 +1,5 @@
 export const personalProjectsData = {
-  header: "Personal projects & Work",
+  header: "Work & Personal projects",
   subheader: "A curated collection of my design work",
   title: "All Projects",
   icon: "/assets/icons/projects.svg",

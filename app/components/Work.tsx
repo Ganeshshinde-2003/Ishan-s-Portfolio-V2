@@ -22,7 +22,7 @@ export function Work() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Work & Personal Project</h1>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Work & Personal Projects</h1>
           <p className="text-[#A7AAB4] font-extrabold text-xs">A curated collection showcasing all my designs</p>
         </div>
         <div className="w-full">
