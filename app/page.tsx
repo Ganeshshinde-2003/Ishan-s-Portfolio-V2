@@ -6,6 +6,7 @@ import { MyLife } from "@/app/components/MyLife";
 import { Work } from "@/app/components/Work";
 import { AiProject } from "@/app/components/AiProject";
 import { CaseStudyAspora } from "@/app/components/CaseStudyAspora";
+import { CaseStudyResearchLens } from "@/app/components/CaseStudyResearchLens";
 
 export default function Page() {
   const { activeNav } = useNavigation();
@@ -17,6 +18,7 @@ export default function Page() {
       {activeNav === "work" && <Work />}
       {activeNav === "ai-projects" && <AiProject />}
       {activeNav === "case-study-aspora" && <CaseStudyAspora />}
+      {activeNav === "case-study-researchlens" && <CaseStudyResearchLens />}
     </div>
   );
 }
