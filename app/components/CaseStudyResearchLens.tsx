@@ -376,29 +376,13 @@ export function CaseStudyResearchLens() {
               <section id="rl-section-09">
                 <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">09&nbsp;&nbsp;Future Work</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Multi-paper comparison</h2>
-                <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
-                  The most requested feature from early users. Upload 3–5 papers on the same topic and see a unified knowledge graph showing which concepts are shared, which are unique to each paper, and where the papers agree or contradict each other. This moves ResearchMap from a single-paper tool to a literature review tool.
-                </p>
-
-                <h3 className="text-white text-base font-semibold mb-3">Backend + user accounts</h3>
-                <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
-                  Currently stateless — everything is in localStorage. A lightweight backend (Supabase or PlanetScale) would enable saved maps, paper history, shared links, and team workspaces. This is the prerequisite for the team tier.
-                </p>
-
-                <h3 className="text-white text-base font-semibold mb-3">Obsidian and Notion integration</h3>
-                <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
-                  Researchers already have note systems. ResearchMap should export directly into them — not just markdown files but structured Obsidian vaults with backlinks, or Notion databases with the full node structure. This makes ResearchMap a step in an existing workflow rather than a new one.
-                </p>
-
-                <h3 className="text-white text-base font-semibold mb-3">Mobile-native experience</h3>
-                <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
-                  The current mobile experience is functional but the gesture and 3D view are inherently desktop. A mobile-first version that focuses entirely on the mindmap with tap-to-expand, swipe navigation, and a streamlined Ask Claude interface would open the tool to on-the-go literature review.
-                </p>
-
-                <h3 className="text-white text-base font-semibold mb-3">Offline / local LLM support</h3>
-                <p className="text-[#A7AAB4] text-sm leading-7">
-                  For researchers working with sensitive unpublished work, sending PDFs to a commercial API is a non-starter. An optional local model path using Ollama or LM Studio would open the tool to institutional research environments.
-                </p>
+                <ul className="space-y-2 text-[#A7AAB4] text-sm leading-7">
+                  <li className="flex gap-2"><span>•</span><span><strong>Multi-paper comparison</strong> — Upload several papers, get one unified map. See shared concepts, unique ideas, contradictions. Turns ResearchMap into a literature review tool.</span></li>
+                  <li className="flex gap-2"><span>•</span><span><strong>Backend + accounts</strong> — Everything currently lives in localStorage. A simple backend unlocks saved maps, history, and shared links.</span></li>
+                  <li className="flex gap-2"><span>•</span><span><strong>Obsidian and Notion integration</strong> — Export directly into the tools researchers already use — structured and linked, not just a markdown dump.</span></li>
+                  <li className="flex gap-2"><span>•</span><span><strong>Mobile</strong> — A mindmap-only mobile version with tap and swipe. The 3D view stays desktop.</span></li>
+                  <li className="flex gap-2"><span>•</span><span><strong>Local LLM support</strong> — For sensitive or unpublished work, an option to run analysis locally using Ollama or LM Studio.</span></li>
+                </ul>
               </section>
 
               {/* 10 Learnings */}
