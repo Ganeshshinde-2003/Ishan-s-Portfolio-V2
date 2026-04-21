@@ -7,16 +7,15 @@ import Footer from "./Footer";
 
 const sections = [
   { id: "rl-section-01", label: "Problem Statement" },
-  { id: "rl-section-02", label: "Role & Constraints" },
-  { id: "rl-section-03", label: "Research & Insight" },
-  { id: "rl-section-04", label: "The Core User Need" },
-  { id: "rl-section-05", label: "Design Process" },
-  { id: "rl-section-06", label: "The Build" },
-  { id: "rl-section-07", label: "The Product" },
-  { id: "rl-section-08", label: "Results & Impact" },
-  { id: "rl-section-09", label: "Monetisation Strategy" },
-  { id: "rl-section-10", label: "Future Work" },
-  { id: "rl-section-11", label: "Learnings" },
+  { id: "rl-section-02", label: "Research & Insight" },
+  { id: "rl-section-03", label: "The Core User Need" },
+  { id: "rl-section-04", label: "Design Process" },
+  { id: "rl-section-05", label: "The Build" },
+  { id: "rl-section-06", label: "The Product" },
+  { id: "rl-section-07", label: "Results & Impact" },
+  { id: "rl-section-08", label: "Monetisation Strategy" },
+  { id: "rl-section-09", label: "Future Work" },
+  { id: "rl-section-10", label: "Learnings" },
 ];
 
 export function CaseStudyResearchLens() {
@@ -151,39 +150,25 @@ export function CaseStudyResearchLens() {
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">What problem was I solving?</h2>
                 <div className="space-y-4 text-[#A7AAB4] text-sm leading-7">
                   <p>
-                    Academic research is dense, non-linear, and cognitively expensive. Students and researchers routinely spend 2–3 hours per paper — and still walk away uncertain of how the ideas connect.
+                    Reading a research paper properly takes hours. Most students I know don't do it — they skim the abstract, jump to the conclusion, and hope for the best. Not because they're lazy, but because the format is brutal. Dense text, no visual structure, no sense of how one idea connects to the next.
                   </p>
                   <p>
-                    The problem is not comprehension. It is structure. Papers are written linearly but understood spatially — yet every tool presents them as flat, scrollable text.
+                    The problem isn't reading. It's orientation. You can't see the shape of a paper's argument until you've already read most of it.
                   </p>
                 </div>
 
                 <h3 className="text-white text-base font-semibold mt-8 mb-3">Who has this problem?</h3>
                 <ul className="space-y-2 text-[#A7AAB4] text-sm leading-7">
-                  <li className="flex gap-2"><span>•</span><span>Postgraduate and final-year undergraduate students processing literature reviews</span></li>
-                  <li className="flex gap-2"><span>•</span><span>Independent researchers exploring new domains quickly</span></li>
-                  <li className="flex gap-2"><span>•</span><span>Designers and developers reading technical papers outside their primary field</span></li>
-                  <li className="flex gap-2"><span>•</span><span>Anyone who needs to understand a paper without reading every word</span></li>
+                  <li className="flex gap-2"><span>•</span><span>Postgraduate students working through literature reviews</span></li>
+                  <li className="flex gap-2"><span>•</span><span>Researchers entering an unfamiliar topic area</span></li>
+                  <li className="flex gap-2"><span>•</span><span>Designers and developers reading outside their field</span></li>
+                  <li className="flex gap-2"><span>•</span><span>Anyone trying to understand a paper without reading every word</span></li>
                 </ul>
-
-                <h3 className="text-white text-base font-semibold mt-8 mb-3">What existed before and why was it not enough?</h3>
-                <p className="text-[#A7AAB4] text-sm leading-7">
-                  NotebookLM lets you chat with a paper — ask questions, get answers. What it doesn't do is show you how the ideas relate to each other. It treats the paper as a text corpus to query, not a knowledge structure to navigate. For a researcher trying to grasp the architecture of an argument quickly, that distinction is everything.
-                </p>
               </section>
 
-              {/* 02 Role & Constraints */}
+              {/* 02 Research & Insight */}
               <section id="rl-section-02">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">02&nbsp;&nbsp;Role &amp; Constraints</p>
-                <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Solo designer and builder</h2>
-                <p className="text-[#A7AAB4] text-sm leading-7">
-                  Every decision in this project — research, information architecture, interaction design, visual design, and code — was made by one person. This is both a constraint and a creative advantage: there is no translation loss between design intent and implementation.
-                </p>
-              </section>
-
-              {/* 03 Research & Insight */}
-              <section id="rl-section-03">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">03&nbsp;&nbsp;Research &amp; Insight</p>
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">02&nbsp;&nbsp;Research &amp; Insight</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Informal user conversations</h2>
                 <ul className="space-y-2 text-[#A7AAB4] text-sm leading-7 mb-6">
                   <li className="flex gap-2"><span>•</span><span>I spoke with four people during the build — two MSc students, one PhD candidate, one UX researcher. Informal conversations, not formal recruitment.</span></li>
@@ -225,9 +210,9 @@ export function CaseStudyResearchLens() {
                 </p>
               </section>
 
-              {/* 04 The Core User Need */}
-              <section id="rl-section-04">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">04&nbsp;&nbsp;The Core User Need</p>
+              {/* 03 The Core User Need */}
+              <section id="rl-section-03">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">03&nbsp;&nbsp;The Core User Need</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Primary user</h2>
                 <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
                   A postgraduate student or researcher who regularly processes academic literature and needs to extract structural understanding quickly — not just find specific facts.
@@ -242,9 +227,9 @@ export function CaseStudyResearchLens() {
                 </ul>
               </section>
 
-              {/* 05 Design Process */}
-              <section id="rl-section-05">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">05&nbsp;&nbsp;Design Process</p>
+              {/* 04 Design Process */}
+              <section id="rl-section-04">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">04&nbsp;&nbsp;Design Process</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Ideation</h2>
                 <div className="space-y-4 text-[#A7AAB4] text-sm leading-7 mb-8">
                   <p>
@@ -296,9 +281,9 @@ export function CaseStudyResearchLens() {
                 </div>
               </section>
 
-              {/* 06 The Build */}
-              <section id="rl-section-06">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">06&nbsp;&nbsp;The Build</p>
+              {/* 05 The Build */}
+              <section id="rl-section-05">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">05&nbsp;&nbsp;The Build</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Built entirely with Claude Code</h2>
                 <div className="space-y-4 text-[#A7AAB4] text-sm leading-7 mb-8">
                   <p>
@@ -326,9 +311,9 @@ export function CaseStudyResearchLens() {
                 </ul>
               </section>
 
-              {/* 07 The Product */}
-              <section id="rl-section-07">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">07&nbsp;&nbsp;The Product</p>
+              {/* 06 The Product */}
+              <section id="rl-section-06">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">06&nbsp;&nbsp;The Product</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Core screens</h2>
                 <div className="space-y-4 text-[#A7AAB4] text-sm leading-7">
                   <p>
@@ -346,9 +331,9 @@ export function CaseStudyResearchLens() {
                 </div>
               </section>
 
-              {/* 08 Results & Impact */}
-              <section id="rl-section-08">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">08&nbsp;&nbsp;Results &amp; Impact</p>
+              {/* 07 Results & Impact */}
+              <section id="rl-section-07">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">07&nbsp;&nbsp;Results &amp; Impact</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-6">Feedback received</h2>
                 <div className="space-y-6">
                   <blockquote className="border-l-2 border-[#00F48D] pl-4">
@@ -366,9 +351,9 @@ export function CaseStudyResearchLens() {
                 </div>
               </section>
 
-              {/* 09 Monetisation Strategy */}
-              <section id="rl-section-09">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">09&nbsp;&nbsp;Monetisation Strategy</p>
+              {/* 08 Monetisation Strategy */}
+              <section id="rl-section-08">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">08&nbsp;&nbsp;Monetisation Strategy</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Current state</h2>
                 <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
                   ResearchMap currently requires users to bring their own Anthropic API key. Each full paper analysis costs approximately £0.03–0.05, making self-service viable for individual researchers. The key-per-user model removes hosting cost entirely for the current version.
@@ -387,9 +372,9 @@ export function CaseStudyResearchLens() {
                 </p>
               </section>
 
-              {/* 10 Future Work */}
-              <section id="rl-section-10">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">10&nbsp;&nbsp;Future Work</p>
+              {/* 09 Future Work */}
+              <section id="rl-section-09">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">09&nbsp;&nbsp;Future Work</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">Multi-paper comparison</h2>
                 <p className="text-[#A7AAB4] text-sm leading-7 mb-8">
                   The most requested feature from early users. Upload 3–5 papers on the same topic and see a unified knowledge graph showing which concepts are shared, which are unique to each paper, and where the papers agree or contradict each other. This moves ResearchMap from a single-paper tool to a literature review tool.
@@ -416,9 +401,9 @@ export function CaseStudyResearchLens() {
                 </p>
               </section>
 
-              {/* 11 Learnings */}
-              <section id="rl-section-11">
-                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">11&nbsp;&nbsp;Learnings</p>
+              {/* 10 Learnings */}
+              <section id="rl-section-10">
+                <p className="text-[#00F48D] font-semibold text-sm tracking-wider uppercase mb-3">10&nbsp;&nbsp;Learnings</p>
                 <h2 className="text-white text-xl md:text-2xl font-bold mb-4">What building taught me about design</h2>
                 <p className="text-[#A7AAB4] text-sm leading-7">
                   When you build what you design, the gap between intent and implementation collapses. The canvas DPR fix, the gesture hold timer, the label halo — none were in the spec. They emerged from building. Implementation forces a precision that designing alone never demands.
