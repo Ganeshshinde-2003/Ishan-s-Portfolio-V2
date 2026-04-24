@@ -43,15 +43,15 @@ const MyLifeCardWrapper = ({
     <div className="w-full">
       <div className="w-full flex items-center justify-between mb-8">
         <div className="flex items-center justify-center gap-5">
-          <div className="hidden md:flex items-center justify-center border border-[#2F3037] p-1.5 rounded-xl h-14 w-14 shrink-0">
-            <div className="border border-[#474853] p-2 rounded-lg flex items-center justify-center">
+          <div className="hidden md:flex items-center justify-center border border-[var(--border)] p-1.5 rounded-xl h-14 w-14 shrink-0">
+            <div className="border border-[var(--border-strong)] p-2 rounded-lg flex items-center justify-center">
               <Image src={icon} alt={header} width={28} height={28} />
             </div>
           </div>
           <div>
             <p className="font-extrabold text-3xl mb-2">{header}</p>
             {subheader && (
-              <p className="font-medium text-sm text-[#A7AAB4]">
+              <p className="font-medium text-sm text-[var(--text-muted)]">
                 {subheader}
               </p>
             )}
@@ -79,15 +79,14 @@ const MyLifeCardWrapper = ({
             </div>
           </div>
 
-          <div
-            className="md:hidden grid gap-4 w-full"
-            style={{
-              gridTemplateColumns: `repeat(1, minmax(0, 1fr))`,
-            }}
-          >
-            <ProjectsCard {...firstItem} imageHeight={imageHeight} />
+          <div className="md:hidden flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory w-full">
+            <div className="shrink-0 w-[75vw] max-w-[280px] snap-start">
+              <ProjectsCard {...firstItem} imageHeight={imageHeight} />
+            </div>
             {slicedData.map((item, index) => (
-              <ProjectsCard key={index} {...item} imageHeight={imageHeight} />
+              <div key={index} className="shrink-0 w-[75vw] max-w-[280px] snap-start">
+                <ProjectsCard {...item} imageHeight={imageHeight} />
+              </div>
             ))}
           </div>
         </>
@@ -103,14 +102,11 @@ const MyLifeCardWrapper = ({
               <ProjectsCard key={index} {...item} imageHeight={imageHeight} />
             ))}
           </div>
-          <div
-            className="md:hidden grid  gap-4 w-full"
-            style={{
-              gridTemplateColumns: `repeat(1, minmax(0, 1fr))`,
-            }}
-          >
+          <div className="md:hidden flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory w-full">
             {slicedData.map((item, index) => (
-              <ProjectsCard key={index} {...item} imageHeight={imageHeight} />
+              <div key={index} className="shrink-0 w-[75vw] max-w-[280px] snap-start">
+                <ProjectsCard {...item} imageHeight={imageHeight} />
+              </div>
             ))}
           </div>
         </>

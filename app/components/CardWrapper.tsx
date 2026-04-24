@@ -43,14 +43,14 @@ const CardWrapper = ({
       {showHeaders && (
         <div className="w-full flex items-center justify-between mb-8">
           <div className="flex items-center justify-center gap-5">
-            <div className="hidden md:flex items-center justify-center border border-[#2F3037] p-1.5 rounded-xl h-14 w-14 shrink-0">
-              <div className="border border-[#474853] p-2 rounded-lg flex items-center justify-center">
+            <div className="hidden md:flex items-center justify-center border border-[var(--border)] p-1.5 rounded-xl h-14 w-14 shrink-0">
+              <div className="border border-[var(--border-strong)] p-2 rounded-lg flex items-center justify-center">
                 <Image src={icon} alt={title} width={28} height={28} />
               </div>
             </div>
             <div>
               <p className="font-semibold text-lg md:text-xl mb-2">{header}</p>
-              <p className="font-medium text-xs md:text-sm text-[#A7AAB4]">
+              <p className="font-medium text-xs md:text-sm text-[var(--text-muted)]">
                 {subheader}
               </p>
             </div>
@@ -60,7 +60,7 @@ const CardWrapper = ({
               onClick={() => {
                 setActiveNav(link);
               }}
-              className="flex gap-2 py-3 px-4 rounded-xl border border-[#2F3037] bg-[#232529] cursor-pointer"
+              className="flex gap-2 py-3 px-4 rounded-xl border border-[var(--border)] bg-[var(--card)] cursor-pointer"
             >
               <p className="hidden md:flex font-extrabold text-sm">{title}</p>
               <Image
@@ -73,28 +73,33 @@ const CardWrapper = ({
           )}
         </div>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 pb-2 md:pb-0 scrollbar-hide snap-x snap-mandatory md:snap-none">
         {data.map((item, index) =>
           item.talk ? (
-            <AppreciationCard key={index} {...item} />
+            <div key={index} className="shrink-0 w-[75vw] max-w-[280px] md:w-auto md:max-w-none snap-start">
+              <AppreciationCard {...item} />
+            </div>
           ) : item.activity ? (
-            <MyLifeCard key={index} {...item} />
+            <div key={index} className="shrink-0 w-[75vw] max-w-[280px] md:w-auto md:max-w-none snap-start">
+              <MyLifeCard {...item} />
+            </div>
           ) : (
-            <ProjectsCard
-              key={index}
-              {...item}
-              onClick={
-                item.title === "Aspora"
-                  ? () => setActiveNav("case-study-aspora")
-                  : item.title === "Zoth.io"
-                  ? () => window.open("https://www.figma.com/proto/QOi61toAIOFLpbJgvwcLI0/Portfolio?node-id=2655-641&t=rPomc9R9rpZzEEdQ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2461%3A269", "_blank", "noopener,noreferrer")
-                  : item.title === "ResearchLens"
-                  ? () => setActiveNav("case-study-researchlens")
-                  : item.title === "BlinkSpeak"
-                  ? () => setActiveNav("case-study-blinkspeak")
-                  : undefined
-              }
-            />
+            <div key={index} className="shrink-0 w-[75vw] max-w-[280px] md:w-auto md:max-w-none snap-start">
+              <ProjectsCard
+                {...item}
+                onClick={
+                  item.title === "Aspora"
+                    ? () => setActiveNav("case-study-aspora")
+                    : item.title === "Zoth.io"
+                    ? () => window.open("https://www.figma.com/proto/QOi61toAIOFLpbJgvwcLI0/Portfolio?node-id=2655-641&t=rPomc9R9rpZzEEdQ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2461%3A269", "_blank", "noopener,noreferrer")
+                    : item.title === "ResearchLens"
+                    ? () => setActiveNav("case-study-researchlens")
+                    : item.title === "BlinkSpeak"
+                    ? () => setActiveNav("case-study-blinkspeak")
+                    : undefined
+                }
+              />
+            </div>
           ),
         )}
       </div>

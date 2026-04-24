@@ -2,6 +2,7 @@
 
 import { useNavigation, type NavItem } from "@/app/context/NavigationContext";
 import { useMarsAssistant } from "@/app/context/MarsAssistantContext";
+import { useTheme } from "@/app/context/ThemeContext";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -50,7 +51,17 @@ const socialItems: {
 export function Sidebar() {
   const { activeNav, setActiveNav } = useNavigation();
   const { openMars } = useMarsAssistant();
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const isLight = theme === "light";
+
+  const activeFilter = isLight
+    ? "brightness(0) saturate(100%) invert(14%)"
+    : "brightness(0) saturate(100%) invert(100%)";
+  const inactiveFilter = isLight
+    ? "brightness(0) saturate(100%) invert(45%)"
+    : "brightness(0) saturate(100%) invert(67%)";
 
   return (
     <aside className={`flex flex-col justify-between ${isMenuOpen ? 'h-screen' : 'h-fit'} md:h-screen sticky top-0 px-5 md:px-0 py-5 md:pl-10 md:py-10 w-full md:w-fit transition-all duration-300`}>
@@ -65,21 +76,21 @@ export function Sidebar() {
               className="rounded-full shrink-0"
             />
             <div className="flex flex-col justify-center">
-              <h3 className="text-white font-semibold text-sm">Ishan Tandel</h3>
+              <h3 className="text-[var(--text)] font-semibold text-sm">Ishan Tandel</h3>
               <p className="text-gray-400 text-xs font-medium">Product Designer</p>
             </div>
           </div>
 
-          <div className="flex md:hidden items-center justify-center py-1 px-2 border border-[#2F3037] rounded-lg bg-[#131415]">
+          <div className="flex md:hidden items-center justify-center py-1 px-2 border border-[var(--border)] rounded-lg bg-[var(--bg)]">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="flex flex-col gap-1 items-center justify-center w-6 h-6">
-              <div className="w-4 h-px bg-white"></div>
-              <div className="w-4 h-px bg-white"></div>
-              <div className="w-4 h-px bg-white"></div>
+              <div className="w-4 h-px bg-[var(--text)]"></div>
+              <div className="w-4 h-px bg-[var(--text)]"></div>
+              <div className="w-4 h-px bg-[var(--text)]"></div>
             </button>
           </div>
         </div>
         <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-          <p className="text-white font-medium text-xs mb-5 tracking-wider">CREATIONS</p>
+          <p className="text-[var(--text)] font-medium text-xs mb-5 tracking-wider">CREATIONS</p>
           <ul className="space-y-2">
             {navigationItems.map((item) => {
               const isResume = item.id === "resume";
@@ -91,7 +102,7 @@ export function Sidebar() {
                       href="/fonts/resume.pdf"
                       download="Ishan_Tandel_Resume.pdf"
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[#A7AAB4] hover:text-[#ffffff]"
+                      className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[var(--text-muted)] hover:text-[var(--text)]"
                     >
                       <Image
                         src={item.icon}
@@ -101,7 +112,7 @@ export function Sidebar() {
                         className="w-full h-full object-cover"
                         objectFit="cover"
                         style={{
-                          filter: "brightness(0) saturate(100%) invert(67%)",
+                          filter: inactiveFilter,
                           width: "auto",
                         }}
                       />
@@ -120,8 +131,8 @@ export function Sidebar() {
                     }}
                     className={`text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 ${
                       activeNav === item.id
-                        ? "text-[#ffffff] bg-[#1A1B1E]"
-                        : "text-[#A7AAB4] hover:text-[#ffffff]"
+                        ? "text-[var(--text)] bg-[var(--panel)]"
+                        : "text-[var(--text-muted)] hover:text-[var(--text)]"
                     }`}
                   >
                     <Image
@@ -134,14 +145,14 @@ export function Sidebar() {
                       style={{
                         filter:
                           activeNav === item.id
-                            ? "brightness(0) saturate(100%) invert(100%)"
-                            : "brightness(0) saturate(100%) invert(67%)",
+                            ? activeFilter
+                            : inactiveFilter,
                         width: "auto",
                       }}
                     />
                     <span className="flex-1 text-sm">{item.label}</span>
                     {item.id === "my-life" && (
-                      <div className="text-[#00F48D] text-xs font-medium px-2 py-1 rounded-lg">
+                      <div className="text-[var(--accent)] text-xs font-medium px-2 py-1 rounded-lg">
                         NEW
                       </div>
                     )}
@@ -152,27 +163,44 @@ export function Sidebar() {
           </ul>
 
           {/* Mars AI Assistant CTA */}
-          <div className="h-px bg-[#2F3037] my-4" />
+          <div className="h-px bg-[var(--border)] my-4" />
           <button
             onClick={() => {
               openMars();
               setIsMenuOpen(false);
             }}
-            className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[#A7AAB4] hover:text-[#ffffff]"
+            className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[var(--text-muted)] hover:text-[var(--text)]"
           >
-            <div className="w-7 h-7 rounded-full bg-[#2F3037] flex items-center justify-center shrink-0">
+            <div className="w-7 h-7 rounded-full bg-[var(--border)] flex items-center justify-center shrink-0">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 1L9.5 6.5L15 8L9.5 9.5L8 15L6.5 9.5L1 8L6.5 6.5L8 1Z" fill="#A7AAB4" />
-                <path d="M13 2L13.5 3.5L15 4L13.5 4.5L13 6L12.5 4.5L11 4L12.5 3.5L13 2Z" fill="#A7AAB4" opacity="0.6" />
+                <path d="M8 1L9.5 6.5L15 8L9.5 9.5L8 15L6.5 9.5L1 8L6.5 6.5L8 1Z" fill="currentColor" />
+                <path d="M13 2L13.5 3.5L15 4L13.5 4.5L13 6L12.5 4.5L11 4L12.5 3.5L13 2Z" fill="currentColor" opacity="0.6" />
               </svg>
             </div>
             <span className="flex-1 text-sm">Mars AI Assistant</span>
-            <span className="bg-[#00F48D] text-[#0A0B0D] text-xs font-bold px-2 py-0.5 rounded-md">AI</span>
+            <span className="bg-[var(--accent)] text-[var(--accent-contrast)] text-xs font-bold px-2 py-0.5 rounded-md">AI</span>
           </button>
         </div>
       </div>
       <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-        <p className="text-white font-medium text-xs mb-5 tracking-wider">SOCIALS</p>
+        {/* <button
+          onClick={toggleTheme}
+          className="flex items-center gap-3 text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text)] transition-colors mb-5 w-full"
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {theme === "dark" ? (
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="3" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M8 1V2.5M8 13.5V15M15 8H13.5M2.5 8H1M12.95 3.05L11.9 4.1M4.1 11.9L3.05 12.95M12.95 12.95L11.9 11.9M4.1 4.1L3.05 3.05" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+          ) : (
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 9.5C13.1 9.8 12.2 10 11.2 10C7 10 3.5 6.5 3.5 2.3C3.5 1.9 3.5 1.6 3.6 1.2C1.5 2.4 0 4.6 0 7.2C0 11 3 14 6.8 14C9.8 14 12.4 12.1 13.4 9.5H14Z" fill="currentColor"/>
+            </svg>
+          )}
+          <span>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
+        </button> */}
+        <p className="text-[var(--text)] font-medium text-xs mb-5 tracking-wider">SOCIALS</p>
         <div className="grid grid-cols-4 gap-3 mb-5 place-items-center">
           {socialItems.map((item) => (
             <Link
@@ -191,7 +219,7 @@ export function Sidebar() {
             </Link>
           ))}
         </div>
-        <p className="text-xs text-center font-extrabold mt-5 text-[#A7AAB4]">
+        <p className="text-xs text-center font-extrabold mt-5 text-[var(--text-muted)]">
           51.5074° N, 0.1278° W
         </p>
       </div>

@@ -21,7 +21,7 @@ const MyLifeCard = ({
   return (
     <div className={`flex flex-col items-start`}>
       <div
-        className="w-full p-2 bg-[#232529] h-full border border-[#2F3037] rounded-2xl"
+        className="w-full p-2 bg-[var(--card)] h-full border border-[var(--border)] rounded-2xl"
         style={{
           height: isMd && imageHeight > 0 ? `${imageHeight * 4}px` : "400px",
         }}
@@ -35,11 +35,11 @@ const MyLifeCard = ({
         />
       </div>
       <div className="w-full flex items-center justify-end gap-2 mt-4 ">
-        <p className="text-xs font-medium text-[#A7AAB4] tracking-wider">
+        <p className="text-xs font-medium text-[var(--text-muted)] tracking-wider">
           {activity}
         </p>
-        <div className="flex items-center justify-center py-1 px-2 border border-[#2F3037] rounded-md bg-[#131415]">
-          <p className="text-sm font-medium tracking-wider text-[#A7AAB4]">
+        <div className="flex items-center justify-center py-1 px-2 border border-[var(--border)] rounded-md bg-[var(--bg)]">
+          <p className="text-sm font-medium tracking-wider text-[var(--text-muted)]">
             Img
           </p>
         </div>

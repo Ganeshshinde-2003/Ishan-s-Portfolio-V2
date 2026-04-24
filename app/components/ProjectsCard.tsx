@@ -21,7 +21,7 @@ const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80, 
       role={onClick ? "button" : undefined}
       tabIndex={onClick ? 0 : undefined}
       onKeyDown={onClick ? (e) => { if (e.key === "Enter" || e.key === " ") onClick(); } : undefined}
-      className={`flex flex-col items-start p-2 bg-[#232529] h-full border border-[#2F3037] rounded-2xl${onClick ? " cursor-pointer hover:border-[#474853] transition-colors" : ""}`}
+      className={`flex flex-col items-start p-2 bg-[var(--card)] h-full border border-[var(--border)] rounded-2xl${onClick ? " cursor-pointer hover:border-[var(--border-strong)] transition-colors" : ""}`}
     >
       <div className="w-full h-auto" style={{ height: isMd && imageHeight > 0 ? `${imageHeight * 4}px` : "400px" }}>
         <Image
@@ -34,7 +34,7 @@ const ProjectsCard = ({ imagePath, title, description, arrow, imageHeight = 80, 
       </div>
       <div className="w-full flex flex-col px-2 mt-4 mb-3">
         <div className="w-full flex items-center justify-between">
-          <h3 className="font-semibold text-xs text-[#A7AAB4]">{title}</h3>
+          <h3 className="font-semibold text-xs text-[var(--text-muted)]">{title}</h3>
           {arrow && (
             <Image
               src={roundedArrow}

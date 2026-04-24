@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+:root,
+[data-theme="dark"] {
+  --bg: #131415;
+  --panel: #1A1B1E;
+  --card: #232529;
+  --border: #2F3037;
+  --border-strong: #474853;
+  --text: #FFFFFF;
+  --text-muted: #A7AAB4;
+  --text-faint: #474853;
+  --accent: #00F48D;
+  --accent-contrast: #0A0B0D;
+  --hero-gradient-overlay: radial-gradient(ellipse 1000px 700px at 20% -10%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+}
+
+/* [data-theme="light"] {
+  --bg: #FFFFFF;
+  --panel: #FFFFFF;
+  --card: #F2F2F2;
+  --border: #E4E4E4;
+  --border-strong: #D7D7D7;
+  --text: #242424;
+  --text-muted: #747474;
+  --text-faint: #A5A5A5;
+  --accent: #00A862;
+  --accent-contrast: #FFFFFF;
+  --hero-gradient-overlay: radial-gradient(ellipse 1000px 700px at 20% -10%, rgba(36, 36, 36, 0.04) 0%, transparent 50%);
+} */
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
 @font-face {
   font-family: "Bricolage";
   src: url("/fonts/Bricolage/static/BricolageGrotesque-ExtraLight.ttf") format("truetype");
