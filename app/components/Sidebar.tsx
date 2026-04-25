@@ -8,13 +8,10 @@ import Link from "next/link";
 import { useState } from "react";
 import profilePic from "../../public/assets/sidebar_pic.png";
 import mail from "../../public/assets/mail.svg";
-import x from "../../public/assets/icons/x.svg";
-import gram from "../../public/assets/icons/gram.svg";
 import be from "../../public/assets/icons/be.svg";
 import bubble from "../../public/assets/icons/bubble.svg";
 import globe from "../../public/assets/icons/globe.svg";
 import linkedin from "../../public/assets/icons/linkedin.svg";
-import note from "../../public/assets/icons/note.svg";
 import home from "../../public/assets/icons/home.svg";
 import work from "../../public/assets/icons/work.svg";
 import aiProjects from "../../public/assets/icons/ai.svg";
@@ -42,10 +39,7 @@ const socialItems: {
   { id: "behance", image: be, link: "https://www.behance.net/ishantandel" },
   { id: "linkedin", image: linkedin, link: "https://www.linkedin.com/in/ishan-tandel-90b592222/" },
   { id: "globe", image: globe, link: "#" },
-  { id: "twitter", image: x, link: "#" },
   { id: "bubble", image: bubble, link: "https://medium.com/@ishantandel637" },
-  { id: "instagram", image: gram, link: "#" },
-  { id: "note", image: note, link: "#" },
 ];
 
 export function Sidebar() {

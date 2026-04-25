@@ -3,6 +3,7 @@
 import Image from "next/image";
 import ProjectsCard from "./ProjectsCard";
 
+
 export interface CardItem {
   imagePath: string;
   title?: string;

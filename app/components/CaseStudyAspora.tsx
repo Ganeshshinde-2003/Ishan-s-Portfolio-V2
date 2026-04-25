@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useNavigation } from "../context/NavigationContext";
 import Footer from "./Footer";
 
+
 const sections = [
   { id: "section-context", label: "Context" },
   { id: "section-problem", label: "The Problem" },

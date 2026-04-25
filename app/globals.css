@@ -34,6 +34,54 @@ html, body {
   color: var(--text);
 }
 
+@property --shiny-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.shiny-btn {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid transparent !important;
+  background:
+    linear-gradient(var(--card, #232529), var(--card, #232529)) padding-box,
+    linear-gradient(var(--border, #2F3037), var(--border, #2F3037)) border-box !important;
+  transition: background 400ms ease;
+}
+
+.shiny-btn:hover {
+  animation: shiny-spin 1800ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  background:
+    linear-gradient(var(--card, #232529), var(--card, #232529)) padding-box,
+    conic-gradient(
+      from var(--shiny-angle),
+      transparent 0%,
+      #3a3a3a 8%,
+      #4a4a4a 15%,
+      #5a5a5a 22%,
+      #6b6b6b 28%,
+      #7a7a7a 32%,
+      #6b6b6b 36%,
+      #4a4a4a 44%,
+      #3a3a3a 50%,
+      transparent 58%,
+      transparent 100%
+    ) border-box !important;
+}
+
+.shiny-btn:not(:hover) {
+  animation: none;
+  background:
+    linear-gradient(var(--card, #232529), var(--card, #232529)) padding-box,
+    linear-gradient(var(--border, #2F3037), var(--border, #2F3037)) border-box !important;
+}
+
+@keyframes shiny-spin {
+  from { --shiny-angle: 0deg; }
+  to   { --shiny-angle: 360deg; }
+}
+
 @font-face {
   font-family: "Bricolage";
   src: url("/fonts/Bricolage/static/BricolageGrotesque-ExtraLight.ttf") format("truetype");

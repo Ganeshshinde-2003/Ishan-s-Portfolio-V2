@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { personalProjectsData } from "../content/data";
 import CardWrapper from "./CardWrapper";
 
+
 export function Work() {
   return (
     <div className="h-auto md:h-full w-full flex flex-col items-center justify-center py-10 md:py-16 relative">

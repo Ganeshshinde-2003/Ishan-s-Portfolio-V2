@@ -15,6 +15,7 @@ import {
 } from "../content/data";
 import Footer from "./Footer";
 
+
 export function MyLife() {
   return (
     <div className="h-full w-full flex flex-col items-start justify-start relative">

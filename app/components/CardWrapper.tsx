@@ -7,6 +7,7 @@ import AppreciationCard from "./AppreciationCard";
 import MyLifeCard from "./MyLifeCard";
 import { NavItem, useNavigation } from "../context/NavigationContext";
 
+
 export interface CardItem {
   imagePath: string;
   title?: string;
@@ -60,7 +61,7 @@ const CardWrapper = ({
               onClick={() => {
                 setActiveNav(link);
               }}
-              className="flex gap-2 py-3 px-4 rounded-xl border border-[var(--border)] bg-[var(--card)] cursor-pointer"
+              className="shiny-btn flex gap-2 py-3 px-4 rounded-xl cursor-pointer"
             >
               <p className="hidden md:flex font-extrabold text-sm">{title}</p>
               <Image
