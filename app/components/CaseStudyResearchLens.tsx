@@ -126,15 +126,18 @@ export function CaseStudyResearchLens() {
               <div>
                 <p className="text-[var(--text-muted)] text-xs tracking-widest font-medium mb-1">LIVE</p>
                 <a
-                  href="https://researchmap.site"
+                  href="https://blinkspeak.live/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text)] text-sm font-medium hover:text-[var(--accent)] transition-colors"
+                  className="text-[var(--text)] hover:text-[var(--accent)] transition-colors underline text-sm font-medium"
                 >
-                  researchmap.site
+                  blinkspeak.live
                 </a>
               </div>
             </div>
+            <p className="text-[var(--text-muted)] text-sm leading-7 mb-8">
+              I designed and built ResearchMap end to end — research, UX, visual design, and code. The whole product was built through Claude Code, using structured prompts rather than writing code manually. Everything from the PDF pipeline to the 3D gesture view to the 2D mindmap was my call, my decisions, shipped solo in under 3 weeks.
+            </p>
             <div className="border-t border-[var(--border)] mb-10" />
 
             {/* Product screenshot placeholder */}
@@ -143,7 +146,7 @@ export function CaseStudyResearchLens() {
             </div>
 
             {/* Content sections */}
-            <div className="space-y-16 pb-16">
+            <div className="space-y-24 pb-16">
 
               {/* 01 Problem Statement */}
               <section id="rl-section-01">
@@ -166,6 +169,7 @@ export function CaseStudyResearchLens() {
                   <li className="flex gap-2"><span>•</span><span>Anyone trying to understand a paper without reading every word</span></li>
                 </ul>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 02 Research & Insight */}
               <section id="rl-section-02">
@@ -210,6 +214,7 @@ export function CaseStudyResearchLens() {
                   Researchers do not need a better way to read papers. They need a way to see the structure of a paper's knowledge before deciding what to read. The product insight shifted from "reading assistant" to "knowledge cartographer".
                 </p>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 03 The Core User Need */}
               <section id="rl-section-03">
@@ -227,6 +232,7 @@ export function CaseStudyResearchLens() {
                   <li className="flex gap-2"><span>•</span><span>User leaves with an exported summary they can use in their own notes</span></li>
                 </ul>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 04 Design Process */}
               <section id="rl-section-04">
@@ -281,6 +287,7 @@ export function CaseStudyResearchLens() {
                   </p>
                 </div>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 05 The Build */}
               <section id="rl-section-05">
@@ -311,6 +318,7 @@ export function CaseStudyResearchLens() {
                   <li className="flex gap-2"><span>•</span><span>The device pixel ratio fix for the mindmap canvas was not in the original design spec. Retina MacBook screens rendered the canvas at 1x internally, causing blur. Added DPR scaling after first test on a MacBook Pro.</span></li>
                 </ul>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 06 The Product */}
               <section id="rl-section-06">
@@ -331,26 +339,41 @@ export function CaseStudyResearchLens() {
                   </p>
                 </div>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 07 Results & Impact */}
               <section id="rl-section-07">
                 <p className="text-[var(--accent)] font-semibold text-sm tracking-wider uppercase mb-3">07&nbsp;&nbsp;Results &amp; Impact</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-6">Feedback received</h2>
-                <div className="space-y-6">
-                  <blockquote className="border-l-2 border-[var(--accent)] pl-4">
-                    <p className="text-[var(--text-muted)] text-sm leading-7 italic">
-                      "This is what I've been trying to build in Obsidian for months. It just works out of the box."
-                    </p>
-                    <p className="text-[var(--text-muted)] text-xs mt-2">— PhD candidate, on the mindmap view</p>
-                  </blockquote>
-                  <blockquote className="border-l-2 border-[var(--accent)] pl-4">
-                    <p className="text-[var(--text-muted)] text-sm leading-7 italic">
-                      "The 3D view is genuinely different from anything I've seen in a research tool. It feels like you're inside the paper."
-                    </p>
-                    <p className="text-[var(--text-muted)] text-xs mt-2">— Independent UX researcher</p>
-                  </blockquote>
+                <div className="space-y-6 text-[var(--text-muted)] text-sm leading-7">
+                  <div>
+                    <p className="font-semibold text-[var(--text)] mb-2">Impact metrics</p>
+                    <ul className="list-disc list-inside space-y-1 ml-2">
+                      <li>40+ site visits in the first week after launch</li>
+                      <li>12 people uploaded a paper and used it end to end</li>
+                      <li>Shared publicly on LinkedIn — most feedback came through DMs after the demo video</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-[var(--text)] mb-2">What people said</p>
+                    <ul className="space-y-2 ml-2">
+                      <li>"Helped me understand a paper in 20 minutes that I'd been avoiding for two weeks" — PhD student</li>
+                      <li>"This is what I've been trying to build in Obsidian for months" — Independent researcher</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold text-[var(--text)] mb-2">What I noticed</p>
+                    <ul className="list-disc list-inside space-y-1 ml-2">
+                      <li>Ask Claude was used more than expected — people weren't just scanning, they were asking follow-up questions about specific nodes</li>
+                      <li>Researchers wanted to stay in the mindmap longer than the 3D view — structure before immersion</li>
+                      <li>Export feature was used consistently — people wanted to take the map into their own notes</li>
+                    </ul>
+                  </div>
                 </div>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 08 Monetisation Strategy */}
               <section id="rl-section-08">
@@ -372,6 +395,7 @@ export function CaseStudyResearchLens() {
                   The primary acquisition channel is academic communities — Reddit's r/PhD, r/GradSchool, ResearchGate, and LinkedIn posts targeting postgraduate students. The freemium model is designed so the free tier is genuinely useful (3 papers covers a week's literature review) while the friction of API key management creates natural upgrade motivation.
                 </p>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 09 Future Work */}
               <section id="rl-section-09">
@@ -385,6 +409,7 @@ export function CaseStudyResearchLens() {
                   <li className="flex gap-2"><span>•</span><span><strong>Local LLM support</strong> — For sensitive or unpublished work, an option to run analysis locally using Ollama or LM Studio.</span></li>
                 </ul>
               </section>
+              <div className="border-t border-[var(--border)] opacity-30" />
 
               {/* 10 Learnings */}
               <section id="rl-section-10">
