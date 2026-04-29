@@ -92,7 +92,7 @@ const CardWrapper = ({
                   item.title === "Aspora"
                     ? () => setActiveNav("case-study-aspora")
                     : item.title === "Zoth.io"
-                    ? () => window.open("https://www.figma.com/proto/QOi61toAIOFLpbJgvwcLI0/Portfolio?node-id=2655-641&t=rPomc9R9rpZzEEdQ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2461%3A269", "_blank", "noopener,noreferrer")
+                    ? () => setActiveNav("case-study-zoth")
                     : item.title === "ResearchLens"
                     ? () => setActiveNav("case-study-researchlens")
                     : item.title === "BlinkSpeak"

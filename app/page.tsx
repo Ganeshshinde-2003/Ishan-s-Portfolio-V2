@@ -8,6 +8,7 @@ import { AiProject } from "@/app/components/AiProject";
 import { CaseStudyAspora } from "@/app/components/CaseStudyAspora";
 import { CaseStudyResearchLens } from "@/app/components/CaseStudyResearchLens";
 import { CaseStudyBlinkSpeak } from "@/app/components/CaseStudyBlinkSpeak";
+import { CaseStudyZoth } from "@/app/components/CaseStudyZoth";
 
 export default function Page() {
   const { activeNav } = useNavigation();
@@ -21,6 +22,7 @@ export default function Page() {
       {activeNav === "case-study-aspora" && <CaseStudyAspora />}
       {activeNav === "case-study-researchlens" && <CaseStudyResearchLens />}
       {activeNav === "case-study-blinkspeak" && <CaseStudyBlinkSpeak />}
+      {activeNav === "case-study-zoth" && <CaseStudyZoth />}
     </div>
   );
 }

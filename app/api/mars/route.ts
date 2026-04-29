@@ -27,6 +27,7 @@ Style:
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
+    const model = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5";
 
     if (!process.env.ANTHROPIC_API_KEY) {
       return NextResponse.json(
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest) {
     const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
     const response = await client.messages.create({
-      model: "claude-haiku-4-5",
+      model,
       max_tokens: 512,
       system: SYSTEM_PROMPT,
       messages,
