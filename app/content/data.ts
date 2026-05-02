@@ -6,15 +6,15 @@ export const personalProjectsData = {
   link: "work" as const,
   data: [
     {
-      imagePath: "/assets/projects/aspora.svg",
-      title: "Aspora",
-      description: "Turning referrals into an experience worth sharing",
-      arrow: true,
-    },
-    {
       imagePath: "/assets/projects/zoth.svg",
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
+      arrow: true,
+    },
+    {
+      imagePath: "/assets/projects/aspora.svg",
+      title: "Aspora",
+      description: "Turning referrals into an experience worth sharing",
       arrow: true,
     },
     {
@@ -56,7 +56,7 @@ export const videCodedProjectsData = {
 
 export const appreciation = {
   header: "Word Of Appreciation",
-  subheader: "Products I've shipped using AI",
+  subheader: "Trusted, valued, proven",
   title: "View More",
   icon: "/assets/icons/thumb.svg",
   link: "home" as const,
@@ -84,14 +84,14 @@ export const appreciation = {
 
 export const recentHighlights = {
   header: "Recent Highlights",
-  subheader: "Products I've shipped using AI",
+  subheader: "What I've been up to",
   title: "Take a Look",
   icon: "/assets/icons/flag.svg",
   data: [
     {
       imagePath: "/assets/highlights/one.svg",
-      title: "Zoth.io",
-      description: "Tokenised Asset Marketplace",
+      title: "Bright Ideas Finalist",
+      description: "Taking Decent Healthcare to the Investor Stage",
       coverImage: true,
       arrow: true,
     },
@@ -104,8 +104,8 @@ export const recentHighlights = {
     },
     {
       imagePath: "/assets/highlights/three.svg",
-      title: "Mobile",
-      description: "Hydro Farming App",
+      title: "Meta VR Innovation Day",
+      description: "Experiencing how XR is transforming real-world applications",
       coverImage: true,
       arrow: true,
     },

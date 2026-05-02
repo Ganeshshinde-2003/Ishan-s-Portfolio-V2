@@ -31,8 +31,41 @@ export function MarsAssistant() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [voiceEnabled, setVoiceEnabled] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const synthRef = useRef<SpeechSynthesis | null>(null);
+
+  useEffect(() => {
+    synthRef.current = window.speechSynthesis;
+    return () => { synthRef.current?.cancel(); };
+  }, []);
+
+  const speak = (text: string) => {
+    if (!synthRef.current || !voiceEnabled) return;
+    synthRef.current.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    const voices = synthRef.current.getVoices();
+    const preferred = voices.find(
+      (v) =>
+        v.lang.startsWith("en") &&
+        (v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Daniel"))
+    );
+    if (preferred) utterance.voice = preferred;
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    utterance.onstart = () => setIsSpeaking(true);
+    utterance.onend = () => setIsSpeaking(false);
+    utterance.onerror = () => setIsSpeaking(false);
+    synthRef.current.speak(utterance);
+  };
+
+  const stopSpeaking = () => {
+    synthRef.current?.cancel();
+    setIsSpeaking(false);
+  };
 
   useEffect(() => {
     if (!isOpen) return;
@@ -49,9 +82,10 @@ export function MarsAssistant() {
       setTimeout(() => inputRef.current?.focus(), 300);
     } else {
       document.body.style.overflow = "";
+      stopSpeaking();
     }
     return () => { document.body.style.overflow = ""; };
-  }, [isOpen]);
+  }, [isOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -78,6 +112,7 @@ export function MarsAssistant() {
       const reply = (data?.reply ?? "").trim();
       if (!reply) throw new Error("Empty reply");
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
+      speak(reply);
     } catch (err) {
       console.error(err);
       setError("Mars couldn't respond right now. Try again in a moment.");
@@ -135,15 +170,47 @@ export function MarsAssistant() {
                     <span className="text-[var(--text-muted)] text-xs">AI Portfolio Assistant</span>
                   </div>
                 </div>
-                <button
-                  onClick={closeMars}
-                  className="text-[var(--text-muted)] hover:text-[var(--text)] transition-colors p-1"
-                  aria-label="Close"
-                >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => {
+                      if (isSpeaking) stopSpeaking();
+                      setVoiceEnabled((prev) => !prev);
+                    }}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+                      voiceEnabled
+                        ? "bg-[var(--accent)]/15 border-[var(--accent)]/30 text-[var(--accent)]"
+                        : "bg-[var(--card)] border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text)]"
+                    }`}
+                    aria-label={voiceEnabled ? "Disable voice" : "Enable voice"}
+                  >
+                    {isSpeaking ? (
+                      <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 5.5H5L9 2V14L5 10.5H2V5.5Z" fill="currentColor" />
+                        <path d="M11.5 5.5C12.5 6.3 13 7.1 13 8C13 8.9 12.5 9.7 11.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="animate-pulse" />
+                        <path d="M13 3.5C14.7 4.9 15.5 6.4 15.5 8C15.5 9.6 14.7 11.1 13 12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="animate-pulse [animation-delay:150ms]" />
+                      </svg>
+                    ) : (
+                      <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 5.5H5L9 2V14L5 10.5H2V5.5Z" fill="currentColor" />
+                        {voiceEnabled ? (
+                          <path d="M11.5 5.5C12.5 6.3 13 7.1 13 8C13 8.9 12.5 9.7 11.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                        ) : (
+                          <path d="M12 6L15 10M15 6L12 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                        )}
+                      </svg>
+                    )}
+                    {voiceEnabled ? (isSpeaking ? "Speaking…" : "Voice on") : "Voice off"}
+                  </button>
+                  <button
+                    onClick={closeMars}
+                    className="text-[var(--text-muted)] hover:text-[var(--text)] transition-colors p-1"
+                    aria-label="Close"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
               {/* Body: empty state OR chat transcript */}
