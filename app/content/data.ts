@@ -34,7 +34,7 @@ export const videCodedProjectsData = {
   link: "ai-projects" as const,
   data: [
     {
-      imagePath: "/assets/projects/researchlens.svg",
+      imagePath: "/assets/projects/researchlens-cover.png",
       title: "ResearchLens",
       description: "Spatial Research Tool",
       arrow: true,

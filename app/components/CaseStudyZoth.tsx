@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigation } from "../context/NavigationContext";
+import { useMarsAssistant } from "../context/MarsAssistantContext";
 import Footer from "./Footer";
 
 const sections = [
@@ -23,6 +24,7 @@ const sections = [
 
 export function CaseStudyZoth() {
   const { setActiveNav } = useNavigation();
+  const { openMars } = useMarsAssistant();
   const [activeSection, setActiveSection] = useState<string>("zoth-section-1");
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -481,6 +483,24 @@ export function CaseStudyZoth() {
                     {label}
                   </button>
                 ))}
+                <button
+                  onClick={openMars}
+                  className="text-left text-xs font-medium mt-2 transition-all duration-200"
+                  style={{
+                    color: "#39FF14",
+                    textShadow: "0 0 0px #39FF14",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLButtonElement).style.color = "#6fff47";
+                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 8px #39FF14, 0 0 16px #39FF1466";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLButtonElement).style.color = "#39FF14";
+                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 0px #39FF14";
+                  }}
+                >
+                  💬 Ask Mars about Zoth.io
+                </button>
               </nav>
             </div>
           </aside>

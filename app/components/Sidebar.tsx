@@ -145,11 +145,6 @@ export function Sidebar() {
                       }}
                     />
                     <span className="flex-1 text-sm">{item.label}</span>
-                    {item.id === "my-life" && (
-                      <div className="text-[var(--accent)] text-xs font-medium px-2 py-1 rounded-lg">
-                        NEW
-                      </div>
-                    )}
                   </button>
                 </li>
               );
