@@ -12,7 +12,9 @@
       "Bash(cp \"/Users/ishan/Downloads/Case study Data folder/Aspora/Image_5.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-1.jpg)",
       "Bash(cp \"/Users/ishan/Downloads/Case study Data folder/Aspora/Image_6.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-2.jpg)",
       "Bash(cp \"/Users/ishan/Downloads/Case study Data /Aspora /Image 5.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-1.jpg)",
-      "Bash(cp \"/Users/ishan/Downloads/Case study Data /Aspora /Image 6.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-2.jpg)"
+      "Bash(cp \"/Users/ishan/Downloads/Case study Data /Aspora /Image 6.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-2.jpg)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
