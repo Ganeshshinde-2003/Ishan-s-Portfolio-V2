@@ -3,21 +3,24 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigation } from "../context/NavigationContext";
+import { useMarsAssistant } from "../context/MarsAssistantContext";
 import Footer from "./Footer";
 
 
 const sections = [
-  { id: "section-context", label: "Context" },
-  { id: "section-problem", label: "The Problem" },
-  { id: "section-research", label: "Research" },
-  { id: "section-design", label: "Design" },
-  { id: "section-outcome", label: "Outcome" },
-  { id: "section-takeaway", label: "Takeaway" },
+  { id: "section-glance", label: "1. Project at Glance" },
+  { id: "section-context", label: "2. Context" },
+  { id: "section-problem", label: "3. Problem" },
+  { id: "section-research", label: "4. Research" },
+  { id: "section-design", label: "5. Design" },
+  { id: "section-outcome", label: "6. Outcome" },
+  { id: "section-takeaway", label: "7. Takeaway" },
 ];
 
 export function CaseStudyAspora() {
   const { setActiveNav } = useNavigation();
-  const [activeSection, setActiveSection] = useState<string>("section-context");
+  const { openMars } = useMarsAssistant();
+  const [activeSection, setActiveSection] = useState<string>("section-glance");
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -109,7 +112,7 @@ export function CaseStudyAspora() {
               {[
                 { label: "COMPANY", value: "Aspora" },
                 { label: "PLATFORM", value: "IOS. Android" },
-                { label: "MY ROLE", value: "UX Designer & Student Ambassador" },
+                { label: "MY ROLE", value: "UX Designer" },
                 { label: "OUTCOME", value: "68% → 89% referral rate" },
                 { label: "MARKET", value: "United Kingdom" },
               ].map(({ label, value }) => (
@@ -124,9 +127,33 @@ export function CaseStudyAspora() {
             {/* Content sections */}
             <div className="space-y-16 pb-16">
 
-              {/* 01 Context */}
+              {/* 01 Project at Glance */}
+              <section id="section-glance">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">01 · Project at Glance</p>
+                <div className="space-y-6 text-[var(--text-muted)] text-sm leading-7">
+                  <div>
+                    <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">What I Did</h2>
+                    <div className="space-y-4">
+                      <p>
+                        I redesigned Aspora's referral screen after spending a few months helping users download the app at events across the UK. I sat with around 100–120 people as they used the app for the first time and watched where they got confused on the referral screen.
+                      </p>
+                      <p>
+                        I noticed four patterns: users didn't see the £25 reward clearly, didn't know if others were using referrals, weren't sure how it worked, and found copying links too much effort. I redesigned the screen to fix each of those problems.
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">Goal</h2>
+                    <p>
+                      Get more UK users to send referral invites. The £25 reward was already there—I just needed to make it clear, trusted, and easy to use.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* 02 Context */}
               <section id="section-context">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">01 · Context</p>
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">02 · Context</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
                   A great feature that UK users weren't using
                 </h2>
@@ -140,9 +167,9 @@ export function CaseStudyAspora() {
                 </div>
               </section>
 
-              {/* 02 The Problem */}
+              {/* 03 Problem */}
               <section id="section-problem">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">02 · The Problem</p>
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">03 · Problem</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
                   A £25 reward wasn't enough.
                 </h2>
@@ -156,9 +183,9 @@ export function CaseStudyAspora() {
                 </div>
               </section>
 
-              {/* 03 Research */}
+              {/* 04 Research */}
               <section id="section-research">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">03 · Research</p>
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">04 · Research</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
                   Watching users at the point of use.
                 </h2>
@@ -202,9 +229,9 @@ export function CaseStudyAspora() {
                 </div>
               </section>
 
-              {/* 04 Design */}
+              {/* 05 Design */}
               <section id="section-design">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">04 · Design</p>
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">05 · Design</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
                   Four changes to the screen.
                 </h2>
@@ -231,9 +258,9 @@ export function CaseStudyAspora() {
                 </div>
               </section>
 
-              {/* 05 Outcome */}
+              {/* 06 Outcome */}
               <section id="section-outcome">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">05 · Outcome</p>
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">06 · Outcome</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
                   Invite rates moved from 68% to 89%.
                 </h2>
@@ -252,9 +279,9 @@ export function CaseStudyAspora() {
                 </div>
               </section>
 
-              {/* 06 Takeaway */}
+              {/* 07 Takeaway */}
               <section id="section-takeaway">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">06 · Takeaway</p>
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">07 · Takeaway</p>
                 <p className="text-[var(--text-muted)] text-sm leading-7">
                   The redesign worked because the research was close to the product. Sitting with users as they installed the app surfaced problems that wouldn't have shown up in analytics or in scheduled interviews. The ambassador role wasn't separate from the design work — it was the input for it.
                 </p>
@@ -279,6 +306,24 @@ export function CaseStudyAspora() {
                     {label}
                   </button>
                 ))}
+                <button
+                  onClick={openMars}
+                  className="text-left text-xs font-medium mt-2 transition-all duration-200"
+                  style={{
+                    color: "#00D9A3",
+                    textShadow: "0 0 0px #00D9A3",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLButtonElement).style.color = "#33e8b8";
+                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 8px #00D9A3, 0 0 16px #00D9A366";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLButtonElement).style.color = "#00D9A3";
+                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 0px #00D9A3";
+                  }}
+                >
+                  Ask Mars about Aspora
+                </button>
               </nav>
             </div>
           </aside>
