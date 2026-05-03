@@ -68,16 +68,16 @@ export const appreciation = {
       imagePath: "/assets/workedwith/chaitanya.png",
     },
     {
-      talk: "\u201Cishan is inquisitive in nature and performs all his given tasks in perfection. He goes beyond what is expected and explores various solutions. He embraces technology in great zeal. Ambitious and works towards his goals brilliantly. I wish him the very best\u201D",
-      name: "Jay Kiruthika",
-      position: "Senior Lecturer at Kingston University",
-      imagePath: "",
-    },
-    {
       talk: "\u201CIshan has a great Design and UX sense. Very keen on experimenting and learning new things as well.\u201D",
       name: "Badal Agrawal",
       position: "SR. Product Manager @ CoinDCX",
       imagePath: "/images/badal-agrawal.jpg",
+    },
+    {
+      talk: "\u201Cishan is inquisitive in nature and performs all his given tasks in perfection. He goes beyond what is expected and explores various solutions. He embraces technology in great zeal. Ambitious and works towards his goals brilliantly. I wish him the very best\u201D",
+      name: "Jay Kiruthika",
+      position: "Senior Lecturer at Kingston University",
+      imagePath: "",
     },
   ],
 };
