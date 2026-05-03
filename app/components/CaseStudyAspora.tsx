@@ -236,9 +236,16 @@ export function CaseStudyAspora() {
                   Four changes to the screen.
                 </h2>
 
-                {/* Wide placeholder for 4 screens */}
-                <div className="w-full rounded-lg bg-[var(--card)] border border-[var(--border)] aspect-[16/6] flex items-center justify-center mb-8">
-                  <span className="text-[var(--text-muted)] text-xs font-medium">[ 4 mobile screens ]</span>
+                {/* Vimeo embed — 4 screens walkthrough */}
+                <div className="w-full rounded-lg bg-[var(--card)] border border-[var(--border)] overflow-hidden mb-8">
+                  <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+                    <iframe
+                      src="https://player.vimeo.com/video/1188779381?title=0&byline=0&portrait=0&transparent=1"
+                      className="absolute inset-0 w-full h-full rounded-lg"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-4">
