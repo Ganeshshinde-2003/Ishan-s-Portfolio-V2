@@ -96,9 +96,9 @@ export const recentHighlights = {
       arrow: true,
     },
     {
-      imagePath: "/assets/highlights/two.svg",
-      title: "DEcent HealthCare",
-      description: "Improving Platform Navigation",
+      imagePath: "/assets/highlights/two.png",
+      title: "From Concept to Conference",
+      description: "Eye Blink-based Morse Code Communication Tool for ALS Patients, IEEE I2CT 2024",
       coverImage: true,
       arrow: true,
     },

@@ -180,8 +180,12 @@ export function CaseStudyZoth() {
                   <p><span className="text-[var(--text)] font-semibold">Business Problem:</span> Earlier, Zoth&apos;s real estate tokenization model struggled to scale due to limited liquidity and niche investors. The new DeFi model solves this by enabling fractional access, real yield, and cross-chain liquidity making RWAs truly scalable and inclusive.</p>
                   <p>80% of users were small-ticket retail investors. These were early adopters — however, limited liquidity slowed overall growth. Institutional investors were hesitant due to regulatory clarity and liquidity concerns.</p>
                 </div>
-                <div className="w-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-6 mt-6 aspect-[16/6] flex items-center justify-center">
-                  <span className="text-[var(--text-muted)] text-xs font-medium">[ Problem framing diagram ]</span>
+                <div className="w-full mt-6 flex justify-center">
+                  <img
+                    src="/images/zoth-problem-mockup.png"
+                    alt="Zoth marketplace interface showing RWA investment accessibility"
+                    className="rounded-2xl shadow-2xl max-w-sm w-full object-contain"
+                  />
                 </div>
               </section>
 
