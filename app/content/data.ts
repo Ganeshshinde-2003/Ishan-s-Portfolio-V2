@@ -74,10 +74,10 @@ export const appreciation = {
       imagePath: "",
     },
     {
-      talk: "\u201C Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.\u201D",
-      name: "Satyarth Sanyal",
-      position: "Founder, Zoth.io",
-      imagePath: "",
+      talk: "\u201CIshan has a great Design and UX sense. Very keen on experimenting and learning new things as well.\u201D",
+      name: "Badal Agrawal",
+      position: "SR. Product Manager @ CoinDCX",
+      imagePath: "/images/badal-agrawal.jpg",
     },
   ],
 };
