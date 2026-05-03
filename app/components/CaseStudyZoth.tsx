@@ -90,16 +90,15 @@ export function CaseStudyZoth() {
                 className="relative rounded-2xl overflow-hidden"
                 style={{ background: "linear-gradient(135deg, #1a0533 0%, #3b0764 50%, #6d28d9 100%)" }}
               >
-                <div className="px-6 pt-10 pb-6 flex flex-col items-center text-center">
-                  <div className="relative w-full max-w-sm mx-auto">
-                    <div className="absolute top-3 right-3 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
-                      2025
-                    </div>
-                    <div className="w-full aspect-[3/2] rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#4c1d95] flex items-center justify-center">
-                      <span className="text-white/40 text-sm font-medium">[ Zoth.io mockup ]</span>
-                    </div>
-                  </div>
+                <div className="absolute top-4 right-4 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
+                  2025
                 </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/zoth-cover.png"
+                  alt="Zoth.io Tokenised Asset Marketplace"
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
               </div>
               <div className="flex items-center justify-end gap-2 px-4 py-3">
                 <p className="text-xs font-medium text-[var(--text-muted)] tracking-wider">CASE STUDY COVER</p>
