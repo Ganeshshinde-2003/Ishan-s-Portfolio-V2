@@ -9,11 +9,13 @@ const AppreciationCard = ({
 }: CardItem) => {
   return (
     <div
-      className={`flex flex-col items-start p-6 bg-[var(--border)] rounded-2xl`}
+      className={`flex flex-col items-start p-6 bg-[var(--border)] rounded-2xl h-full`}
     >
-      <p className="text-base font-semibold text-[var(--text-muted)]">{talk}</p>
+      <p className="text-base font-semibold text-[var(--text-muted)] flex-1">{talk}</p>
       <div className="w-full flex flex-col mt-10">
-        <Image src={imagePath} alt={!name ? "Speaker Image" : name} width={60} height={60} className="rounded-full mb-2"/>
+        {imagePath && (
+          <Image src={imagePath} alt={!name ? "Speaker Image" : name} width={60} height={60} className="rounded-full mb-2"/>
+        )}
         <p className="text-base font-normal">{name}</p>
         <p className="text-sm font-medium text-[var(--text-muted)]">{position}</p>
       </div>

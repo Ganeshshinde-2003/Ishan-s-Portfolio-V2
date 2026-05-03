@@ -27,7 +27,7 @@ export const personalProjectsData = {
 };
 
 export const videCodedProjectsData = {
-  header: "Vibe Coded Projects",
+  header: "AI Enabled Project",
   subheader: "Products I've shipped using AI",
   title: "Take a Look",
   icon: "/assets/icons/projects.svg",
@@ -71,13 +71,13 @@ export const appreciation = {
       talk: "\u201Cishan is inquisitive in nature and performs all his given tasks in perfection. He goes beyond what is expected and explores various solutions. He embraces technology in great zeal. Ambitious and works towards his goals brilliantly. I wish him the very best\u201D",
       name: "Jay Kiruthika",
       position: "Senior Lecturer at Kingston University",
-      imagePath: "/assets/workedwith/chaitanya.png",
+      imagePath: "",
     },
     {
       talk: "\u201C Working with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.\u201D",
       name: "Satyarth Sanyal",
       position: "Founder, Zoth.io",
-      imagePath: "/assets/workedwith/chaitanya.png",
+      imagePath: "",
     },
   ],
 };

@@ -73,7 +73,7 @@ export function CaseStudyZoth() {
           <span className="text-[var(--text-muted)] text-xs font-medium tracking-wide hidden md:block">
             Zoth.io - RWA Investment Platform
           </span>
-          <span className="text-[var(--text-muted)] text-xs font-medium">7 min read</span>
+          <span className="text-[var(--text-muted)] text-xs font-medium">15 min read</span>
         </div>
 
         {/* Main layout: content + sticky TOC */}
@@ -487,19 +487,19 @@ export function CaseStudyZoth() {
                   onClick={openMars}
                   className="text-left text-xs font-medium mt-2 transition-all duration-200"
                   style={{
-                    color: "#39FF14",
-                    textShadow: "0 0 0px #39FF14",
+                    color: "#00D9A3",
+                    textShadow: "0 0 0px #00D9A3",
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLButtonElement).style.color = "#6fff47";
-                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 8px #39FF14, 0 0 16px #39FF1466";
+                    (e.currentTarget as HTMLButtonElement).style.color = "#33e8b8";
+                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 8px #00D9A3, 0 0 16px #00D9A366";
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLButtonElement).style.color = "#39FF14";
-                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 0px #39FF14";
+                    (e.currentTarget as HTMLButtonElement).style.color = "#00D9A3";
+                    (e.currentTarget as HTMLButtonElement).style.textShadow = "0 0 0px #00D9A3";
                   }}
                 >
-                  💬 Ask Mars about Zoth.io
+                  Ask Mars about Zoth.io
                 </button>
               </nav>
             </div>

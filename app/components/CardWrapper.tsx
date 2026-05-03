@@ -77,7 +77,7 @@ const CardWrapper = ({
       <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 pb-2 md:pb-0 scrollbar-hide snap-x snap-mandatory md:snap-none">
         {data.map((item, index) =>
           item.talk ? (
-            <div key={index} className="shrink-0 w-[75vw] max-w-[280px] md:w-auto md:max-w-none snap-start">
+            <div key={index} className="shrink-0 w-[75vw] max-w-[280px] md:w-auto md:max-w-none snap-start h-full">
               <AppreciationCard {...item} />
             </div>
           ) : item.activity ? (
