@@ -85,17 +85,15 @@ export function CaseStudyAspora() {
 
               <div className="relative rounded-2xl overflow-hidden"
                 style={{ background: "linear-gradient(135deg, #0A1B4D 0%, #2D1B69 50%, #4A148C 100%)" }}>
-                <div className="px-6 pt-10 pb-6 flex flex-col items-center text-center">
-                  {/* Phone mockup placeholder */}
-                  <div className="relative w-full max-w-sm mx-auto">
-                    <div className="absolute top-3 right-3 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
-                      2025
-                    </div>
-                    <div className="w-full aspect-[3/2] rounded-xl bg-gradient-to-br from-[#6B46C1] to-[#4C1D95] flex items-center justify-center">
-                      <span className="text-white/40 text-sm font-medium">[ Mobile mockup ]</span>
-                    </div>
-                  </div>
+                <div className="absolute top-4 right-4 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
+                  2025
                 </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/aspora-cover.png"
+                  alt="Aspora Referral Screen Redesign"
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
               </div>
 
               {/* Bottom label — outside the gradient box, aligned right */}
@@ -201,13 +199,21 @@ export function CaseStudyAspora() {
                   </p>
                 </div>
 
-                {/* Image placeholders */}
+                {/* Event photos */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-                  <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#6B46C1] to-[#4C1D95] flex items-center justify-center">
-                    <span className="text-white/40 text-xs font-medium">[ Ambassador event image ]</span>
+                  <div className="rounded-xl overflow-hidden shadow-lg">
+                    <img
+                      src="/images/aspora/event-1.jpg"
+                      alt="Ishan helping users at Aspora event booth"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#6B46C1] to-[#4C1D95] flex items-center justify-center">
-                    <span className="text-white/40 text-xs font-medium">[ Ambassador event image ]</span>
+                  <div className="rounded-xl overflow-hidden shadow-lg">
+                    <img
+                      src="/images/aspora/event-2.jpg"
+                      alt="Ishan at Aspora brand activation event"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
 
