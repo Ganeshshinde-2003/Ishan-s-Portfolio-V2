@@ -59,7 +59,7 @@ export const appreciation = {
   subheader: "Trusted, valued, proven",
   title: "View More",
   icon: "/assets/icons/thumb.svg",
-  link: "home" as const,
+  link: "https://www.linkedin.com/in/ishan-tandel-90b592222/details/recommendations/?detailScreenTabIndex=0",
   data: [
     {
       talk: "\u201CWorking with Ishan, I've come to appreciate his intuitive understanding of design. From a client's perspective, it's ideal when your designer not only understands the brief but consistently exceeds expectations without needing detailed instructions.\u201D",

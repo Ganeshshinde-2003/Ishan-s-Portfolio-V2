@@ -37,7 +37,7 @@ interface CardData {
   header: string;
   subheader: string;
   title: string;
-  link?: NavItem;
+  link?: NavItem | string;
   icon: string;
   data: CardItem[];
 }
@@ -69,19 +69,36 @@ const CardWrapper = ({
               </p>
             </div>
           </div>
-          {link && navItemToRoute[link] && (
-            <Link
-              href={navItemToRoute[link]}
-              className="shiny-btn flex gap-2 py-3 px-4 rounded-xl cursor-pointer"
-            >
-              <p className="hidden md:flex font-extrabold text-sm">{title}</p>
-              <Image
-                src={roundedArrow}
-                alt="Rounded Arrow"
-                width={18}
-                height={18}
-              />
-            </Link>
+          {link && (
+            link.startsWith("http") ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shiny-btn flex gap-2 py-3 px-4 rounded-xl cursor-pointer"
+              >
+                <p className="hidden md:flex font-extrabold text-sm">{title}</p>
+                <Image
+                  src={roundedArrow}
+                  alt="Rounded Arrow"
+                  width={18}
+                  height={18}
+                />
+              </a>
+            ) : navItemToRoute[link] ? (
+              <Link
+                href={navItemToRoute[link]}
+                className="shiny-btn flex gap-2 py-3 px-4 rounded-xl cursor-pointer"
+              >
+                <p className="hidden md:flex font-extrabold text-sm">{title}</p>
+                <Image
+                  src={roundedArrow}
+                  alt="Rounded Arrow"
+                  width={18}
+                  height={18}
+                />
+              </Link>
+            ) : null
           )}
         </div>
       )}
