@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { NavigationProvider } from "@/app/context/NavigationContext";
 import { MarsAssistantProvider } from "@/app/context/MarsAssistantContext";
 import { ThemeProvider } from "@/app/context/ThemeContext";
+import { NavigationProvider } from "@/app/context/NavigationContext";
 import { Sidebar } from "@/app/components/Sidebar";
 import { MarsAssistant } from "@/app/components/MarsAssistant";
 
@@ -17,41 +17,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`h-full antialiased`}
-    >
-      {/* <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var t = localStorage.getItem('theme');
-                  if (t === 'light' || t === 'dark') {
-                    document.documentElement.setAttribute('data-theme', t);
-                  } else {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                  }
-                } catch(e) {}
-              })();
-            `,
-          }}
-        />
-      </head> */}
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full bg-[var(--bg)]">
         <ThemeProvider>
-          <NavigationProvider>
-            <MarsAssistantProvider>
+          <MarsAssistantProvider>
+            <NavigationProvider>
               <div className="flex flex-col md:flex-row h-screen bg-[var(--bg)]">
                 <Sidebar />
-                <main className="flex-1 overflow-auto p-0 md:p-10">
-                  {children}
+                <main className="flex-1 overflow-hidden p-0 md:p-10">
+                  <div className="bg-[var(--panel)] text-[var(--text)] h-full w-full rounded-t-2xl md:rounded-2xl shadow-[0_1px_40px_10px_rgba(5,5,5,0.2)] overflow-y-auto scrollbar-hide">
+                    {children}
+                  </div>
                 </main>
               </div>
               <MarsAssistant />
-            </MarsAssistantProvider>
-          </NavigationProvider>
+            </NavigationProvider>
+          </MarsAssistantProvider>
         </ThemeProvider>
       </body>
     </html>

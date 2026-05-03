@@ -1,10 +1,10 @@
 "use client";
 
-import { useNavigation, type NavItem } from "@/app/context/NavigationContext";
 import { useMarsAssistant } from "@/app/context/MarsAssistantContext";
 import { useTheme } from "@/app/context/ThemeContext";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import profilePic from "../../public/assets/sidebar_pic.png";
 import mail from "../../public/assets/mail.svg";
@@ -19,15 +19,16 @@ import resume from "../../public/assets/icons/resume.svg";
 import myLife from "../../public/assets/icons/mylife.svg";
 
 const navigationItems: {
-  id: NavItem;
+  id: string;
   label: string;
   icon: StaticImageData;
+  href: string;
 }[] = [
-  { id: "home", label: "Home", icon: home },
-  { id: "work", label: "Work & personal project", icon: work },
-  { id: "ai-projects", label: "AI Enabled Projects", icon: aiProjects },
-  { id: "resume", label: "Resume", icon: resume },
-  { id: "my-life", label: "My Life", icon: myLife },
+  { id: "home", label: "Home", icon: home, href: "/" },
+  { id: "work", label: "Work & personal project", icon: work, href: "/work-personal-projects" },
+  { id: "ai-projects", label: "AI Enabled Projects", icon: aiProjects, href: "/ai-enabled-projects" },
+  { id: "resume", label: "Resume", icon: resume, href: "/resume" },
+  { id: "my-life", label: "My Life", icon: myLife, href: "/my-life" },
 ];
 
 const socialItems: {
@@ -43,9 +44,9 @@ const socialItems: {
 ];
 
 export function Sidebar() {
-  const { activeNav, setActiveNav } = useNavigation();
   const { openMars } = useMarsAssistant();
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isLight = theme === "light";
@@ -87,44 +88,15 @@ export function Sidebar() {
           <p className="text-[var(--text)] font-medium text-xs mb-5 tracking-wider">CREATIONS</p>
           <ul className="space-y-2">
             {navigationItems.map((item) => {
-              const isResume = item.id === "resume";
-
-              if (isResume) {
-                return (
-                  <li key={item.id}>
-                    <a
-                      href="/fonts/resume.pdf"
-                      download="Ishan_Tandel_Resume.pdf"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[var(--text-muted)] hover:text-[var(--text)]"
-                    >
-                      <Image
-                        src={item.icon}
-                        alt={item.label}
-                        width={16}
-                        height={16}
-                        className="w-full h-full object-cover"
-                        objectFit="cover"
-                        style={{
-                          filter: inactiveFilter,
-                          width: "auto",
-                        }}
-                      />
-                      <span className="flex-1 text-sm">{item.label}</span>
-                    </a>
-                  </li>
-                );
-              }
+              const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
 
               return (
                 <li key={item.id}>
-                  <button
-                    onClick={() => {
-                      setActiveNav(item.id);
-                      setIsMenuOpen(false);
-                    }}
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
                     className={`text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 ${
-                      activeNav === item.id
+                      isActive
                         ? "text-[var(--text)] bg-[var(--panel)]"
                         : "text-[var(--text-muted)] hover:text-[var(--text)]"
                     }`}
@@ -137,15 +109,12 @@ export function Sidebar() {
                       className="w-full h-full object-cover"
                       objectFit="cover"
                       style={{
-                        filter:
-                          activeNav === item.id
-                            ? activeFilter
-                            : inactiveFilter,
+                        filter: isActive ? activeFilter : inactiveFilter,
                         width: "auto",
                       }}
                     />
                     <span className="flex-1 text-sm">{item.label}</span>
-                  </button>
+                  </Link>
                 </li>
               );
             })}

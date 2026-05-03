@@ -1,28 +1,5 @@
-"use client";
-
-import { useNavigation } from "@/app/context/NavigationContext";
 import { Home } from "@/app/components/Home";
-import { MyLife } from "@/app/components/MyLife";
-import { Work } from "@/app/components/Work";
-import { AiProject } from "@/app/components/AiProject";
-import { CaseStudyAspora } from "@/app/components/CaseStudyAspora";
-import { CaseStudyResearchLens } from "@/app/components/CaseStudyResearchLens";
-import { CaseStudyBlinkSpeak } from "@/app/components/CaseStudyBlinkSpeak";
-import { CaseStudyZoth } from "@/app/components/CaseStudyZoth";
 
 export default function Page() {
-  const { activeNav } = useNavigation();
-
-  return (
-    <div className="bg-[var(--panel)] text-[var(--text)] h-full w-full rounded-t-2xl md:rounded-2xl shadow-[0_1px_40px_10px_rgba(5,5,5,0.2)] overflow-y-auto scrollbar-hide">
-      {activeNav === "home" && <Home />}
-      {activeNav === "my-life" && <MyLife />}
-      {activeNav === "work" && <Work />}
-      {activeNav === "ai-projects" && <AiProject />}
-      {activeNav === "case-study-aspora" && <CaseStudyAspora />}
-      {activeNav === "case-study-researchlens" && <CaseStudyResearchLens />}
-      {activeNav === "case-study-blinkspeak" && <CaseStudyBlinkSpeak />}
-      {activeNav === "case-study-zoth" && <CaseStudyZoth />}
-    </div>
-  );
+  return <Home />;
 }

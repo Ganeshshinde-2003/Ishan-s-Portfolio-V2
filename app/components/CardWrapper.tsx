@@ -1,11 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import roundedArrow from "../../public/assets/icons/roundedarrow.svg";
 import ProjectsCard from "./ProjectsCard";
 import AppreciationCard from "./AppreciationCard";
 import MyLifeCard from "./MyLifeCard";
-import { NavItem, useNavigation } from "../context/NavigationContext";
+import { NavItem } from "../context/NavigationContext";
+
+const navItemToRoute: Record<string, string> = {
+  home: "/",
+  work: "/work-personal-projects",
+  "ai-projects": "/ai-enabled-projects",
+  "my-life": "/my-life",
+  "case-study-aspora": "/work-personal-projects/aspora",
+  "case-study-zoth": "/work-personal-projects/zoth",
+  "case-study-researchlens": "/ai-enabled-projects/researchmap",
+  "case-study-blinkspeak": "/ai-enabled-projects/blinkspeak",
+};
 
 
 export interface CardItem {
@@ -38,7 +51,7 @@ const CardWrapper = ({
   data: { header, subheader, title, link, icon, data },
   showHeaders = true,
 }: CardWrapperProps) => {
-  const { setActiveNav } = useNavigation();
+  const router = useRouter();
   return (
     <div className="w-full">
       {showHeaders && (
@@ -56,11 +69,9 @@ const CardWrapper = ({
               </p>
             </div>
           </div>
-          {link && (
-            <button
-              onClick={() => {
-                setActiveNav(link);
-              }}
+          {link && navItemToRoute[link] && (
+            <Link
+              href={navItemToRoute[link]}
               className="shiny-btn flex gap-2 py-3 px-4 rounded-xl cursor-pointer"
             >
               <p className="hidden md:flex font-extrabold text-sm">{title}</p>
@@ -70,7 +81,7 @@ const CardWrapper = ({
                 width={18}
                 height={18}
               />
-            </button>
+            </Link>
           )}
         </div>
       )}
@@ -90,13 +101,13 @@ const CardWrapper = ({
                 {...item}
                 onClick={
                   item.title === "Aspora"
-                    ? () => setActiveNav("case-study-aspora")
+                    ? () => router.push("/work-personal-projects/aspora")
                     : item.title === "Zoth.io"
-                    ? () => setActiveNav("case-study-zoth")
+                    ? () => router.push("/work-personal-projects/zoth")
                     : item.title === "ResearchLens"
-                    ? () => setActiveNav("case-study-researchlens")
+                    ? () => router.push("/ai-enabled-projects/researchmap")
                     : item.title === "BlinkSpeak"
-                    ? () => setActiveNav("case-study-blinkspeak")
+                    ? () => router.push("/ai-enabled-projects/blinkspeak")
                     : undefined
                 }
               />

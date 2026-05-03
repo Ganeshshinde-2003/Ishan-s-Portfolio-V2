@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigation } from "../context/NavigationContext";
+import { useRouter } from "next/navigation";
 import { useMarsAssistant } from "../context/MarsAssistantContext";
 import Footer from "./Footer";
 
@@ -23,7 +23,7 @@ const sections = [
 ];
 
 export function CaseStudyZoth() {
-  const { setActiveNav } = useNavigation();
+  const router = useRouter();
   const { openMars } = useMarsAssistant();
   const [activeSection, setActiveSection] = useState<string>("zoth-section-1");
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -62,7 +62,7 @@ export function CaseStudyZoth() {
         {/* Top bar */}
         <div className="sticky top-0 z-20 bg-[var(--panel)] border-b border-[var(--border)] px-6 py-3 flex items-center justify-between">
           <button
-            onClick={() => setActiveNav("home")}
+            onClick={() => router.push("/")}
             className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text)] transition-colors text-sm font-medium"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

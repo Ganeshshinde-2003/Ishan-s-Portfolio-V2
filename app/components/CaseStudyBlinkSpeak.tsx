@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigation } from "../context/NavigationContext";
+import { useRouter } from "next/navigation";
 import Footer from "./Footer";
 
 
@@ -21,7 +21,7 @@ const sections = [
 ];
 
 export function CaseStudyBlinkSpeak() {
-  const { setActiveNav } = useNavigation();
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState<string>("bs-section-01");
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -61,7 +61,7 @@ export function CaseStudyBlinkSpeak() {
         {/* Top bar */}
         <div className="sticky top-0 z-20 bg-[var(--panel)] border-b border-[var(--border)] px-6 py-3 flex items-center justify-between">
           <button
-            onClick={() => setActiveNav("home")}
+            onClick={() => router.push("/")}
             className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text)] transition-colors text-sm font-medium"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -93,25 +93,24 @@ export function CaseStudyBlinkSpeak() {
 
               <div
                 className="relative rounded-2xl overflow-hidden"
-                style={{ background: "linear-gradient(135deg, #0A1B4D 0%, #2D1B69 50%, #4A148C 100%)" }}
+                style={{ background: "linear-gradient(135deg, #0A1B4D 0%, #2D1B69 50%, #4A148C 100%)", aspectRatio: "16/9" }}
               >
-                <div className="px-6 pt-10 pb-6 flex flex-col items-center text-center">
-                  <div className="relative w-full max-w-sm mx-auto">
-                    <div className="absolute top-3 right-3 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
-                      2025
-                    </div>
-                    <div className="w-full aspect-[3/2] rounded-xl bg-gradient-to-br from-[#1E3A8A] to-[#4C1D95] flex items-center justify-center">
-                      <span className="text-[#A7AAB4] text-sm font-medium">[ BlinkSpeak cover ]</span>
-                    </div>
-                  </div>
+                <div className="absolute top-3 right-3 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
+                  2025
                 </div>
+                <iframe
+                  src="https://player.vimeo.com/video/1188779911?title=0&byline=0&portrait=0&color=667eea&transparent=1"
+                  className="absolute inset-0 w-full h-full"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
 
               {/* Bottom label — outside the gradient box, aligned right */}
               <div className="flex items-center justify-end gap-2 px-4 py-3">
                 <p className="text-xs font-medium text-[var(--text-muted)] tracking-wider">CASE STUDY COVER</p>
                 <div className="flex items-center justify-center py-1 px-2 border border-[var(--border)] rounded-md bg-[var(--bg)]">
-                  <p className="text-sm font-medium tracking-wider text-[var(--text-muted)]">IMG</p>
+                  <p className="text-sm font-medium tracking-wider text-[var(--text-muted)]">VIDEO</p>
                 </div>
               </div>
             </div>
