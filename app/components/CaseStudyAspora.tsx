@@ -68,7 +68,7 @@ export function CaseStudyAspora() {
             Back
           </button>
           <span className="text-[var(--text-muted)] text-xs font-medium tracking-wide hidden md:block">
-            Improving Platform Navigation
+            Aspora Case Study
           </span>
           <span className="text-[var(--text-muted)] text-xs font-medium">7 min read</span>
         </div>
@@ -80,7 +80,7 @@ export function CaseStudyAspora() {
             {/* Hero section */}
             <div className="mb-10">
               <h1 className="text-[var(--text)] text-2xl md:text-3xl font-bold max-w-xl leading-tight mb-6 text-center mx-auto">
-                Aspora Referral and Invite: A new experience
+                Optimizing the Referral Funnel for 31% Relative Conversion Growth
               </h1>
 
               <div className="relative rounded-2xl overflow-hidden"

@@ -14,7 +14,7 @@ export const personalProjectsData = {
     {
       imagePath: "/assets/projects/aspora.svg",
       title: "Aspora",
-      description: "Turning referrals into an experience worth sharing",
+      description: "Optimizing the Referral Funnel for 31% Relative Conversion Growth",
       arrow: true,
     },
     {

@@ -36,16 +36,7 @@ export function MyLife() {
         <div className="flex flex-col md:flex-row mt-10 mb-36 md:my-36 justify-between gap-0  w-full">
           <div className="flex flex-col justify-between w-full md:w-2/5 h-auto md:h-100">
             <div>
-              <div className="flex gap-2">
-                <p className="text-[var(--accent)] font-medium text-xs">
-                  DESIGNING FOR ZEPTO
-                </p>
-                <p className="text-[var(--text-faint)] font-medium text-xs">|</p>
-                <p className="text-[var(--text-muted)] font-medium text-xs">
-                  PRODUCT DESIGNER
-                </p>
-              </div>
-              <p className="text-[var(--text)] font-extrabold text-3xl md:text-4xl mt-5">
+<p className="text-[var(--text)] font-extrabold text-3xl md:text-4xl mt-5">
                 A collection of stories, miles, and moments that shape how I
                 Think & Design.
               </p>
