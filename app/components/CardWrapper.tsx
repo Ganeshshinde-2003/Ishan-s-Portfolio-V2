@@ -31,6 +31,7 @@ export interface CardItem {
   coverImage?: boolean;
   activity?: string;
   arrow?: boolean;
+  flipBack?: string;
 }
 
 interface CardData {

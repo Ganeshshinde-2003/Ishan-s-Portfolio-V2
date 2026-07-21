@@ -8,12 +8,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import CardWrapper from "./CardWrapper";
 import {
-  appreciation,
   mylife,
   personalProjectsData,
   recentHighlights,
   videCodedProjectsData,
 } from "../content/data";
+import WordOfAppreciation from "./WordOfAppreciation";
 import Footer from "./Footer";
 
 
@@ -55,7 +55,7 @@ export function Home() {
             </div>
             <div className="mb-0 md:mb-20">
               <p className="text-[var(--text-muted)] font-medium text-xs mt-12 tracking-wider">
-                COMPANIES I'VE WORKED WITH
+                Worked at startups backed by
               </p>
               <div className="flex gap-4 mt-4">
                 <Image
@@ -105,7 +105,7 @@ export function Home() {
         </div>
         <div className="flex justify-center my-36 md:my-36">
           <div className="w-full md:max-w-212.5">
-            <CardWrapper data={appreciation} />
+            <WordOfAppreciation />
           </div>
         </div>
         <div className="flex justify-center my-36 md:my-36">

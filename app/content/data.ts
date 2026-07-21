@@ -10,18 +10,21 @@ export const personalProjectsData = {
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
       arrow: true,
+      flipBack: "I worked as a junior product designer on Zoth.io, contributing to taking the product from 0 to 1.",
     },
     {
       imagePath: "/assets/projects/aspora.svg",
       title: "Aspora",
       description: "Optimizing the Referral Funnel for 31% Relative Conversion Growth",
       arrow: true,
+      flipBack: "I worked as a product designer on Aspora, turning referrals into an experience worth sharing.",
     },
     {
       imagePath: "/assets/projects/decent.svg",
       title: "DEcent HealthCare",
       description: "Improving Platform Navigation",
       arrow: true,
+      flipBack: "I worked as a product designer on DEcent HealthCare, improving platform navigation.",
     },
   ],
 };

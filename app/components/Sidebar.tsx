@@ -25,7 +25,7 @@ const navigationItems: {
   href: string;
 }[] = [
   { id: "home", label: "Home", icon: home, href: "/" },
-  { id: "work", label: "Work & personal project", icon: work, href: "/work-personal-projects" },
+  { id: "work", label: "Work", icon: work, href: "/work-personal-projects" },
   { id: "ai-projects", label: "AI Enabled Projects", icon: aiProjects, href: "/ai-enabled-projects" },
   { id: "resume", label: "Resume", icon: resume, href: "/resume" },
   // { id: "my-life", label: "My Life", icon: myLife, href: "/my-life" },
@@ -119,27 +119,27 @@ export function Sidebar() {
             })}
           </ul>
 
-          {/* Mars AI Assistant CTA */}
-          <div className="h-px bg-[var(--border)] my-4" />
-          <button
-            onClick={() => {
-              openMars();
-              setIsMenuOpen(false);
-            }}
-            className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[var(--text-muted)] hover:text-[var(--text)]"
-          >
-            <div className="w-7 h-7 rounded-full bg-[var(--border)] flex items-center justify-center shrink-0">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 1L9.5 6.5L15 8L9.5 9.5L8 15L6.5 9.5L1 8L6.5 6.5L8 1Z" fill="currentColor" />
-                <path d="M13 2L13.5 3.5L15 4L13.5 4.5L13 6L12.5 4.5L11 4L12.5 3.5L13 2Z" fill="currentColor" opacity="0.6" />
-              </svg>
-            </div>
-            <span className="flex-1 text-sm">Mars AI Assistant</span>
-            <span className="bg-[var(--accent)] text-[var(--accent-contrast)] text-xs font-bold px-2 py-0.5 rounded-md">AI</span>
-          </button>
         </div>
       </div>
       <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
+        {/* Mars AI Assistant CTA */}
+        <button
+          onClick={() => {
+            openMars();
+            setIsMenuOpen(false);
+          }}
+          className="text-base font-medium transition-colors px-2 py-2.5 rounded-xl w-full text-start flex items-center gap-3 text-[var(--text-muted)] hover:text-[var(--text)]"
+        >
+          <div className="w-7 h-7 rounded-full bg-[var(--border)] flex items-center justify-center shrink-0">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 1L9.5 6.5L15 8L9.5 9.5L8 15L6.5 9.5L1 8L6.5 6.5L8 1Z" fill="currentColor" />
+              <path d="M13 2L13.5 3.5L15 4L13.5 4.5L13 6L12.5 4.5L11 4L12.5 3.5L13 2Z" fill="currentColor" opacity="0.6" />
+            </svg>
+          </div>
+          <span className="flex-1 text-sm">Mars AI Assistant</span>
+          <span className="bg-[var(--accent)] text-[var(--accent-contrast)] text-xs font-bold px-2 py-0.5 rounded-md">AI</span>
+        </button>
+        <div className="h-px bg-[var(--border)] my-4" />
         {/* <button
           onClick={toggleTheme}
           className="flex items-center gap-3 text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text)] transition-colors mb-5 w-full"
