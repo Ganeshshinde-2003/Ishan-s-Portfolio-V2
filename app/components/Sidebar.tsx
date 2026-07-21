@@ -28,7 +28,7 @@ const navigationItems: {
   { id: "work", label: "Work & personal project", icon: work, href: "/work-personal-projects" },
   { id: "ai-projects", label: "AI Enabled Projects", icon: aiProjects, href: "/ai-enabled-projects" },
   { id: "resume", label: "Resume", icon: resume, href: "/resume" },
-  { id: "my-life", label: "My Life", icon: myLife, href: "/my-life" },
+  // { id: "my-life", label: "My Life", icon: myLife, href: "/my-life" },
 ];
 
 const socialItems: {
@@ -85,7 +85,6 @@ export function Sidebar() {
           </div>
         </div>
         <div className={`${isMenuOpen ? 'block opacity-100' : 'hidden opacity-0'} md:block md:opacity-100 transition-opacity duration-300`}>
-          <p className="text-[var(--text)] font-medium text-xs mb-5 tracking-wider">CREATIONS</p>
           <ul className="space-y-2">
             {navigationItems.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
@@ -177,9 +176,9 @@ export function Sidebar() {
             </Link>
           ))}
         </div>
-        <p className="text-xs text-center font-extrabold mt-5 text-[var(--text-muted)]">
+        {/* <p className="text-xs text-center font-extrabold mt-5 text-[var(--text-muted)]">
           51.5074° N, 0.1278° W
-        </p>
+        </p> */}
       </div>
     </aside>
   );
