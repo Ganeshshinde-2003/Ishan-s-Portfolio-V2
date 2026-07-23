@@ -6,6 +6,12 @@ export const personalProjectsData = {
   link: "work" as const,
   data: [
     {
+      imagePath: "/assets/projects/lacoverpage.png",
+      title: "LookAfterAI",
+      description: "AI-powered caregiving and health monitoring assistant",
+      arrow: true,
+    },
+    {
       imagePath: "/assets/projects/zoth.svg",
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
