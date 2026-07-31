@@ -6,21 +6,24 @@ import { useRouter } from "next/navigation";
 import { useMarsAssistant } from "../context/MarsAssistantContext";
 import Footer from "./Footer";
 
-
 const sections = [
-  { id: "section-glance", label: "1. Project at Glance" },
-  { id: "section-context", label: "2. Context" },
-  { id: "section-problem", label: "3. Problem" },
-  { id: "section-research", label: "4. Research" },
-  { id: "section-design", label: "5. Design" },
-  { id: "section-outcome", label: "6. Outcome" },
-  { id: "section-takeaway", label: "7. Takeaway" },
+  { id: "aspora-section-1", label: "1. Project at Glance" },
+  { id: "aspora-section-2", label: "2. Problem" },
+  { id: "aspora-section-3", label: "3. Design Strategy" },
+  { id: "aspora-section-4", label: "4. Stakeholder" },
+  { id: "aspora-section-5", label: "5. User" },
+  { id: "aspora-section-6", label: "6. Competition" },
+  { id: "aspora-section-7", label: "7. Platform Study" },
+  { id: "aspora-section-8", label: "8. Ideation" },
+  { id: "aspora-section-8a", label: "— Approach" },
+  { id: "aspora-section-8b", label: "— Key Insights" },
+  { id: "aspora-section-9", label: "9. Visual Design & UI" },
 ];
 
 export function CaseStudyAspora() {
   const router = useRouter();
   const { openMars } = useMarsAssistant();
-  const [activeSection, setActiveSection] = useState<string>("section-glance");
+  const [activeSection, setActiveSection] = useState<string>("aspora-section-1");
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -34,12 +37,10 @@ export function CaseStudyAspora() {
       },
       { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
     );
-
     sections.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) observerRef.current?.observe(el);
     });
-
     return () => observerRef.current?.disconnect();
   }, []);
 
@@ -68,23 +69,25 @@ export function CaseStudyAspora() {
             Back
           </button>
           <span className="text-[var(--text-muted)] text-xs font-medium tracking-wide hidden md:block">
-            Aspora Case Study
+            Aspora — Referral Funnel Redesign
           </span>
-          <span className="text-[var(--text-muted)] text-xs font-medium">7 min read</span>
+          <span className="text-[var(--text-muted)] text-xs font-medium">10 min read</span>
         </div>
 
         {/* Main layout: content + sticky TOC */}
         <div className="relative flex gap-8 px-6 pt-10 md:pt-12 pb-0 w-full mx-auto md:max-w-212.5">
           {/* Main content */}
           <div className="flex-1 min-w-0">
-            {/* Hero section */}
+
+            {/* Hero */}
             <div className="mb-10">
               <h1 className="text-[var(--text)] text-2xl md:text-3xl font-bold max-w-xl leading-tight mb-6 text-center mx-auto">
                 Optimizing the Referral Funnel for 31% Relative Conversion Growth
               </h1>
-
-              <div className="relative rounded-2xl overflow-hidden"
-                style={{ background: "linear-gradient(135deg, #0A1B4D 0%, #2D1B69 50%, #4A148C 100%)" }}>
+              <div
+                className="relative rounded-2xl overflow-hidden"
+                style={{ background: "linear-gradient(135deg, #0A1B4D 0%, #2D1B69 50%, #4A148C 100%)" }}
+              >
                 <div className="absolute top-4 right-4 z-10 bg-[#1A1B1E]/60 text-white text-xs px-2 py-1 rounded-md font-medium">
                   2025
                 </div>
@@ -95,8 +98,6 @@ export function CaseStudyAspora() {
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
               </div>
-
-              {/* Bottom label — outside the gradient box, aligned right */}
               <div className="flex items-center justify-end gap-2 px-4 py-3">
                 <p className="text-xs font-medium text-[var(--text-muted)] tracking-wider">CASE STUDY COVER</p>
                 <div className="flex items-center justify-center py-1 px-2 border border-[var(--border)] rounded-md bg-[var(--bg)]">
@@ -109,7 +110,7 @@ export function CaseStudyAspora() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-6">
               {[
                 { label: "COMPANY", value: "Aspora" },
-                { label: "PLATFORM", value: "IOS. Android" },
+                { label: "PLATFORM", value: "iOS/Android" },
                 { label: "MY ROLE", value: "Product Designer" },
                 { label: "OUTCOME", value: "68% → 89% referral rate" },
                 { label: "MARKET", value: "United Kingdom" },
@@ -120,91 +121,126 @@ export function CaseStudyAspora() {
                 </div>
               ))}
             </div>
+
+            {/* What I Did */}
+            <div className="mb-6">
+              <p className="text-[var(--text)] text-sm font-bold mb-2">WHAT I DID ?</p>
+              <p className="text-[var(--text-muted)] text-sm leading-7">
+                Spearheaded the end-to-end redesign of the UK referral journey, conducting on-ground ethnographic research at community events, then using AI-integrated workflows to rapidly prototype and ship a higher-converting flow.
+              </p>
+              <p className="text-[var(--text)] text-sm font-semibold mt-4 mb-1">The Challenge in One Sentence:</p>
+              <p className="text-[var(--text-muted)] text-sm leading-7">
+                Despite a high-value £25 double-sided incentive, Aspora&apos;s UK referral funnel was underperforming at 68% due to critical trust friction and high cognitive load at the point of invite.
+              </p>
+            </div>
+
             <div className="border-t border-[var(--border)] mb-12" />
 
             {/* Content sections */}
             <div className="space-y-16 pb-16">
 
-              {/* 01 Project at Glance */}
-              <section id="section-glance">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">01 · Project at Glance</p>
-                <div className="space-y-6 text-[var(--text-muted)] text-sm leading-7">
-                  <div>
-                    <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">What I Did</h2>
-                    <div className="space-y-4">
-                      <p>
-                        Spearheaded the end-to-end redesign of the UK referral journey to transform an underperforming acquisition loop into a high-converting growth engine.
-                      </p>
-                      <ul className="list-disc list-outside ml-5 space-y-2">
-                        <li>Conducted on-ground ethnographic research by observing 120+ live user interactions at community events to identify &ldquo;invisible&rdquo; friction points that traditional analytics missed.</li>
-                        <li>Leveraged AI-integrated workflows (Claude Code) to rapidly prototype and iterate on design hypotheses, focusing on value-led Information Architecture and social proof integration.</li>
-                        <li>Eliminated technical friction by replacing manual copy-paste mechanisms with a native contact-invite selector, significantly reducing the &ldquo;time-to-action&rdquo; for users.</li>
-                        <li>Delivered a measurable commercial outcome, increasing the referral invite completion rate from 68% to 89% within the UK market.</li>
-                      </ul>
+              {/* 1. Project at a Glance */}
+              <section id="aspora-section-1">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">TEASER SECTION · 1 min Read</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-2">1. Project at a Glance</h2>
+                <p className="text-[var(--accent)] text-xs font-semibold tracking-wider mb-4">CONTEXT & PROBLEM</p>
+                <div className="space-y-4 text-[var(--text-muted)] text-sm leading-7">
+                  <p>Aspora is a fintech platform for the UK and UAE diaspora. Its referral program offered a competitive £25 double-sided incentive, yet UK engagement stayed well below its commercial potential — stuck at a 68% invite completion rate.</p>
+                  <p>My role gave me ground-level access that bridged product strategy and real user intent — facilitating live app downloads and first transfers at community events let me see exactly where high-intent users hesitated.</p>
+                </div>
+                <p className="text-[var(--text)] text-sm font-semibold mt-6 mb-3">RESEARCH APPROACH</p>
+                <div className="space-y-2 text-[var(--text-muted)] text-sm leading-7">
+                  {[
+                    "Observed 120+ live user interactions at community events to find friction analytics couldn't show",
+                    "Used AI-integrated workflows (Claude Code) to rapidly prototype and test hypotheses",
+                    "Replaced manual copy-paste sharing with a native contact-invite selector",
+                    "Shipped and measured the redesign against the live UK funnel",
+                  ].map((item) => (
+                    <div key={item} className="flex gap-3"><span className="text-[var(--accent)] shrink-0">→</span><p>{item}</p></div>
+                  ))}
+                </div>
+                <p className="text-[var(--text)] text-sm font-semibold mt-6 mb-3">BUSINESS IMPACT</p>
+                <div className="space-y-2 text-[var(--text-muted)] text-sm leading-7">
+                  {[
+                    "Referral invite completion rate rose from 68% to 89% (31% relative growth)",
+                    "Lower effective Cost Per Lead (CPL) from the UK referral channel",
+                    "Validated ambassador-led, on-ground research as a repeatable model for future markets",
+                  ].map((item) => (
+                    <div key={item} className="flex gap-3"><span className="text-[var(--accent)] shrink-0">→</span><p>{item}</p></div>
+                  ))}
+                </div>
+                <p className="text-[var(--text)] text-sm font-semibold mt-6 mb-2">GOAL</p>
+                <p className="text-[var(--text-muted)] text-sm leading-7">To drive a measurable increase in UK referral conversions by optimizing the &ldquo;invite-to-action&rdquo; funnel — clarifying the £25 value exchange, establishing trust through social proof, and eliminating technical friction to lower Cost Per Lead (CPL).</p>
+              </section>
+
+              {/* 2. Problem Worth Solving */}
+              <section id="aspora-section-2">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">FULL CASE STUDY</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">2. Problem Worth Solving</h2>
+                <div className="space-y-4 text-[var(--text-muted)] text-sm leading-7">
+                  <p><span className="text-[var(--text)] font-semibold">User Problem:</span> Users didn&apos;t register the £25 reward as a real financial exchange, saw no social proof that others were referring, weren&apos;t clear how the payout worked, and hit a high-effort copy-paste step right at the point of intent.</p>
+                  <p><span className="text-[var(--text)] font-semibold">Business Problem:</span> A strong incentive alone wasn&apos;t enough — the conversion-to-action pipeline had a ceiling that inflated effective CPL and slowed organic growth in the UK market.</p>
+                </div>
+              </section>
+
+              {/* 3. Design Strategy */}
+              <section id="aspora-section-3">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">03 · DESIGN STRATEGY</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">3. Design Strategy — 4 Areas I Focused On</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    { title: "Understanding User Behavior On the Ground", body: "Where exactly did high-intent users pause or abandon the invite flow in real, live settings?" },
+                    { title: "Understanding the Funnel Data", body: "What did the 68% completion rate hide about drop-off points along the journey?" },
+                    { title: "Understanding Trust Signals in Fintech", body: "What lessons could be drawn from how other referral-driven fintechs build confidence?" },
+                    { title: "Understanding Aspora's Existing Flow", body: "Where were the usability gaps in the current referral screen, and how could they be closed?" },
+                  ].map(({ title, body }) => (
+                    <div key={title} className="border border-[#2F3037] rounded-xl p-5 bg-[#232529]">
+                      <p className="text-[var(--text)] text-sm font-semibold mb-2">{title}</p>
+                      <p className="text-[var(--text-muted)] text-xs leading-6">{body}</p>
                     </div>
-                  </div>
-                  <div>
-                    <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">Goal</h2>
-                    <p>
-                      To drive a measurable increase in UK referral conversions by optimizing the &ldquo;invite-to-action&rdquo; funnel. The objective was to transform dormant user intent into immediate commercial impact by clarifying the £25 value exchange, establishing trust through social proof, and eliminating technical friction to lower the overall Cost Per Lead (CPL).
-                    </p>
-                  </div>
-                  <div>
-                    <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">The Challenge in One Sentence</h2>
-                    <p>
-                      Despite a high-value £25 double-sided incentive, Aspora&apos;s UK referral funnel was underperforming at 68% due to critical trust friction and high cognitive load at the point of invite.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </section>
 
-              {/* 02 Context */}
-              <section id="section-context">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">02 · Context</p>
-                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
-                  A great feature that UK users weren't using
-                </h2>
-                <div className="space-y-4 text-[var(--text-muted)] text-sm leading-7">
-                  <p>
-                    Aspora is a fintech platform designed for the UK and UAE diaspora, focusing on financial confidence and cross-border growth. While the referral program featured a competitive £25 double-sided incentive, UK engagement remained significantly below its commercial potential.
-                  </p>
-                  <p>
-                    My role provided unique ground-level access that bridged the gap between product strategy and actual user intent. By facilitating live app downloads and first-time transfers at community events, I observed exactly where high-intent users hesitated. This direct ethnographic insight allowed me to treat user friction not just as a design flaw, but as a measurable opportunity for conversion optimization.
-                  </p>
+              {/* 4. Stakeholder Vision */}
+              <section id="aspora-section-4">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">04 · STAKEHOLDERS</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">4. Stakeholder Vision</h2>
+                <p className="text-[var(--text-muted)] text-xs font-medium mb-4 italic">— Placeholder content pending confirmation</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {[
+                    { title: "Grow organic acquisition", body: "Reduce reliance on paid channels by making referrals the primary UK growth lever." },
+                    { title: "Prove the ambassador model", body: "Validate on-ground research as a repeatable input for design decisions in other markets." },
+                    { title: "Protect the incentive economics", body: "Improve conversion without increasing the £25 payout, keeping CPL sustainable." },
+                  ].map(({ title, body }) => (
+                    <div key={title} className="border border-[#2F3037] rounded-xl p-5 bg-[#232529]">
+                      <p className="text-[var(--text)] text-sm font-semibold mb-2">{title}</p>
+                      <p className="text-[var(--text-muted)] text-xs leading-6">{body}</p>
+                    </div>
+                  ))}
                 </div>
               </section>
 
-              {/* 03 Problem */}
-              <section id="section-problem">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">03 · Problem</p>
-                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
-                  A £25 reward wasn't enough.
-                </h2>
-                <div className="space-y-4 text-[var(--text-muted)] text-sm leading-7">
-                  <p>
-                    On paper, the £25 double-sided incentive was a high-performing lead-gen tool, yet the conversion rate was stagnant at 68%. Despite a clear value exchange, the referral journey failed to drive action, creating a performance ceiling that hindered organic growth and increased the effective Cost Per Lead (CPL). The challenge wasn&apos;t the incentive&apos;s value; it was a breakdown in the conversion-to-action pipeline caused by underlying trust friction and excessive cognitive load at the point of invite.
-                  </p>
+              {/* 5. Users Wanted Trust & Speed */}
+              <section id="aspora-section-5">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">05 · USERS</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">5. Users Wanted Trust & Speed</h2>
+                <div className="space-y-3 mb-8">
+                  {[
+                    { title: "Value Blindness", body: "Users failed to register the £25 reward headline, perceiving the invite as a simple download link share rather than a high-value financial exchange." },
+                    { title: "Social Friction", body: "The absence of social proof created \u2018first-to-try\u2019 anxiety; without signals that others were referring, the action felt socially risky instead of normalized." },
+                    { title: "Cognitive Load", body: "Users were unclear on the \u2018how-it-works\u2019 mechanics — specifically the friend\u2019s required actions and payout triggers — leading to hesitation and drop-off." },
+                    { title: "Interaction Friction", body: "The requirement to manually copy, switch apps, and paste a link into WhatsApp was a high-effort barrier most users weren\u2019t willing to accept at the point of intent." },
+                  ].map(({ title, body }) => (
+                    <div key={title} className="flex gap-4">
+                      <span className="text-[var(--accent)] shrink-0 mt-0.5">→</span>
+                      <p className="text-[var(--text-muted)] text-sm leading-7"><span className="text-[var(--text)] font-semibold">{title}:</span> {body}</p>
+                    </div>
+                  ))}
                 </div>
-              </section>
-
-              {/* 04 Research */}
-              <section id="section-research">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">04 · Research</p>
-                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
-                  Identifying Friction through Behavioral Observation
-                </h2>
-                <div className="space-y-4 text-[var(--text-muted)] text-sm leading-7">
-                  <p>
-                    To move beyond surface-level analytics, I leveraged my role at major community events across the UK to conduct on-ground ethnographic research. By observing 120+ first-time users as they navigated the referral journey in high-intent environments, I identified critical behavioral signals that informed my optimization strategy.
-                  </p>
-                  <p>
-                    This observational study allowed me to pinpoint exactly where users paused, hesitated, or abandoned the funnel—translating &ldquo;silent&rdquo; friction into actionable data points. I specifically focused on identifying the psychological barriers that prevented users from completing the invite action, ensuring my research directly supported the objective of increasing funnel performance.
-                  </p>
-                </div>
-
-                {/* Event photos */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="rounded-xl overflow-hidden shadow-lg">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/images/aspora/event-1.jpg"
                       alt="Ishan helping users at Aspora event booth"
@@ -212,6 +248,7 @@ export function CaseStudyAspora() {
                     />
                   </div>
                   <div className="rounded-xl overflow-hidden shadow-lg">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/images/aspora/event-2.jpg"
                       alt="Ishan at Aspora brand activation event"
@@ -219,27 +256,177 @@ export function CaseStudyAspora() {
                     />
                   </div>
                 </div>
-
-                <p className="font-semibold text-[var(--text)]">Behavioral Insights: Four Repeated Friction Patterns</p>
-                <p>
-                  Through direct observation and funnel analysis, I identified four critical friction points that inhibited conversion and prevented users from acting on high-intent signals:
-                </p>
-                <ul className="list-disc list-outside ml-5 space-y-3">
-                  <li><span className="text-[var(--text)] font-medium">01 · Value Blindness (Incentive Recognition):</span> Users failed to register the £25 reward headline, perceiving the invite as a simple download link share rather than a high-value financial exchange.</li>
-                  <li><span className="text-[var(--text)] font-medium">02 · Social Friction (Lack of Validation):</span> The absence of social proof created &ldquo;first-to-try&rdquo; anxiety; without signals that others were referring, the action felt socially risky instead of normalized.</li>
-                  <li><span className="text-[var(--text)] font-medium">03 · Cognitive Load (Process Obscurity):</span> Users were unclear on the &ldquo;how-it-works&rdquo; mechanics—specifically the friend&apos;s required actions and payout triggers—leading to hesitation and funnel drop-off.</li>
-                  <li><span className="text-[var(--text)] font-medium">04 · Interaction Friction (High-Effort UX):</span> The requirement to manually copy, switch apps, and paste a link into WhatsApp served as a high-effort technical barrier that most users were unwilling to accept at the point of intent.</li>
-                </ul>
               </section>
 
-              {/* 05 Design */}
-              <section id="section-design">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">05 · Design</p>
-                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
-                  Strategic Optimizations for Conversion
-                </h2>
+              {/* 6. Competition */}
+              <section id="aspora-section-6">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">06 · COMPETITIVE ANALYSIS</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">6. Competition</h2>
+                <p className="text-[var(--text-muted)] text-xs font-medium mb-4 italic">— Placeholder content pending confirmation</p>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { title: "Remittance apps\u2019 limitation", body: "Most lead with a flat reward amount but give no lifecycle clarity, leaving users unsure when they\u2019ll actually get paid." },
+                    { title: "Neobank gap", body: "Challenger banks like Revolut and Wise lean on in-app leaderboards and streaks, which work for engaged users but do little for first-time, low-trust invites." },
+                    { title: "Aspora\u2019s opportunity", body: "Combine a clear value-first headline with lightweight social proof, without needing a full gamification layer." },
+                    { title: "Trust as foundation", body: "Diaspora users specifically needed reassurance the reward and transfer were legitimate — more so than typical domestic fintech users." },
+                  ].map(({ title, body }) => (
+                    <div key={title} className="flex gap-4">
+                      <span className="text-[var(--accent)] shrink-0 mt-0.5">→</span>
+                      <p className="text-[var(--text-muted)] text-sm leading-7"><span className="text-[var(--text)] font-semibold">{title}:</span> {body}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="w-full rounded-xl border border-[var(--border)] bg-[var(--card)] mt-6 aspect-[16/6] flex items-center justify-center">
+                  <span className="text-[var(--text-muted)] text-xs font-medium">[ Competitive landscape matrix ]</span>
+                </div>
+              </section>
 
-                {/* Vimeo embed — 4 screens walkthrough */}
+              {/* 7. Platform Study */}
+              <section id="aspora-section-7">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">07 · PLATFORM STUDY</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">7. Platform Study — Gaps & Opportunities</h2>
+                <div className="space-y-3">
+                  {[
+                    "The £25 reward was mentioned but not visually prioritized on the screen",
+                    "No indication that other users were actively referring — no social proof",
+                    "No visual explanation of the invite → transfer → reward lifecycle",
+                    "Sharing required manually copying a link and pasting it into a separate messaging app",
+                  ].map((item) => (
+                    <div key={item} className="flex gap-3 text-[var(--text-muted)] text-sm leading-7">
+                      <span className="text-red-400 shrink-0">→</span><p>{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="w-full rounded-xl border border-[var(--border)] bg-[var(--card)] mt-6 aspect-[16/6] flex items-center justify-center">
+                  <span className="text-[var(--text-muted)] text-xs font-medium">[ Platform audit screenshots ]</span>
+                </div>
+              </section>
+
+              {/* 8. Ideation */}
+              <section id="aspora-section-8">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">08 · IDEATION</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">8. Ideation</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                  {[
+                    { title: "Value-first headline", body: "Promote the £25 reward to the primary headline, visible above the fold in persuasive, plain language." },
+                    { title: "Live social proof", body: "Surface real-time signals of active referrers to lower first-to-try anxiety." },
+                    { title: "Reward lifecycle guide", body: "A transparent three-step visual (Invite → Transfer → Reward) to remove uncertainty about payout timing." },
+                    { title: "Native contact-invite selector", body: "Replace manual copy-paste with a direct, in-app contact picker to cut time-to-action." },
+                    { title: "Gamified referral tiers", body: "Milestone-based badges for repeat referrers to sustain engagement beyond the first invite." },
+                    { title: "Post-invite nudges", body: "Lightweight reminders to referred contacts who haven\u2019t completed onboarding yet." },
+                  ].map(({ title, body }) => (
+                    <div key={title} className="border border-[var(--border)] rounded-xl p-5 bg-[var(--card)]">
+                      <p className="text-[var(--text)] text-sm font-semibold mb-2">{title}</p>
+                      <p className="text-[var(--text-muted)] text-xs leading-6">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* 8a. Approach */}
+              <section id="aspora-section-8a">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">08a · APPROACH</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-6">Approach</h2>
+                <div className="space-y-8">
+                  {[
+                    {
+                      num: "APPROACH 1",
+                      title: "Education-first explainer modal",
+                      body: "Show a short explainer on how referrals and payouts work before letting users reach the invite screen, addressing the confusion we observed on-site.",
+                      decision: "❌ Rejected",
+                      decisionNote: "Added a step before value was visible — exactly the kind of friction we were trying to remove.",
+                      pros: [
+                        "Could pre-empt confusion about payout timing",
+                        "Sets expectations upfront for first-time users",
+                      ],
+                      cons: [
+                        "Delays the £25 headline the user actually cares about",
+                        "Extra screen users are likely to skip or abandon",
+                      ],
+                    },
+                    {
+                      num: "APPROACH 2",
+                      title: "Leaderboard-style gamification",
+                      body: "Rank users by number of successful referrals with badges and tiers, borrowing from neobank engagement patterns.",
+                      decision: "⚠️ Partially adopted",
+                      decisionNote: "Kept the lightweight idea of visible referrer counts, but dropped ranks/badges — too heavy for a one-time, high-trust decision.",
+                      pros: [
+                        "Strong for repeat, engaged users",
+                        "Adds a light social-proof signal",
+                      ],
+                      cons: [
+                        "Doesn\u2019t address first-time trust or the copy-paste friction",
+                        "Feels like a distraction on a first visit to the screen",
+                      ],
+                    },
+                    {
+                      num: "APPROACH 3",
+                      title: "Value-first, low-friction invite",
+                      body: "Lead with the reward, show simple social proof and a lifecycle guide, then let the user invite a contact directly with no manual copy-paste.",
+                      decision: "✅ Adopted",
+                      decisionNote: "Directly addressed all four friction patterns observed on the ground, with the least added steps.",
+                      pros: [
+                        "Matches exactly what we observed users hesitate on",
+                        "Fastest path from intent to completed invite",
+                      ],
+                      cons: [
+                        "Needs a native contact-picker integration",
+                        "Social proof numbers need to stay current to stay credible",
+                      ],
+                    },
+                  ].map(({ num, title, body, decision, decisionNote, pros, cons }) => (
+                    <div key={num} className="border border-[var(--border)] rounded-xl overflow-hidden">
+                      <div className="bg-[var(--card)] px-6 py-4 border-b border-[var(--border)]">
+                        <p className="text-[var(--text-muted)] text-xs tracking-widest font-medium mb-1">{num}</p>
+                        <h3 className="text-[var(--text)] text-base font-bold">{title}</h3>
+                      </div>
+                      <div className="px-6 py-5">
+                        <p className="text-[var(--text-muted)] text-sm leading-7 mb-4">{body}</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                          <div>
+                            <p className="text-[var(--text)] text-xs font-semibold mb-2">Why this would work</p>
+                            <div className="space-y-1">{pros.map(p => <div key={p} className="flex gap-2 text-xs text-[var(--text-muted)] leading-5"><span className="text-green-400 shrink-0">+</span><p>{p}</p></div>)}</div>
+                          </div>
+                          <div>
+                            <p className="text-[var(--text)] text-xs font-semibold mb-2">Challenges</p>
+                            <div className="space-y-1">{cons.map(c => <div key={c} className="flex gap-2 text-xs text-[var(--text-muted)] leading-5"><span className="text-red-400 shrink-0">−</span><p>{c}</p></div>)}</div>
+                          </div>
+                        </div>
+                        <div className="border-t border-[var(--border)] pt-4">
+                          <p className="text-[var(--text)] text-xs font-bold mb-1">Decision: {decision}</p>
+                          <p className="text-[var(--text-muted)] text-xs leading-5">{decisionNote}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* 8b. Key Insights */}
+              <section id="aspora-section-8b">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">08b · KEY INSIGHTS</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-6">Key Insights</h2>
+                <div className="space-y-4">
+                  {[
+                    { num: "01", title: "\u201cThe reward has to be seen, not just offered\u201d", body: "A generous incentive buried in body copy performs the same as no incentive at all." },
+                    { num: "02", title: "\u201cFirst-time trust needs a social signal\u201d", body: "Even a simple \u2018X people referred this month\u2019 reduced the sense of being the first to try something unproven." },
+                    { num: "03", title: "\u201cClarity beats persuasion\u201d", body: "Users didn\u2019t need convincing to refer — they needed to understand exactly when and how they\u2019d get paid." },
+                    { num: "04", title: "\u201cRemove the manual step, not just explain it\u201d", body: "No amount of copy could fix a UX flow that still required leaving the app to paste a link." },
+                  ].map(({ num, title, body }) => (
+                    <div key={num} className="flex gap-4">
+                      <span className="text-[var(--text-muted)] text-xs font-medium tracking-widest mt-0.5 shrink-0">{num}</span>
+                      <p className="text-[var(--text-muted)] text-sm leading-7"><span className="text-[var(--text)] font-semibold">{title}</span> — {body}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* 9. Visual Design & UI */}
+              <section id="aspora-section-9">
+                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">09 · VISUAL DESIGN & UI</p>
+                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">9. Visual Design & UI</h2>
+
+                {/* Vimeo embed */}
                 <div className="w-full rounded-lg bg-[var(--card)] border border-[var(--border)] overflow-hidden mb-8">
                   <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                     <iframe
@@ -251,29 +438,27 @@ export function CaseStudyAspora() {
                   </div>
                 </div>
 
-                <p>
-                  By leveraging AI-integrated workflows (Claude Code) for rapid prototyping and iteration, I implemented four structural changes to align the interface with high-intent user behavior:
-                </p>
-                <ul className="list-disc list-outside ml-5 space-y-3">
-                  <li><span className="text-[var(--text)] font-medium">Value-First Information Architecture:</span> Promoted the £25 reward to the primary headline, ensuring the &ldquo;give-to-get&rdquo; value exchange was visible above the fold in clear, persuasive language.</li>
-                  <li><span className="text-[var(--text)] font-medium">Trust-Building Social Proof:</span> Integrated real-time signals of active referrers to provide immediate social validation and lower the &ldquo;first-to-try&rdquo; anxiety identified during ethnographic research.</li>
-                  <li><span className="text-[var(--text)] font-medium">Reducing Cognitive Load:</span> Clarified the reward lifecycle with a transparent, three-step visual guide (Invite → Transfer → Reward) to eliminate uncertainty regarding payout triggers.</li>
-                  <li><span className="text-[var(--text)] font-medium">Seamless Direct Interaction:</span> Replaced the high-friction manual copy-paste workflow with an integrated contact selector, drastically reducing &ldquo;time-to-action&rdquo; and technical abandonment.</li>
-                </ul>
-              </section>
+                {/* Placeholder screens */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  {[
+                    "Referral screen — value-first headline",
+                    "Social proof + reward lifecycle guide",
+                    "Native contact-invite selector",
+                  ].map((label) => (
+                    <div
+                      key={label}
+                      className="rounded-xl border border-[var(--border)] bg-[var(--card)] aspect-[9/16] flex items-center justify-center p-4"
+                    >
+                      <span className="text-[var(--text-muted)] text-xs font-medium text-center">[ {label} ]</span>
+                    </div>
+                  ))}
+                </div>
 
-              {/* 06 Outcome */}
-              <section id="section-outcome">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">06 · Outcome</p>
-                <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">
-                  Invite rates moved from 68% to 89%.
-                </h2>
-                <p className="text-[var(--text-muted)] text-sm leading-7 mb-8">
+                {/* Outcome stat card */}
+                <p className="text-[var(--text-muted)] text-sm leading-7 mb-6">
                   After the redesign went live in the UK, the share of users completing a referral invite increased from 68% to 89%.
                 </p>
-
-                {/* Stat card */}
-                <div className="border border-[var(--border)] rounded-xl p-6 inline-block min-w-[220px]">
+                <div className="border border-[var(--border)] rounded-xl p-6 inline-block min-w-[220px] mb-10">
                   <p className="text-[var(--text-muted)] text-xs tracking-widest font-medium mb-4">UNITED KINGDOM</p>
                   <div className="flex items-baseline gap-3 mb-2">
                     <span className="text-[var(--text-muted)] text-2xl font-bold line-through">68%</span>
@@ -281,14 +466,14 @@ export function CaseStudyAspora() {
                   </div>
                   <p className="text-[var(--text-muted)] text-xs">Share of users completing a referral invite</p>
                 </div>
-              </section>
 
-              {/* 07 Takeaway */}
-              <section id="section-takeaway">
-                <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">07 · Takeaway</p>
-                <p className="text-[var(--text-muted)] text-sm leading-7">
-                  The redesign worked because the research was close to the product. Sitting with users as they installed the app surfaced problems that wouldn't have shown up in analytics or in scheduled interviews. The ambassador role wasn't separate from the design work — it was the input for it.
-                </p>
+                {/* Takeaway */}
+                <div className="border-t border-[var(--border)] pt-8">
+                  <p className="text-[var(--text)] text-sm font-bold mb-3">TAKEAWAY</p>
+                  <p className="text-[var(--text-muted)] text-sm leading-7">
+                    The redesign worked because the research was close to the product. Sitting with users as they installed the app surfaced problems that wouldn&apos;t have shown up in analytics or scheduled interviews — the ambassador role wasn&apos;t separate from the design work, it was the input for it.
+                  </p>
+                </div>
               </section>
 
             </div>
