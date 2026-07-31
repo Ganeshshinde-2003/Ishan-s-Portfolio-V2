@@ -6,17 +6,18 @@ export const personalProjectsData = {
   link: "work" as const,
   data: [
     {
-      imagePath: "/assets/projects/lacoverpage.png",
+      imagePath: "/assets/projects/lookafterai.svg",
       title: "LookAfterAI",
       description: "AI-powered caregiving and health monitoring assistant",
       arrow: true,
+      flipBack: "As the Founding Product Designer, I led the 0-to-1 creation of LookAfterAI's multi-generational Family Health OS. I owned the end-to-end product lifecycle from researching complex caregiver workflows and shaping the core product strategy, to designing an accessible care ecosystem powered by a secure AI architecture.",
     },
     {
       imagePath: "/assets/projects/zoth.svg",
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
       arrow: true,
-      flipBack: "I worked as a junior product designer on Zoth.io, contributing to taking the product from 0 to 1.",
+      flipBack: "As a product designer, I did researching users, proposing strategic directions, and designing a tokenised asset marketplace that earned stakeholder buy-in within a 6-month timeline. The redesign unlocked fractional access and cross-chain liquidity, helping onboard 10K+ members through the Index Fund feature.",
     },
     {
       imagePath: "/assets/projects/aspora.svg",
@@ -24,13 +25,6 @@ export const personalProjectsData = {
       description: "Optimizing the Referral Funnel for 31% Relative Conversion Growth",
       arrow: true,
       flipBack: "I worked as a product designer on Aspora, turning referrals into an experience worth sharing.",
-    },
-    {
-      imagePath: "/assets/projects/decent.svg",
-      title: "DEcent HealthCare",
-      description: "Improving Platform Navigation",
-      arrow: true,
-      flipBack: "I worked as a product designer on DEcent HealthCare, improving platform navigation.",
     },
   ],
 };
@@ -49,9 +43,9 @@ export const videCodedProjectsData = {
       arrow: true,
     },
     {
-      imagePath: "/assets/projects/geometry.svg",
-      title: "⁠Vortex AI",
-      description: "Geometry of memories",
+      imagePath: "/assets/projects/decent.svg",
+      title: "DEcent HealthCare",
+      description: "Improving Platform Navigation",
       arrow: true,
     },
     {

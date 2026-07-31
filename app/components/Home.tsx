@@ -1,8 +1,5 @@
 "use client";
 
-import zoth from "../../public/assets/workedwith/zoth.svg";
-import aspora from "../../public/assets/workedwith/aspora.svg";
-import di from "../../public/assets/workedwith/di.svg";
 import homepic from "../../public/assets/home_screen_pic.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -57,21 +54,20 @@ export function Home() {
               <p className="text-[var(--text-muted)] font-medium text-xs mt-12 tracking-wider">
                 Worked at startups backed by
               </p>
-              <div className="flex gap-4 mt-4">
+              <div className="flex items-center gap-6 mt-4">
                 <Image
-                  src={zoth}
-                  alt="Zoth"
-                  className="h-8 w-auto object-contain"
+                  src="/assets/workedwith/sequoia.png"
+                  alt="Sequoia"
+                  width={150}
+                  height={40}
+                  className="h-10 w-auto object-contain"
                 />
                 <Image
-                  src={aspora}
-                  alt="Aspora"
-                  className="h-8 w-auto object-contain"
-                />
-                <Image
-                  src={di}
-                  alt="DI"
-                  className="h-8 w-auto object-contain"
+                  src="/assets/workedwith/ycombinator.png"
+                  alt="Y Combinator"
+                  width={200}
+                  height={30}
+                  className="h-[30px] w-auto object-contain"
                 />
               </div>
             </div>

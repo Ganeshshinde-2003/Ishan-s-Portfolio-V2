@@ -3,11 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import roundedArrow from "../../public/assets/icons/roundedarrow.svg";
 import ProjectsCard from "./ProjectsCard";
 import AppreciationCard from "./AppreciationCard";
 import MyLifeCard from "./MyLifeCard";
+import NdaModal from "./NdaModal";
 import { NavItem } from "../context/NavigationContext";
+
+const NDA_ROUTES: Record<string, string | null> = {
+  "LookAfterAI": null,
+};
 
 const navItemToRoute: Record<string, string> = {
   home: "/",
@@ -53,8 +59,26 @@ const CardWrapper = ({
   showHeaders = true,
 }: CardWrapperProps) => {
   const router = useRouter();
+  const [ndaOpen, setNdaOpen] = useState(false);
+  const [ndaRoute, setNdaRoute] = useState<string | null>(null);
+
+  const openNda = (route: string | null) => {
+    setNdaRoute(route);
+    setNdaOpen(true);
+  };
+
+  const handleUnlock = () => {
+    setNdaOpen(false);
+    if (ndaRoute) router.push(ndaRoute);
+  };
+
   return (
     <div className="w-full">
+      <NdaModal
+        isOpen={ndaOpen}
+        onClose={() => setNdaOpen(false)}
+        onUnlock={handleUnlock}
+      />
       {showHeaders && (
         <div className="w-full flex items-center justify-between mb-8">
           <div className="flex items-center justify-center gap-5">
@@ -118,7 +142,9 @@ const CardWrapper = ({
               <ProjectsCard
                 {...item}
                 onClick={
-                  item.title === "Aspora"
+                  item.title !== undefined && item.title in NDA_ROUTES
+                    ? () => openNda(NDA_ROUTES[item.title!])
+                    : item.title === "Aspora"
                     ? () => router.push("/work-personal-projects/aspora")
                     : item.title === "Zoth.io"
                     ? () => router.push("/work-personal-projects/zoth")

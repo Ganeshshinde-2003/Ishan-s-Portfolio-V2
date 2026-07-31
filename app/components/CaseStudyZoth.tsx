@@ -169,6 +169,15 @@ export function CaseStudyZoth() {
                 </div>
                 <p className="text-[var(--text)] text-sm font-semibold mt-6 mb-2">GOAL</p>
                 <p className="text-[var(--text-muted)] text-sm leading-7">Design an app that democratises access to real-world assets (RWAs) by allowing users to invest, stake, and earn from tokenised assets securely and seamlessly.</p>
+                <div className="w-full mt-6 mb-2 flex justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/assets/casestudy/zoth/goal-mockup.png"
+                    alt="Zoth app goal — phone-in-hand product mockup"
+                    className="rounded-2xl shadow-2xl w-full object-contain"
+                    style={{ maxWidth: 440 }}
+                  />
+                </div>
               </section>
 
               {/* 2. Problem */}
@@ -208,6 +217,24 @@ export function CaseStudyZoth() {
                   ))}
                 </div>
               </section>
+
+              {/* Design process board — full-width, between section 3 and section 4 */}
+              <div className="w-full border border-[var(--border)] rounded-xl bg-[var(--card)] overflow-hidden">
+                <div className="px-5 py-3 border-b border-[var(--border)] flex items-center justify-between">
+                  <p className="text-[var(--text)] text-xs font-semibold tracking-widest">DESIGN PROCESS BOARD</p>
+                  <p className="text-[var(--text-muted)] text-xs">Empathise → Define → Ideate → Prototype</p>
+                </div>
+                <div
+                  className="w-full overflow-auto"
+                  style={{ minHeight: 560, maxHeight: 700 }}
+                >
+                  <img
+                    src="/assets/casestudy/zoth/design-process-board.png"
+                    alt="Full design process board — Empathise, Define, Ideate, Prototype phases"
+                    style={{ width: "100%", height: "auto", minHeight: 560, objectFit: "contain", display: "block" }}
+                  />
+                </div>
+              </div>
 
               {/* 4. Stakeholder */}
               <section id="zoth-section-4">
@@ -255,12 +282,12 @@ export function CaseStudyZoth() {
                     <div key={item} className="flex gap-3"><span className="text-[var(--accent)] shrink-0">→</span><p>{item}</p></div>
                   ))}
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                  <div className="aspect-[4/3] rounded-lg bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
-                    <span className="text-[var(--text-muted)] text-xs font-medium">[ User journey map ]</span>
+                <div className="flex flex-col gap-4 mt-8">
+                  <div className="w-full rounded-lg border border-[var(--border)] overflow-hidden bg-[var(--card)]">
+                    <img src="/assets/casestudy/zoth/user-journey-map.png" alt="User journey map" className="w-full h-auto block object-contain" />
                   </div>
-                  <div className="aspect-[4/3] rounded-lg bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
-                    <span className="text-[var(--text-muted)] text-xs font-medium">[ User persona ]</span>
+                  <div className="w-full rounded-lg border border-[var(--border)] overflow-hidden bg-[var(--card)]">
+                    <img src="/assets/casestudy/zoth/user-persona.png" alt="User persona" className="w-full h-auto block" style={{ objectFit: "contain" }} />
                   </div>
                 </div>
               </section>
@@ -422,12 +449,25 @@ export function CaseStudyZoth() {
                 <p className="text-[var(--text-muted)] text-xs font-medium tracking-widest mb-3">09 · DESIGN SYSTEM</p>
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">9. Design System</h2>
                 <p className="text-[var(--text-muted)] text-sm leading-7 mb-6">Built a scalable design system for Zoth covering colour tokens, typography, component library, and spacing rules — designed to support both the retail-facing app and institutional dashboard from a single source of truth.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="aspect-[4/3] rounded-lg bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="aspect-[4/3] rounded-lg bg-[var(--card)] border border-[var(--border)] flex items-center justify-center p-4">
                     <span className="text-[var(--text-muted)] text-xs font-medium">[ Colour tokens & typography ]</span>
                   </div>
-                  <div className="aspect-[4/3] rounded-lg bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
-                    <span className="text-[var(--text-muted)] text-xs font-medium">[ Component library ]</span>
+                  <div className="rounded-lg bg-[var(--card)] border border-[var(--border)] overflow-hidden flex items-center justify-center p-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/assets/casestudy/zoth/component-library-1.png"
+                      alt="Component library — part 1"
+                      style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="rounded-lg bg-[var(--card)] border border-[var(--border)] overflow-hidden flex items-center justify-center p-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/assets/casestudy/zoth/component-library-2.png"
+                      alt="Component library — part 2"
+                      style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
+                    />
                   </div>
                 </div>
               </section>
@@ -438,11 +478,30 @@ export function CaseStudyZoth() {
                 <h2 className="text-[var(--text)] text-xl md:text-2xl font-bold mb-4">10. Visual Design & UI</h2>
                 <p className="text-[var(--text-muted)] text-sm leading-7 mb-6">The final UI prioritised trust, clarity, and scalability. A dark-mode-first palette with high-contrast data visualisations, modular investment cards, and a persistent portfolio tracker made the experience feel both premium and accessible.</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {["[ Home — Asset discovery ]", "[ Investment card detail ]", "[ Portfolio dashboard ]", "[ Onboarding flow ]", "[ Asset staking screen ]", "[ Mobile responsive views ]"].map((label) => (
-                    <div key={label} className="aspect-[3/4] rounded-xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
-                      <span className="text-[var(--text-muted)] text-xs font-medium text-center px-3">{label}</span>
-                    </div>
-                  ))}
+                  {/* Home — Asset discovery */}
+                  <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+                    <img src="/assets/casestudy/zoth/marketplace-screens.png" alt="Home — Asset discovery" className="w-full h-full object-contain" />
+                  </div>
+                  {/* Investment card detail */}
+                  <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+                    <img src="/assets/casestudy/zoth/liquidity-pool-screens.png" alt="Investment card detail" className="w-full h-full object-contain" />
+                  </div>
+                  {/* Portfolio dashboard */}
+                  <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+                    <img src="/assets/casestudy/zoth/portfolio-screens.png" alt="Portfolio dashboard" className="w-full h-full object-contain" />
+                  </div>
+                  {/* Onboarding flow — placeholder */}
+                  <div className="aspect-[3/4] rounded-xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
+                    <span className="text-[var(--text-muted)] text-xs font-medium text-center px-3">[ Onboarding flow ]</span>
+                  </div>
+                  {/* Asset staking screen */}
+                  <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+                    <img src="/assets/casestudy/zoth/stake-screens.png" alt="Asset staking screen" className="w-full h-full object-contain" />
+                  </div>
+                  {/* Mobile responsive views — placeholder */}
+                  <div className="aspect-[3/4] rounded-xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
+                    <span className="text-[var(--text-muted)] text-xs font-medium text-center px-3">[ Mobile responsive views ]</span>
+                  </div>
                 </div>
               </section>
 
@@ -465,6 +524,29 @@ export function CaseStudyZoth() {
                     <p className="text-[var(--text-muted)] text-xs">Opens interactive prototype in a new tab</p>
                   </div>
                 </div>
+
+                {/* Prototype screenshots — add more paths to this array as needed */}
+                {(() => {
+                  const screenshots = [
+                    "/assets/casestudy/zoth/prototype-1.svg",
+                  ];
+                  return (
+                    <div className={`mt-4 w-full ${screenshots.length === 1 ? "" : "grid grid-cols-1 sm:grid-cols-2 gap-4"}`}>
+                      {screenshots.map((src, i) => (
+                        <div
+                          key={i}
+                          className="rounded-xl border border-[var(--border)] bg-[var(--card)] overflow-hidden"
+                        >
+                          <img
+                            src={src}
+                            alt={`Prototype screenshot ${i + 1}`}
+                            className="w-full h-auto block"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  );
+                })()}
               </section>
 
             </div>
