@@ -10,14 +10,14 @@ export const personalProjectsData = {
       title: "LookAfterAI",
       description: "AI-powered caregiving and health monitoring assistant",
       arrow: true,
-      flipBack: "As the Founding Product Designer, I led the 0-to-1 creation of LookAfterAI's multi-generational Family Health OS. I owned the end-to-end product lifecycle from researching complex caregiver workflows and shaping the core product strategy, to designing an accessible care ecosystem powered by a secure AI architecture.",
+      flipBack: "As the Founding Product Designer, I led the 0-to-1. I owned the end-to-end product lifecycle from researching complex caregiver workflows & shaping the core product strategy, to designing an accessible care ecosystem powered by a secure AI architecture.",
     },
     {
       imagePath: "/assets/projects/zoth.svg",
       title: "Zoth.io",
       description: "Tokenised Asset Marketplace",
       arrow: true,
-      flipBack: "As a product designer, I did researching users, proposing strategic directions, and designing a tokenised asset marketplace that earned stakeholder buy-in within a 6-month timeline. The redesign unlocked fractional access and cross-chain liquidity, helping onboard 10K+ members through the Index Fund feature.",
+      flipBack: "As a product designer, I did researching users, proposing strategic directions, & designing a tokenised asset marketplace that earned stakeholder buy-in. The redesign unlocked fractional access & cross-chain liquidity, helping onboard 10K+ members through the Index Fund feature.",
     },
     {
       imagePath: "/assets/projects/aspora.svg",

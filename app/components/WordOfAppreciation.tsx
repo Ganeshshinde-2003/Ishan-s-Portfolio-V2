@@ -110,7 +110,10 @@ export default function WordOfAppreciation() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [descText, setDescText] = useState(TOPICS[0].description);
   const [descOpacity, setDescOpacity] = useState(1);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
   const pausedRef = useRef(false);
+  const quoteRef = useRef<HTMLParagraphElement>(null);
 
   const goToDial = useCallback((i: number) => {
     setDialIndex(i);
@@ -145,10 +148,20 @@ export default function WordOfAppreciation() {
 
   const t = TESTIMONIALS[testimonialIndex];
 
-  const prevTestimonial = () =>
+  useEffect(() => {
+    const el = quoteRef.current;
+    if (!el) return;
+    setIsOverflowing(el.scrollHeight > el.clientHeight);
+  }, [testimonialIndex]);
+
+  const prevTestimonial = () => {
+    setIsExpanded(false);
     setTestimonialIndex((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  const nextTestimonial = () =>
+  };
+  const nextTestimonial = () => {
+    setIsExpanded(false);
     setTestimonialIndex((i) => (i + 1) % TESTIMONIALS.length);
+  };
 
   return (
     <div className="w-full">
@@ -184,7 +197,7 @@ export default function WordOfAppreciation() {
           maxWidth: 850,
           display: "flex",
           gap: 24,
-          height: 420,
+          minHeight: 420,
         }}
       >
         {/* ── Left card: rotary topic dial ── */}
@@ -359,9 +372,6 @@ export default function WordOfAppreciation() {
                   color: "#A7AAB4",
                   margin: 0,
                   marginTop: 2,
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
                 }}
               >
                 {t.role}
@@ -369,23 +379,48 @@ export default function WordOfAppreciation() {
             </div>
           </div>
 
-          {/* Quote */}
-          <p
-            style={{
-              fontSize: 17,
-              fontWeight: 500,
-              lineHeight: "28px",
-              color: "#fff",
-              margin: "20px 0 0",
-              display: "-webkit-box",
-              WebkitLineClamp: 6,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-              flex: 1,
-            }}
-          >
-            {t.quote}
-          </p>
+          {/* Quote + toggle */}
+          <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
+            <p
+              ref={quoteRef}
+              style={{
+                fontSize: 17,
+                fontWeight: 500,
+                lineHeight: "28px",
+                color: "#fff",
+                margin: "20px 0 0",
+                ...(isExpanded
+                  ? { overflow: "visible" }
+                  : {
+                      display: "-webkit-box",
+                      WebkitLineClamp: 6,
+                      WebkitBoxOrient: "vertical" as const,
+                      overflow: "hidden",
+                    }),
+              }}
+            >
+              {t.quote}
+            </p>
+            {isOverflowing && (
+              <button
+                onClick={() => setIsExpanded((e) => !e)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  padding: 0,
+                  marginTop: 8,
+                  cursor: "pointer",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  color: "#A7AAB4",
+                  alignSelf: "flex-start",
+                  textDecoration: "underline",
+                }}
+              >
+                {isExpanded ? "Show less" : "Read more"}
+              </button>
+            )}
+          </div>
 
           {/* Nav buttons */}
           <div style={{ display: "flex", gap: 10, marginTop: 20 }}>

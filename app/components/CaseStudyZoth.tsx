@@ -490,17 +490,17 @@ export function CaseStudyZoth() {
                   <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
                     <img src="/assets/casestudy/zoth/portfolio-screens.png" alt="Portfolio dashboard" className="w-full h-full object-contain" />
                   </div>
-                  {/* Onboarding flow — placeholder */}
-                  <div className="aspect-[3/4] rounded-xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
-                    <span className="text-[var(--text-muted)] text-xs font-medium text-center px-3">[ Onboarding flow ]</span>
+                  {/* Onboarding flow */}
+                  <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+                    <img src="/assets/casestudy/zoth/onboarding-flow.png" alt="Onboarding flow" className="w-full h-full object-contain" />
                   </div>
                   {/* Asset staking screen */}
                   <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
                     <img src="/assets/casestudy/zoth/stake-screens.png" alt="Asset staking screen" className="w-full h-full object-contain" />
                   </div>
-                  {/* Mobile responsive views — placeholder */}
-                  <div className="aspect-[3/4] rounded-xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center">
-                    <span className="text-[var(--text-muted)] text-xs font-medium text-center px-3">[ Mobile responsive views ]</span>
+                  {/* Mobile responsive views */}
+                  <div className="rounded-xl bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+                    <img src="/assets/casestudy/zoth/mobile-responsive-views.png" alt="Mobile responsive views" className="w-full h-full object-contain" />
                   </div>
                 </div>
               </section>
