@@ -14,7 +14,10 @@
       "Bash(cp \"/Users/ishan/Downloads/Case study Data /Aspora /Image 5.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-1.jpg)",
       "Bash(cp \"/Users/ishan/Downloads/Case study Data /Aspora /Image 6.png\" /Users/ishan/Downloads/PortfolioV2/public/images/aspora/event-2.jpg)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/work-personal-projects/decent)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/assets/casestudy/decent/cover.svg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/assets/casestudy/decent/proto-personas.png)"
     ]
   }
 }

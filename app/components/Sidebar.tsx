@@ -26,7 +26,7 @@ const navigationItems: {
 }[] = [
   { id: "home", label: "Home", icon: home, href: "/" },
   { id: "work", label: "Work", icon: work, href: "/work-personal-projects" },
-  { id: "ai-projects", label: "AI Enabled Projects", icon: aiProjects, href: "/ai-enabled-projects" },
+  { id: "ai-projects", label: "Side Projects", icon: aiProjects, href: "/ai-enabled-projects" },
   { id: "resume", label: "Resume", icon: resume, href: "/resume" },
   // { id: "my-life", label: "My Life", icon: myLife, href: "/my-life" },
 ];

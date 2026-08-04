@@ -37,15 +37,16 @@ export const videCodedProjectsData = {
   link: "ai-projects" as const,
   data: [
     {
+      imagePath: "/assets/projects/decent.svg",
+      title: "DEcent Healthcare",
+      description: "Decentralized Healthcare Using Smart Contracts: Secure Data Ownership & Monetisation",
+      arrow: true,
+      flipBack: "A 0→1 solo product design project built on blockchain and smart contracts. I designed a privacy-first healthcare ecosystem where patients own and monetise their data — developed as an academic capstone at Kingston University using Lean UX methodology, with usability testing across patients, doctors, and researchers.",
+    },
+    {
       imagePath: "/assets/projects/researchlens-cover.png",
       title: "ResearchLens",
       description: "Spatial Research Tool",
-      arrow: true,
-    },
-    {
-      imagePath: "/assets/projects/decent.svg",
-      title: "DEcent HealthCare",
-      description: "Improving Platform Navigation",
       arrow: true,
     },
     {

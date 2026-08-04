@@ -152,6 +152,8 @@ const CardWrapper = ({
                     ? () => router.push("/ai-enabled-projects/researchmap")
                     : item.title === "BlinkSpeak"
                     ? () => router.push("/ai-enabled-projects/blinkspeak")
+                    : item.title === "DEcent Healthcare"
+                    ? () => router.push("/work-personal-projects/decent")
                     : undefined
                 }
               />
