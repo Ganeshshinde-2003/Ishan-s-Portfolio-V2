@@ -47,7 +47,7 @@ export function Home() {
                 Hey, I&apos;m Ishan Tandel
               </p>
               <p className="text-[var(--text-muted)] font-medium text-sm mt-3 leading-6 tracking-wide">
-                I&apos;m a Product Designer who builds AI-enhanced experiences, backed by a B.tech in Computer Science and a MSc in User Experience. Currently seeking product and UX design roles.
+                I&apos;m a Product Designer who builds AI-enhanced experiences, backed by a B.tech in Computer Science and a MSc in User Experience. 3+ years of experience in Building products 0-&gt;1
               </p>
             </div>
             <div className="mb-0 md:mb-20">
